@@ -45,7 +45,7 @@ https://github.com/gb-mobile/pokecrystal-mobile-en/wiki/Pok%C3%A9mon-Crystal-Mob
 ## Contributors
 
 - Pret           : Initial disassembly
-- Pfero          : Old German disassembly for Pokecrystal
+- Pfero          : Old Spanish disassembly for Pokecrystal
 - Matze          : Mobile Restoration & Japanese Code Disassembly
 - Damien         : Code
 - DS             : GFX & Code
