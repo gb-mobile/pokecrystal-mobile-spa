@@ -1,0 +1,10 @@
+	db "MEGATÓN@" ; species name
+	dw 14, 3000 ; height, weight
+
+	db   "Tiene un cuerpo"
+	next "rocoso tan fuerte"
+	next "que ni siquiera"
+
+	page "la dinamita más"
+	next "potente le haría"
+	next "ningún rasguño.@"

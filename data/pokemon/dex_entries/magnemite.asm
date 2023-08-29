@@ -1,0 +1,10 @@
+	db "IMÁN@" ; species name
+	dw 3, 60 ; height, weight
+
+	db   "La gran cantidad"
+	next "de electricidad"
+	next "que libera por"
+
+	page "todos lados, le"
+	next "convierte en un"
+	next "potente imán.@"
