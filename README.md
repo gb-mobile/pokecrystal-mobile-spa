@@ -10,6 +10,7 @@ It is possible that some menus were missed by the find/replace script, and need 
 
 - Check for any untranslated menus missed by the find/replace script.
 - Translate any of mobile features. (Anything under /mobile/, /maps/GoldenrodPokecenter1F.asm and maps/PokecomCenterAdminOfficeMobile.asm).
+- Also refer to the English build for 'Text_BattleReceptionistIntro:', 'Text_TradeReceptionistIntro:' and 'Text_TimeCapsuleReceptionistIntro:' for proper mobile translations of the PokeCOM Club reception dialogue.
 - Fix the known issues. (Especially the critical battle-crashing bug)
 
 ## Setup [![Build Status][ci-badge]][ci]
