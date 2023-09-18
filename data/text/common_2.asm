@@ -703,7 +703,7 @@ Text_BattleEffectActivate::
 	text_ram wStringBuffer2
 	text " de"
 	line "<USER>@"
-	done
+	text_end
 
 	text_end ; unreferenced
 
@@ -722,7 +722,7 @@ Text_BattleFoeEffectActivate::
 	text_ram wStringBuffer2
 	text " de"
 	line "<TARGET>@"
-	done
+	text_end
 
 	text_end ; unreferenced
 
