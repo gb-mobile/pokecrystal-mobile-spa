@@ -123,20 +123,24 @@ _ExpPointsText::
 	prompt
 
 _GoMonText::
-	text "¡Adelante,@"
+	text "¡Adelante,"
+	line "@"
 	text_end
 
 _DoItMonText::
-	text "¡Hazlo,@"
+	text "¡Hazlo,"
+	line "@"
 	text_end
 
 _GoForItMonText::
-	text "¡Adelante,@"
+	text "¡Adelante,"
+	line "@"
 	text_end
 
 _YourFoesWeakGetmMonText::
 	text "¡Tu enemigo está"
-	line "débil! ¡A por él,@"
+	line "débil! ¡A por él,"
+	line "@"
 	text_end
 
 _BattleMonNicknameText::
@@ -698,7 +702,7 @@ Text_BattleEffectActivate::
 	text "¡@"
 	text_ram wStringBuffer2
 	text " de"
-	line "<USER>"
+	line "<USER>@"
 	done
 
 	text_end ; unreferenced
@@ -709,7 +713,7 @@ _BattleStatWentWayUpText::
 	prompt
 
 _BattleStatWentUpText::
-
+	text_start
 	cont "subió!"
 	prompt
 
@@ -717,7 +721,7 @@ Text_BattleFoeEffectActivate::
 	text "¡@"
 	text_ram wStringBuffer2
 	text " de"
-	line "<TARGET>"
+	line "<TARGET>@"
 	done
 
 	text_end ; unreferenced
@@ -728,7 +732,7 @@ _BattleStatSharplyFellText::
 	prompt
 
 _BattleStatFellText::
-
+	text_start
 	cont "bajó!"
 	prompt
 
