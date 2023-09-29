@@ -16,13 +16,6 @@
 	const HIRONOBU_YOSHIDA
 	const ASUKA_IWASHITA
 	const GO_ICHINOSE
-	const ERIK_JOHNSON
-	const THOMAS_HERTZOG
-	const NOB_OGASAWARA
-	const TERESA_LILLYGREN
-	const HIROTO_ALEXANDER
-	const SETH_MCMAHILL
-	const GAIL_TILDEN
 	const MORIKAZU_AOKI
 	const KOHJI_NISHINO
 	const KENJI_MATSUSHIMA
@@ -121,10 +114,10 @@ DEF NUM_CREDITS_STRINGS EQU const_value
 
 ; CreditsScript indexes (see data/credits_script.asm)
 	const_def -1, -1
-	const CREDITS_END
-	const CREDITS_WAIT
-	const CREDITS_SCENE
-	const CREDITS_CLEAR
-	const CREDITS_MUSIC
-	const CREDITS_WAIT2
 	const CREDITS_THEEND
+	const CREDITS_WAIT2
+	const CREDITS_MUSIC
+	const CREDITS_CLEAR
+	const CREDITS_SCENE
+	const CREDITS_WAIT
+	const CREDITS_END
