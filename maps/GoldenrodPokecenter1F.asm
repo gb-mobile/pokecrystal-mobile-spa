@@ -1011,7 +1011,7 @@ GoldenrodPokecenter1FMobileOffTeacherText:
 	para "Lo que significa"
 	line "que podré conec-"
 	cont "tarme con todo"
-	line "tipo de gente."
+	cont "tipo de gente."
 	done
 
 GoldenrodPokecenter1FMobileOffRockerText:
