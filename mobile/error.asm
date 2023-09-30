@@ -453,12 +453,12 @@ String_17f98e:
 	db   "@" 
 
 String_17f9d0:
-    db   "ID de acceso o" ; "ログインパスワードか"
-    next "código inválidos." ; "ログイン　アイディーに"
-    next "Favor confirme su" ; "まちがいがあります"
-    next "su información de" ; "パスワードを　かくにんして"
-    next "acceso e intente" ; "しばらく　まって"
-    next "nuevamente." ; "かけなおして　ください"
+	db   "ID de acceso o" ; "ログインパスワードか"
+	next "código inválidos." ; "ログイン　アイディーに"
+	next "Favor confirme su" ; "まちがいがあります"
+	next "su información de" ; "パスワードを　かくにんして"
+	next "acceso e intente" ; "しばらく　まって"
+	next "nuevamente." ; "かけなおして　ください"
     db   "@"
 
 String_17fa14:
@@ -615,9 +615,9 @@ String_17fe03:
 	db   "@" 
 
 String_17fe4b:
-    db   "La llamda ha ter-" ; "まちじかんが　ながいので"
-    next "minado debido a" ; "でんわが　きれました"
-    next "inactividad." 
+	db   "La llamda ha ter-" ; "まちじかんが　ながいので"
+	next "minado debido a" ; "でんわが　きれました"
+	next "inactividad." 
     db   "@"
 
 String_17fe63:
