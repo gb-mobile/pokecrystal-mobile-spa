@@ -746,7 +746,8 @@ _MobileStadiumEntryText::
 	para "pueden leerse"
 	line "aquí."
 
-	para "¿Lees los datos?"
+	para "¿Deseas leer los"
+	line "datos?"
 	done
 
 _MobileStadiumSuccessText::
@@ -768,12 +769,12 @@ _MainMenuTimeUnknownText::
 	done
 
 _DeleteSavedLoginPasswordText::
-	text "¿Borras la CONTRA-"
-	line "SEÑA de ACCESO?"
+	text "¿Borrar la CONTRA-"
+	line "SEÑA DE ACCESO?"
 	done
 
 _DeletedTheLoginPasswordText::
-	text "CONTRASEÑA de"
+	text "CONTRASEÑA DE"
 	line "ACCESO borrada."
 	done
 
@@ -815,7 +816,7 @@ _MobileCardFolderIntro1Text::
 
 	para "número de teléfono"
 	line "y su perfil."
-	done
+	prompt
 
 _MobileCardFolderIntro2Text::
 	text "Ésta es tu"
@@ -828,7 +829,7 @@ _MobileCardFolderIntro2Text::
 
 	para "TARJETAS con tus"
 	line "amigos/as."
-	done
+	prompt
 
 _MobileCardFolderIntro3Text::
 	text "Si tienes la"
@@ -842,7 +843,7 @@ _MobileCardFolderIntro3Text::
 
 	para "piso de los"
 	line "CENTROS #MON."
-	done
+	prompt
 
 _MobileCardFolderIntro4Text::
 	text "Para guardar tu"
@@ -853,7 +854,7 @@ _MobileCardFolderIntro4Text::
 
 	para "CONTRASEÑA a tu"
 	line "TARJETERO."
-	done
+	prompt
 
 _MobileCardFolderAskDeleteText::
 	text "Si se borra el"
@@ -890,13 +891,13 @@ _MobileCardFolderAskOpenOldText::
 	done
 
 _MobileCardFolderAskDeleteOldText::
-	text "¿Borras el TARJE-"
-	line "TERO antiguo?"
+	text "¿Deseas borrar el"
+	line "TARJETERO antiguo?"
 	done
 
 _MobileCardFolderFinishRegisteringCardsText::
-	text "¿Acabas de regis-"
-	line "trar TARJETAS?"
+	text "¿Terminaste de re-"
+	line "gistrar TARJETAS?"
 	done
 
 _PhoneWrongNumberText::
