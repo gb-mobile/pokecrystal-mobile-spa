@@ -193,7 +193,7 @@ Function48187:
 .asm_481ce
 	bit 2, d
 	jr nz, .asm_481db
-	lb bc, 2, 8
+	lb bc, 1, 8
 	hlcoord 11, 9 ; prefecture position
 	call ClearBox
 .asm_481db
@@ -211,14 +211,14 @@ Function48187:
 	bit 0, a
 	jr nz, .asm_48201
 .asm_481f8
-	hlcoord 8, 11 ; Position of 'Tell Later' after selecting
+	hlcoord 7, 11 ; Position of 'Tell Later' after selecting
 	ld de, .String_TellLater
 	call PlaceString
 .asm_48201
 	ret
 
 .String_TellLater:
-	db "Tell Later@"
+	db "Decir luego@"
 
 MobileProfileOptionPressed:
 	call PlaceHollowCursor
@@ -275,7 +275,7 @@ Function48272:
 	jp ReturnToMobileProfileMenu
 
 MobileString_PersonalInfo:
-	db "Personal Info@"
+	db "Info Personal@"
 
 ClearMobileProfileBottomTextBox:
 	lb bc, 2, 18
@@ -457,9 +457,9 @@ DisplayRegionCodesList:
 .loop_end
 	ld d, h
 	ld e, l
-	ld b, $2
+	ld b, $1
 	ld c, $8
-	hlcoord 11, 8 ; ??? Clears the surrounding tiles when prefecture is selected, needs to be moved with preferectures
+	hlcoord 11, 9 ; ??? Clears the surrounding tiles when prefecture is selected, needs to be moved with preferectures
 	call ClearBox
 	hlcoord 19 - REGION_CODE_STRING_LENGTH, 9 ; Prefectures position when selected
 	call PlaceString
@@ -599,17 +599,17 @@ DEF N = ZIPCODE_LENGTH - 1
 DEF S EQUS STRCAT("LOW(Zipcode_CharPoolsLength - Zipcode_CharPoolForStringIndex", STRSUB("01234567", N+1, 1))
 	db S ) / 1
 
-MobileProfileString:         db "  Mobile Profile@"
-MobileString_Gender:         db "Gender@"
-MobileString_Age:            db "Age@"
-MobileString_Address:        db "Address@"
-MobileString_ZipCode:        db "Zip Code@"
+MobileProfileString:         db "   Perfil Móvil  @"
+MobileString_Gender:         db "Género@"
+MobileString_Age:            db "Edad@"
+MobileString_Address:        db "Dirección@"
+MobileString_ZipCode:        db "Código Postal@"
 MobileString_OK:             db "OK@"
-MobileString_ProfileChanged: db "Profile Changed@"
-MobileDesc_Gender:           db "Boy or girl?@"
-MobileDesc_Age:              db "How old are you?@"
-MobileDesc_Address:          db "Where do you live?@"
-MobileDesc_ZipCode:          db "Your zip code?@"
+MobileString_ProfileChanged: db "Perfil Cambiado@"
+MobileDesc_Gender:           db "¿Chico o chica?@"
+MobileDesc_Age:              db "¿Qué edad tienes?@"
+MobileDesc_Address:          db "¿Dónde vives?@"
+MobileDesc_ZipCode:          db "¿Tu código postal?@"
 
 MenuHeader_0x484f1:
 	db MENU_BACKUP_TILES ; flags
@@ -1092,8 +1092,8 @@ ZipCodePressed:
 	call TellNowTellLaterMenu
 	jp c, ReturnToMobileProfileMenu
 
-	hlcoord 8, 11 ; Clearing the potential "Tell Later" text.
-	lb bc, 1, 10 - ZIPCODE_LENGTH ; Determines the size of the clearing box
+	hlcoord 7, 11 ; Clearing the potential "Tell Later" text.
+	lb bc, 1, 11 - ZIPCODE_LENGTH ; Determines the size of the clearing box
 	call ClearBox
 
 	ld hl, MenuHeader_ZipCodeEditBox
@@ -1360,17 +1360,17 @@ TellNowTellLaterMenu:
 	ld hl, MenuHeader_0x48a9c
 	call LoadMenuHeader
 	call SetCursorParameters_Gender
-	ld a, $a
+	ld a, $a ; Y Placement of 'Tell Now' 'Tell Later' Cursor
 	ld [w2DMenuCursorInitY], a
-	ld a, $7 ; Y Placement of 'Tell Now' 'Tell Later' Cursor
+	ld a, $6 ; X Placement of 'Later' Cursor
 	ld [w2DMenuCursorInitX], a
-	ld a, $1 ; X Placement of 'Later' Cursor
+	ld a, $1
 	ld [wMenuCursorY], a
-	hlcoord 6, 8 ; Placement of 'Tell Now' 'Tell Later' Box
-	ld b, $4
-	ld c, $c
+	hlcoord 5, 8 ; Placement of 'Tell Now' 'Tell Later' Box
+	ld b, 4
+	ld c, 13
 	call DisplayBlankGoldenBox
-	hlcoord 8, 10 ; Placement of 'Tell Now' 'Tell Later' Text
+	hlcoord 7, 10 ; Placement of 'Tell Now' 'Tell Later' Text
 	ld de, TellNowLaterStrings
 	call PlaceString
 	call StaticMenuJoypad ; Waits for a user input from the input filter.
@@ -1407,8 +1407,8 @@ MenuHeader_0x48a9c:
 	menu_coords 5, 8, SCREEN_WIDTH - 1, 13 ; For clearing the 'Tell Later' 'Tell Now' Box
 
 TellNowLaterStrings:
-	db   "Tell Now"
-	next "Tell Later@"
+	db   "Decir ahora"
+	next "Decir luego@"
 
 InputZipcodeCharacters: ; Function48ab5. Zip code menu controls.
 	ldh a, [hJoyPressed]
