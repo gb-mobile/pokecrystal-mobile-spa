@@ -147,7 +147,7 @@ endr
 
 .Odd:
 ; localization: mind above remark
-	db "ODD@@@@@"
+	db "Raro@@@@"
 
 
 Function11765d:
