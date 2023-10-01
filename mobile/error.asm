@@ -496,11 +496,11 @@ String_17fab0:
 	db   "@" 
 
 String_17faf9:
-	db   "El correo electr." ; "あてさき　メールアドレスに"
-	next "es incorrecto." ; "まちがいがあります"
-	next "Favor reingrese" ; "ただしい　メールアドレスを"
-	next "su correo" ; "いれなおしてください"
-	next "electrónico." 
+	db   "El correo elec-" ; "あてさき　メールアドレスに"
+	next "trónico es inco-" ; "まちがいがあります"
+	next "rrecto. Favor re-" ; "ただしい　メールアドレスを"
+	next "ingrese su correo" ; "いれなおしてください"
+	next "electrónico."
 	db   "@" 
 
 String_17fb2a:
@@ -615,7 +615,7 @@ String_17fe03:
 	db   "@" 
 
 String_17fe4b:
-	db   "La llamda ha ter-" ; "まちじかんが　ながいので"
+	db   "La llamada ha ter-" ; "まちじかんが　ながいので"
 	next "minado debido a" ; "でんわが　きれました"
 	next "inactividad." 
     db   "@"
@@ -629,13 +629,13 @@ String_17fe63:
 	next "para más detalles." 
 	db   "@" 
 
-String_17fe9a: ; unused
+String_17fe9a: ; unreferenced
 	db   "Las NOTICIAS #-" ; "ポケモンニュースが"
 	next "MON se han actua-" ; "あたらしくなっているので"
 	next "lizado. Favor des-" ; "レポートを　おくれません"
-	next "cargar las últimas" ; "あたらしい　ポケモンニュースの"
-	next "NOTICIAS antes de" ; "よみこみを　さきに　してください"
-	next "actualizar ranking" 
+	next "cargarlas antes" ; "あたらしい　ポケモンニュースの"
+	next "de actualizar" ; "よみこみを　さきに　してください"
+	next "los rankings." 
 	db   "@" 
 
 String_17fedf:
