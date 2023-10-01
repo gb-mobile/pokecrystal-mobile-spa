@@ -605,8 +605,8 @@ MenuHeader_1179bd:
 	db 0 ; default option
 
 YessNoString_1179c5:
-	db "SÍ@";"はい@"
-	db "NO@";"いいえ@"
+	db   "SÍ" ;"はい@"
+	next "NO@";"いいえ@"
 
 AskSavePasswordString:
 	db   "Save this";"こ<NO>パスワード¯ほぞんして"
@@ -944,8 +944,8 @@ MenuHeader_117cc4:
 	db 0 ; default item
 
 YesNo117ccc:
-	db "SÍ@";"はい@"
-	db "NO@";"いいえ@"
+	db   "SÍ" ;"はい@"
+	next "NO@";"いいえ@"
 
 MobileStadiumEntryText:
 	text_far _MobileStadiumEntryText

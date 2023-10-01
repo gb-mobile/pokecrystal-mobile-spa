@@ -6570,8 +6570,8 @@ MenuHeader_11b013:
 	db 1 ; default option
 
 String_11b01b:
-	db "SÍ@"
-	db "NO@"
+	db   "SÍ"
+	next "NO@"
 
 Function11b022:
 	ld a, [wcd2e]
