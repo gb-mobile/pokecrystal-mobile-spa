@@ -478,8 +478,8 @@ String_17fa49:
 	db   "@" 
 
 String_17fa71:
-	db   "El Adapt. Móvil" ; "モバイルアダプタに"
-	next "no está configurado" ; "とうろくされた　じょうほうが"
+	db   "El Adapt. Móvil no" ; "モバイルアダプタに"
+	next "está configurado" ; "とうろくされた　じょうほうが"
 	next "correctamente." ; "ただしく　ありません"
 	next "Por favor registar" ; "モバイルトレーナーで"
 	next "su información en" ; "しょきとうろくを　してください"
