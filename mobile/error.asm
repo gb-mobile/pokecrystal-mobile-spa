@@ -409,7 +409,7 @@ Unknown_17f844: db 19
 	dbbw $ff, $ff, String_17fa49
 
 String_17f891: ; 18 max!
-	db   "El Mobile Adapter" ; "モバイルアダプタが　ただしく"
+	db   "El Adapt. Móvil" ; "モバイルアダプタが　ただしく"
 	next "no está conectado" ; "さしこまれていません"
 	next "correctamente." ; "とりあつかいせつめいしょを"
 	next "Por favor revise" ; "ごらんのうえ　しっかりと"
@@ -435,8 +435,8 @@ String_17f913:
 	db   "@" 
 
 String_17f946:
-	db   "Error de Mobile" ; "モバイルアダプタの　エラーです"
-	next "Adapter. Por favor" ; "しばらく　まって"
+	db   "Error de Adapt." ; "モバイルアダプタの　エラーです"
+	next "Móvil. Por favor" ; "しばらく　まって"
 	next "intente de nuevo." ; "かけなおして　ください"
 	next "Si el problema" ; "なおらない　ときは"
 	next "persiste, favor" ; "モバイルサポートセンターへ"
@@ -478,12 +478,12 @@ String_17fa49:
 	db   "@" 
 
 String_17fa71:
-	db   "El Mobile Adapter" ; "モバイルアダプタに"
+	db   "El Adapt. Móvil" ; "モバイルアダプタに"
 	next "no está configurado" ; "とうろくされた　じょうほうが"
 	next "correctamente." ; "ただしく　ありません"
 	next "Por favor registar" ; "モバイルトレーナーで"
 	next "su información en" ; "しょきとうろくを　してください"
-	next "Mobile Trainer." 
+	next "Entrenador Móvil." 
 	db   "@" 
 
 String_17fab0:
@@ -509,7 +509,7 @@ String_17fb2a:
 	next "Favor revise el" ; "とりあつかいせつめいしょを"
 	next "manual y regístre-" ; "ごらんのうえ"
 	next "se usando el" ; "モバイルトレーナーで"
-	next "Mobile Trainer." 
+	next "Entrenador Móvil." 
 	db   "@" 
 
 String_17fb6e:
@@ -624,7 +624,7 @@ String_17fe63:
 	db   "Su amigo está" ; "あいての　モバイルアダプタと"
 	next "usando un tipo" ; "タイプが　ちがいます"
 	next "diferente de" ; "くわしくは　とりあつかい"
-	next "Mobile Adapter." ; "せつめいしょを　ごらんください"
+	next "Adapt. Móvil." ; "せつめいしょを　ごらんください"
 	next "Revise el manual" 
 	next "para más detalles." 
 	db   "@" 
