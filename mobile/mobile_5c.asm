@@ -774,11 +774,11 @@ PasswordSlowpokeLZ:
 INCBIN "gfx/pokedex/slowpoke_mobile.2bpp.lz"
 
 String_172e31:
-	db "Enter PASSWORD@";"パスワード<WO>いれてください@"
+	db "Ingrese CÓDIGO@";"パスワード<WO>いれてください@"
 String_172e3f:
-	db " 123  QUIT  OK @";"きりかえ　やめる　　けってい@"
+	db " 123 SALIR  OK @";"きりかえ　やめる　　けってい@"
 String_172e4e:
-	db " ABC  QUIT  OK @";"きりかえ　やめる　　"
+	db " ABC SALIR  OK @";"きりかえ　やめる　　"
 String_172e58:
 	db "OK@";"けってい@"
 String_172e5d:

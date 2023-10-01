@@ -609,16 +609,16 @@ YessNoString_1179c5:
 	next "NO@";"いいえ@"
 
 AskSavePasswordString:
-	db   "Save this";"こ<NO>パスワード¯ほぞんして"
-	line "PASSWORD?@";"おきますか？@"
+	db   "¿Guardar este";"こ<NO>パスワード¯ほぞんして"
+	line "CÓDIGO?@";"おきますか？@"
 
 NotAPokemonPasswordString:
-	db   "Invalid PASSWORD!@";"パスワード<WO>にゅうりょく"
-	;line "PASSWORD!@";"されていません！@"
+	db   "¡CÓDIGO";"パスワード<WO>にゅうりょく"
+	line "INVÁLIDO!@";"されていません！@"
 
 SavedPasswordString:
-	db   "Saved the LOG-IN";"ログインパスワード¯ほぞん"
-	line "PASSWORD.@";"しました@"
+	db   "CÓDIGO DE AC-";"ログインパスワード¯ほぞん"
+	line "CESO guardada.@";"しました@"
 
 MobilePassword_IncrementJumptable:
 	ld hl, wcd49

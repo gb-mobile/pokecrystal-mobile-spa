@@ -769,13 +769,13 @@ _MainMenuTimeUnknownText::
 	done
 
 _DeleteSavedLoginPasswordText::
-	text "¿Borrar la CONTRA-"
-	line "SEÑA DE ACCESO?"
+	text "¿Borrar el CÓDIGO"
+	line "DE ACCESO?"
 	done
 
 _DeletedTheLoginPasswordText::
-	text "CONTRASEÑA DE"
-	line "ACCESO borrada."
+	text "CÓDIGO DE ACCESO"
+	line "borrado."
 	done
 
 _MobilePickThreeMonForBattleText::
