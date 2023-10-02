@@ -399,8 +399,8 @@ Function171a95:
 	jp Function171c66
 
 String_171aa7:
-	db   "Connecting to";"モバイルアダプタに"
-	next "MOBILE ADAPTER…";"せつぞく　しています"
+	db   "Conectando con";"モバイルアダプタに"
+	next "ADAPTADOR MÓVIL…";"せつぞく　しています"
 	;next "しばらく　おまちください"
 	db   "@"
 
@@ -645,8 +645,8 @@ MenuHeader_171c6b:
 	db 0 ; default option
 
 String_171c73:
-	db   "MOBILE CENTER";"モバイルセンターを　けってい"
-	next "set.@";"しました@"
+	db   "CENTRO MÓVIL";"モバイルセンターを　けってい"
+	next "establecido.@";"しました@"
 
 Function171c87:
 	call DisableLCD
@@ -669,7 +669,7 @@ Function171c87:
 	hlcoord 3, 2
 	ld de, String_172e31
 	call PlaceString
-	hlcoord 2, 16;3, 16
+	hlcoord 2, 16
 	ld de, String_172e3f
 	call PlaceString
 	ret
@@ -782,8 +782,8 @@ String_172e4e:
 String_172e58:
 	db "OK@";"けってい@"
 String_172e5d:
-	db   "Connect to a";"せつぞくする　モバイルセンターを"
-	next "MOBILE CENTER@";"えらんで　ください@"
+	db   "Conectar con un";"せつぞくする　モバイルセンターを"
+	next "CENTRO MÓVIL@";"えらんで　ください@"
 
 Function172e78:
 	ld a, $7f
