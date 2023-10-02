@@ -53,7 +53,7 @@ VioletPokecenter1F_ElmsAideScript:
 	end
 
 .eggname
-	db "EGG@"
+	db "HUEVO@"
 
 .AideGivesEgg:
 	jumpstd ReceiveTogepiEggScript
