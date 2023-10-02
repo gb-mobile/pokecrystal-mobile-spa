@@ -1263,9 +1263,9 @@ MobileTradeAnim_DisplayEggData:
 	ret
 
 .EggTemplate:
-	db   "EGG";"タマゴ"
-	next "OT/?????";"おや/？？？？？"
-	next "<ID>№.?????";"<ID>№<DOT>？？？？？"
+	db   "HUEVO";"タマゴ"
+	next "EO/?????";"おや/？？？？？"
+	next "№<ID>?????";"<ID>№<DOT>？？？？？"
 	db   "@"
 
 Function108a33:
@@ -1284,7 +1284,7 @@ Function108a33:
 	ret
 
 .OddEgg:
-	db "ODD EGG@";"なぞのタマゴ@"
+	db "HUEVO RARO@";"なぞのタマゴ@"
 
 MobileTradeAnim_LoadMonTemplate:
 	call WaitTop
@@ -1303,8 +1303,8 @@ MobileTradeAnim_LoadMonTemplate:
 .MonTemplate:
 	db   "─── №.";"─　№<DOT>"
 	next ""
-	next "OT/";"おや／"
-	next "<ID>№.";"<ID>№<DOT>"
+	next "EO/";"おや／"
+	next "№<ID>";"<ID>№<DOT>"
 	db   "@"
 
 MobileTradeAnim_MonDisplay_UpdateBGMap:
