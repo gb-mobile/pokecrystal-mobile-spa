@@ -69,10 +69,10 @@ MainMenu:
 	db "JUEGO NUEVO@"
 	db "OPCIÓN@"
 	db "REGALO MIST@"
-	db "MOBILE@"
-	db "MOBILE STADIUM@"
+	db "MÓVIL@"
+	db "ESTADIO MÓVIL@"
 if DEF(_DEBUG)
-	db "DEBUG ROOM@"
+	db "SALA DEBUG@"
 endc
 
 .Jumptable:
