@@ -951,14 +951,14 @@ EZChatDrawBKG_ChatWords:
 	ret
 
 EZChatString_ChatExplanation: ; Explanation string
-	db   "Combine four words";"６つのことば¯くみあわせます"
-	next "or phrases.";"かえたいところ¯えらぶと　でてくる"
-	next "Select a space";"ことばのグループから　いれかえたい"
-	next "and choose a word.";"たんご¯えらんでください"
+	db   "Combine cuatro pa-";"６つのことば¯くみあわせます"
+	next "labras o frases.";"かえたいところ¯えらぶと　でてくる"
+	next "Comience eligiendo";"ことばのグループから　いれかえたい"
+	next "un espacio.";"たんご¯えらんでください"
 	db   "@"
 
 EZChatString_ChatExplanationBottom: ; Explanation commands string
-	db "RESET　QUIT  　OK@";"ぜんぶけす　やめる　　　けってい@"
+	db "REINI　SALIR 　OK@";"ぜんぶけす　やめる　　　けってい@"
 
 EZChatDraw_CategoryMenu: ; Open category menu
 ; might need no change here
@@ -1148,7 +1148,7 @@ EZChat_SortMenuBackground:
 	ret
 
 EZChatString_Stop_Mode_Cancel:
-	db "DEL  　MODE　　QUIT@";"けす　　　　モード　　　やめる@"
+	db "ELI  　MODO　　SALIR@";"けす　　　　モード　　　やめる@"
 
 EZChatCoord_Categories: ; Category Coordinates
 	dwcoord  1,  7 ; PKMN
@@ -1732,13 +1732,13 @@ BCD2String: ; unreferenced
 	ret
 
 MobileString_Page: ; unreferenced
-	db "PAGE@";"ぺージ@"
+	db "PÁG.@";"ぺージ@"
 
 MobileString_Prev:
-	db "PREV@";"まえ@"
+	db "ANT.@";"まえ@"
 
 MobileString_Next:
-	db "NEXT@";"つぎ@"
+	db "SIG.@";"つぎ@"
 
 EZChat_VerifyWordPlacement:
 ; make sure that if one row contains a mon name
@@ -2071,11 +2071,11 @@ Function11ca19:
 	ret
 
 EZChatString_EraseMenu: ; Erase words string, accessed from erase command on entry menu for EZ chat
-	db   "All words will";"とうろくちゅう<NO>あいさつ¯ぜんぶ"
-	next "be erased. OK?@";"けしても　よろしいですか？@"
+	db   "Todo será borrado.";"とうろくちゅう<NO>あいさつ¯ぜんぶ"
+	next "¿De acuerdo?@";"けしても　よろしいですか？@"
 
 EZChatString_EraseConfirmation: ; Erase words confirmation string
-	db   "YES";"はい"
+	db   "SÍ";"はい"
 	next "NO@";"いいえ@"
 
 EZChatMenu_EraseWordsAccept:
@@ -2198,12 +2198,12 @@ EZChatMenu_ExitSubmenu: ; Exit Message menu
 	ret
 
 EZChatString_ExitPrompt: ; Exit menu string
-	db   "Want to stop";"あいさつ<NO>とうろく¯ちゅうし"
-	next "setting a message?@";"しますか？@"
+	db   "¿Dejar de escribir";"あいさつ<NO>とうろく¯ちゅうし"
+	next "un mensaje?@";"しますか？@"
 
 EZChatString_ExitConfirmation: ; Exit menu confirmation string
-	db   "Quit without";"とうろくちゅう<NO>あいさつ<WA>ほぞん"
-	next "saving a message? @";"されません<GA>よろしい　ですか？@"
+	db   "¿Salir sin guardar";"とうろくちゅう<NO>あいさつ<WA>ほぞん"
+	next "un mensaje? @";"されません<GA>よろしい　ですか？@"
 
 EZChatDraw_MessageTypeMenu: ; Message Type Menu Drawing (Intro/Battle Start/Win/Lose menu)
 	ld hl, EZChatString_MessageDescription
@@ -2327,20 +2327,20 @@ EZChatString_MessageDescription: ; Message usage strings
 	dw EZChatString_MessageBattleLoseDescription
 
 EZChatString_MessageIntroDescription:
-	db   "Shown as an";"じこしょうかい　は"
-	next "introduction. OK?@";"この　あいさつで　いいですか？@"
+	db   "Visto como una";"じこしょうかい　は"
+	next "introducción. ¿OK?@";"この　あいさつで　いいですか？@"
 
 EZChatString_MessageBattleStartDescription:
-	db   "Shown when a";"たいせん　<GA>はじまるとき　は"
-	next "battle starts. OK?@";"この　あいさつで　いいですか？@"
+	db   "Visto cuando ini-";"たいせん　<GA>はじまるとき　は"
+	next "cia combate. ¿OK?@";"この　あいさつで　いいですか？@"
 
 EZChatString_MessageBattleWinDescription:
-	db   "Shown if you";"たいせん　<NI>かったとき　は"
-	next "win a battle. OK?@";"この　あいさつで　いいですか？@"
+	db   "Visto cuando";"たいせん　<NI>かったとき　は"
+	next "gana combate. ¿OK?@";"この　あいさつで　いいですか？@"
 
 EZChatString_MessageBattleLoseDescription:
-	db   "Shown if you";"たいせん　<NI>まけたとき　は"
-	next "lose a battle. OK?@";"この　あいさつで　いいですか？@"
+	db   "Visto cuando pier-";"たいせん　<NI>まけたとき　は"
+	next "de combate. ¿OK?@";"この　あいさつで　いいですか？@"
 
 EZChatString_MessageSet: ; message accept strings, one for each type of message.
 	dw EZChatString_MessageIntroSet
@@ -2349,20 +2349,20 @@ EZChatString_MessageSet: ; message accept strings, one for each type of message.
 	dw EZChatString_MessageBattleLoseSet
 
 EZChatString_MessageIntroSet:
-	db   "INTRODUCTION"		;"じこしょうかい　の"
-	next "message set!@"	;next "あいさつ¯とうろくした！@"
+	db   "¡Mensaje INTRODUC-"		;"じこしょうかい　の"
+	next "CIÓN establecido!@"	;next "あいさつ¯とうろくした！@"
 
 EZChatString_MessageBattleStartSet:
-	db   "BEGIN BATTLE"		;"たいせん　<GA>はじまるとき　の"
-	next "message set!@"	;next "あいさつ¯とうろくした！@"
+	db   "¡Mensaje de COM-"		;"たいせん　<GA>はじまるとき　の"
+	next "BATE establecido!@"	;next "あいさつ¯とうろくした！@"
 
 EZChatString_MessageBattleWinSet:
-	db   "WIN BATTLE"		;"たいせん　<NI>かったとき　の"
-	next "message set!@"	;next "あいさつ¯とうろくした！@"
+	db   "¡Mensaje de VICTO-"		;"たいせん　<NI>かったとき　の"
+	next "RIA establecido!@"	;next "あいさつ¯とうろくした！@"
 
 EZChatString_MessageBattleLoseSet:
-	db   "LOSE BATTLE"		;"たいせん　<NI>まけたとき　の"
-	next "message set!@"	;next "あいさつ¯とうろくした！@"
+	db   "¡Mensaje de DERRO-"		;"たいせん　<NI>まけたとき　の"
+	next "TA establecido!@"	;next "あいさつ¯とうろくした！@"
 
 EZChatMenu_WarnEmptyMessage:
 	ld de, EZChatBKG_SortBy
@@ -2383,8 +2383,8 @@ Function11cd04:
 	ret
 
 EZChatString_EnterSomeWords:
-	db 	 "Please enter a";"なにか　ことば¯いれてください@"
-	next "phrase or word.@"
+	db 	 "Favor ingresar una";"なにか　ことば¯いれてください@"
+	next "frase o palabra.@"
 
 EZChatDraw_SortByMenu: ; Draws/Opens Sort By Menu
 	call EZChat_ClearBottom12Rows
