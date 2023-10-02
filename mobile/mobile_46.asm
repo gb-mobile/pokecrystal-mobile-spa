@@ -5998,7 +5998,7 @@ Text_ReceivedNews:
 	done
 
 Text_QuitReadingNews:
-	text "¿Dejas de leer las"
+	text "¿Dejar de leer las"
 	line "NOTICIAS?"
 	done
 
@@ -6043,13 +6043,13 @@ Text_UberRestriction:
 	done
 
 Text_CancelBattleRoomChallenge:
-	text "¿Cancelas tu"
+	text "¿Cancelar tu"
 	line "desafío de SALA"
 	cont "BATALLA?"
 	done
 
 Text_ExitGymLeaderHonorRoll:
-	text "¿Sales de la LISTA"
+	text "¿Salir de la LISTA"
 	line "de HONOR de los"
 	cont "LÍDER de la SALA?"
 	done
@@ -6065,7 +6065,7 @@ Text_WhatLevelDoYouWantToChallenge:
 	done
 
 Text_CheckBattleRoomListByMaxLevel:
-	text "¿Compruebas la"
+	text "¿Comprobar la"
 	line "lista de SALAS"
 
 	para "BATALLA por nivel"
@@ -6074,7 +6074,8 @@ Text_CheckBattleRoomListByMaxLevel:
 
 Text_EnterWhichBattleRoom: ; unreferenced
 	text "¿En qué SALA"
-	line "BATALLA entras?"
+	line "BATALLA desea"
+	cont "entrar?"
 	done
 
 Text_WhichBattleRoom: ; unreferenced
@@ -6098,7 +6099,7 @@ Text_ThisBattleRoomPleaseWait:
 	line "de @"
 	text_ram wStringBuffer3
 	text "?"
-	cont "Por favor, espera…"
+	cont "Por favor, espere…"
 	done
 
 Function11ac3e:
