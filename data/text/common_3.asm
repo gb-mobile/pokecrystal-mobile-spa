@@ -825,10 +825,10 @@ _MobileCardFolderIntro2Text::
 	para "Una vez hayas in-"
 	line "troducido tu núme-"
 	cont "ro de teléfono,"
-	cont "podrás cambiar"
-
-	para "TARJETAS con tus"
-	line "amigos/as."
+	
+	para "podrás cambiar"
+	line "TARJETAS con tus"
+	cont "amigos/as."
 	prompt
 
 _MobileCardFolderIntro3Text::
@@ -880,7 +880,7 @@ _MobileCardFolderDeleteAreYouSureText::
 _MobileCardFolderDeletedText::
 	text "El TARJETERO"
 	line "ha sido borrado."
-	done
+	prompt
 
 _MobileCardFolderAskOpenOldText::
 	text "Hay un TARJETERO"

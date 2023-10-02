@@ -521,14 +521,14 @@ Function17a99e:
 	ld b, $4
 	ld c, $12
 	call Function17ac46
-	hlcoord 2, 14
+	hlcoord 1, 14
 	ld de, String_17a9b2
 	call PlaceString
 	ret
 
 String_17a9b2:
-	db   "Invalid phone" ;"でんわばんごうが　ただしく"
-	next "number!" ;"はいって　いません！"
+	db   "¡Número telefónico" ;"でんわばんごうが　ただしく"
+	next "inválido!" ;"はいって　いません！"
 	db   "@"
 
 Function17a9cb:
