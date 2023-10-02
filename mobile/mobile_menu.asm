@@ -362,7 +362,7 @@ Function4a239:
 	jp Function4a13b
 
 Strings_4a23d:
-	db   "Escoger CENTRO";"いつも　せつぞく¯する"
+	db   "Escoge CENTRO";"いつも　せつぞく¯する"
 	next "MÓVIL a usar.@";"モバイルセンター¯えらびます@"
 
 	db   "CÓDIGO usado";"モバイルセンター<NI>せつぞくするとき"

@@ -618,7 +618,7 @@ NotAPokemonPasswordString:
 
 SavedPasswordString:
 	db   "CÓDIGO DE AC-";"ログインパスワード¯ほぞん"
-	line "CESO guardada.@";"しました@"
+	line "CESO guardado.@";"しました@"
 
 MobilePassword_IncrementJumptable:
 	ld hl, wcd49
