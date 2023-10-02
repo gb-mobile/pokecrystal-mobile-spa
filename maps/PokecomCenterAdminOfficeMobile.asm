@@ -48,16 +48,16 @@ PokecomCenterAdminOfficeMobileComputer1:
 
 .Computer1MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, 8
+	menu_coords 0, 0, 14, 8
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 3 ; items
-	db "#COM CLUB@" ; # COM CLUB
-	db "MOBILE CENTER@" ; MOBILE CENTER
-	db "CANCEL@" ; QUIT
+	db "CLUB #COM@" ; # COM CLUB
+	db "CENTRO MÓVIL@" ; MOBILE CENTER
+	db "SALIR@" ; QUIT
 
 PokecomCenterAdminOfficeMobileComputer2:
 	opentext
@@ -90,16 +90,16 @@ PokecomCenterAdminOfficeMobileComputer2:
 
 .Computer2MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, 8
+	menu_coords 0, 0, 13, 8
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 3 ; items
-	db "PHONE GUIDE@" ; Use phone
-	db "PHONE ISSUES@" ; Don't use phone
-	db "CANCEL@" ; QUIT
+	db "GUÍA DE USO@" ; Use phone
+	db "PROBLEMAS@" ; Don't use phone
+	db "SALIR@" ; QUIT
 
 PokecomCenterAdminOfficeMobileComputer3:
 	jumptext PokecomCenterAdminOfficeMobileComputer3Text
