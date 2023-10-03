@@ -7019,11 +7019,8 @@ Function11b279:
 .asm_11b294
 	ret
 
-Function11b295: ; pokemon to receive
-	;hlcoord 8, 3 ;4, 13
-	;ld de, String_11b308
-	;call PlaceString
-	hlcoord 8, 4 ;4, 14
+Function11b295: ; Pokémon to receive
+	hlcoord 8, 4
 	ld de, String_11b308
 	call PlaceString
 	call Function11b20b
@@ -7041,7 +7038,7 @@ Function11b295: ; pokemon to receive
 	add hl, bc
 	ld e, [hl]
 	farcall FlyFunction_GetMonIcon
-	hlcoord 8, 4 ;4, 14
+	hlcoord 8, 4
 	push hl
 	call GetPokemonName
 	jr .asm_11b2e7
@@ -7060,7 +7057,7 @@ Function11b295: ; pokemon to receive
 	ld de, String_11b30e
 
 .asm_11b2e7
-	ld a, MON_NAME_LENGTH ;6 crash fix
+	ld a, MON_NAME_LENGTH
 	ld bc, wStringBuffer4
 .asm_11b2ec
 	push af
@@ -7070,12 +7067,10 @@ Function11b295: ; pokemon to receive
 	inc bc
 	pop af
 	dec a
-	and a
 	jr nz, .asm_11b2ec
 	pop hl
 	ld de, wStringBuffer4
-	call PlaceString
-	ret
+	jp PlaceString
 
 ; bank space, these are unused anyway
 ;String_11b2fe: ; unreferenced
@@ -7088,7 +7083,7 @@ String_11b308:
 	db "　　　　　　　　　　@"
 
 String_11b30e:
-	db "?????" ;"みはっけん@"
+	db "??????????@" ;"みはっけん@"
 
 Function11b314:
 	call Function11b31b
