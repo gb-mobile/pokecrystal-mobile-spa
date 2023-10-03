@@ -3052,7 +3052,7 @@ MenuData_0x8a417:
 	db 4 ; items
 	db "TARJETAS@" ;"めいしりスト@"
 	db "MI TARJ.@" ;"じぶんの　めいし@"
-	db "CAMBIAR@" ;"めいしこうかん@"
+	db "ENVIAR@" ;"めいしこうかん@"
 	db "SALIR@" ;"やめる@"
 
 MenuHeader_0x8a435:
@@ -3097,7 +3097,7 @@ Strings_8a483:
 	db   "Ingresa n.° para";"でんわばんごう<WO>いれると"
 	next "enviar TARJETAS.@";"めいしこうかん<GA>できます@"
 
-	db   "Cambia TARJETAS";"ともだちと　じぶん<NO>めいしを"
+	db   "Comparte TARJETAS";"ともだちと　じぶん<NO>めいしを"
 	next "con amigos via IR.@";"せきがいせんで　こうかん　します@"
 
 Function8a4d3:

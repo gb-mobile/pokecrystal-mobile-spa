@@ -13,11 +13,11 @@ Function49f16:
 	call MobileMenu_InitMenuBuffers
 	ld c, 12
 	call DelayFrames
-	hlcoord 3, 0 ;4, 0
+	hlcoord 4, 0
 	ld b, 10 ; menu height
-	ld c, 12 ;10 ; menu width
+	ld c, 10 ; menu width
 	call DisplayBlankGoldenBox
-	hlcoord 5, 2 ;6, 2 ; menu text position
+	hlcoord 6, 2 ; menu text position
 	ld de, MobileString1
 	call PlaceString
 	hlcoord 0, 12
@@ -88,16 +88,13 @@ Function49f16:
 	call ClearBox
 	hlcoord 1, 14
 	call PlaceString
-	jp .useless_jump
-
-.useless_jump
 	call MobileMenu_InitMenuBuffers
 	pop bc
 	ld hl, wMenuCursorY
 	ld [hl], b
 	ld b, $a
 	ld c, $1
-	hlcoord 4, 1
+	hlcoord 5, 1
 	call ClearBox
 	jp .joy_loop
 
@@ -135,13 +132,13 @@ MobileMenu_InitMenuBuffers:
 	ld hl, w2DMenuCursorInitY
 	ld a, 2
 	ld [hli], a
-	ld a, 4 ;5 ; w2DMenuCursorInitX
+	ld a, 5 ; w2DMenuCursorInitX
 	ld [hli], a
 	ld a, 5 ; w2DMenuNumRows
 	ld [hli], a
 	ld a, 1 ; w2DMenuNumCols
 	ld [hli], a
-	ld [hl], $0 ; w2DMenuFlags1
+	ld [hl], 0 ; w2DMenuFlags1
 	set 5, [hl]
 	inc hl
 	xor a ; w2DMenuFlags2
