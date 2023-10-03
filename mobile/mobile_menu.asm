@@ -251,11 +251,11 @@ Function4a13b:
 
 MobileSettingsMenu:
 	call LoadTilesAndDisplayMobileMenuBackground
-	hlcoord 1, 2
-	ld b, $6
-	ld c, $10
+	hlcoord 2, 2
+	ld b, 6
+	ld c, 14
 	call DisplayBlankGoldenBox
-	hlcoord 3, 4
+	hlcoord 4, 4
 	ld de, String_4a1ef
 	call PlaceString
 	hlcoord 0, 12
@@ -327,13 +327,13 @@ asm_4a19d:
 	ld hl, wMenuCursorY
 	ld [hl], b
 	lb bc, 6, 1
-	hlcoord 2, 3
+	hlcoord 3, 3
 	call ClearBox
 	jp Function4a195
 
 String_4a1ef:
 	db   "CENTRO MÓVIL";"モバイルセンター¯えらぶ"
-	next "CÓDIGO INGRESO";"ログインパスワード¯いれる"
+	next "CÓDIGO ACCESO";"ログインパスワード¯いれる"
 	next "SALIR@";"もどる@"
 
 Function4a20e:
@@ -374,7 +374,7 @@ Strings_4a23d:
 	db   "@"
 
 Function4a28a:
-	hlcoord 2, 3
+	hlcoord 3, 3
 	lb bc, 6, 1
 	ld a, " "
 	call MobileMenu_FillBGArea
@@ -485,7 +485,7 @@ Function4a373:
 	ld hl, w2DMenuCursorInitY
 	ld a, $4
 	ld [hli], a
-	ld a, $2
+	ld a, $3
 	ld [hli], a
 	ld a, $3
 	ld [hli], a
