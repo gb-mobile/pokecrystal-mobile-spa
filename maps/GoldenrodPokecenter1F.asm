@@ -873,7 +873,7 @@ GoldenrodPokecomCenterMakingPreparationsText:
 	done
 
 GoldenrodPokecomCenterSaveBeforeNewsMachineText:
-	text "GUARDAREMOS tu"
+	text "Vamos a GUARDAR tu"
 	line "progreso antes de"
 
 	para "poner en marcha la"

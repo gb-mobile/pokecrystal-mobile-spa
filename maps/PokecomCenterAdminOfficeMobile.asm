@@ -149,7 +149,7 @@ PokecomCenterAdminOfficeMobileComputer1Text:
 	text "Es una nota sobre"
 	line "dónde deben usarse"
 
-	para "los ADAPTADORES de"
+	para "los ADAPTADORES"
 	line "MÓVIL…"
 	done
 
@@ -171,8 +171,7 @@ PokecomCenterAdminOfficeMobileComputer1Text_PokeComClub:
 	line "amigo/a debe tener"
 
 	para "el mismo tipo de"
-	line "ADAPTADOR de"
-	cont "MÓVIL."
+	line "ADAPTADOR MÓVIL."
 	done
 
 PokecomCenterAdminOfficeMobileComputer1Text_MobileCenter:
@@ -202,7 +201,7 @@ PokecomCenterAdminOfficeMobileComputer2Text_UsePhone:
 	text "Asegúrate de que"
 	line "tu teléfono y el"
 
-	para "ADAPTADOR de MÓVIL"
+	para "ADAPTADOR MÓVIL"
 	line "están bien"
 	cont "conectados."
 
@@ -212,7 +211,9 @@ PokecomCenterAdminOfficeMobileComputer2Text_UsePhone:
 
 	para "No toques ni"
 	line "cuelgues el móvil"
-	cont "mientras conecta."
+	
+	para "mientras se"
+	line "conecta."
 	done
 
 PokecomCenterAdminOfficeMobileComputer2Text_DontUsePhone:
