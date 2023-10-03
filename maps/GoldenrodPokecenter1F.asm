@@ -736,7 +736,7 @@ GoldenrodPokecomCenterOddEggBriefingText:
 	para "CAMBIO se hacen"
 	line "entre dos entrena-"
 	cont "dores que no se"
-	line "conocen."
+	cont "conocen."
 
 	para "Por eso, puede que"
 	line "lleve tiempo."
@@ -803,7 +803,7 @@ GoldenrodPokecomCenterNewsMachineExplanationText:
 	line "archivos GUARDADOS"
 
 	para "de entrenadores"
-	cont "#MON."
+	line "#MON."
 
 	para "Cuando leas las"
 	line "NOTICIAS, tu"
@@ -816,10 +816,10 @@ GoldenrodPokecomCenterNewsMachineExplanationText:
 
 	para "contiene tu"
 	line "progreso y tu"
-	cont "perfil de móvil."
+	cont "perfil móvil."
 
 	para "No se enviará tu"
-	line "número de móvil."
+	line "número móvil."
 
 	para "El contenido de"
 	line "las NOTICIAS"
