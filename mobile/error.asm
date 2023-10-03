@@ -523,11 +523,11 @@ String_17fb6e:
 
 String_17fbb6:
 	db   "No es posible leer" ; "データの　よみこみが　できません"
-	next "los datos. Favor" ; "しばらくまって"
-	next "intente de nuevo." ; "かけなおして　ください"
-	next "Si el problema" ; "なおらない　ときは"
-	next "persiste, favor" ; "モバイルサポートセンターへ"
-	next "contactar soporte." ; "おといあわせください"
+	next "los datos. Intén-" ; "しばらくまって"
+	next "telo de nuevo. Si" ; "かけなおして　ください"
+	next "el problema per-" ; "なおらない　ときは"
+	next "siste, favor con-" ; "モバイルサポートセンターへ"
+	next "tacte a soporte." ; "おといあわせください"
 	db   "@" 
 	
 String_17fbfe:
@@ -607,11 +607,11 @@ String_17fdd9:
 
 String_17fe03:
 	db   "No es posible leer" ; "データの　よみこみが　できません"
-	next "los datos. Favor" ; "しばらくまって"
-	next "intente de nuevo." ; "かけなおして　ください"
-	next "Si el problema" ; "なおらない　ときは"
-	next "persiste, favor" ; "モバイルサポートセンターへ"
-	next "contacte soporte." ; "おといあわせください"
+	next "los datos. Intén-" ; "しばらくまって"
+	next "telo de nuevo. Si" ; "かけなおして　ください"
+	next "el problema per-" ; "なおらない　ときは"
+	next "siste, favor con-" ; "モバイルサポートセンターへ"
+	next "tacte a soporte." ; "おといあわせください"
 	db   "@" 
 
 String_17fe4b:
