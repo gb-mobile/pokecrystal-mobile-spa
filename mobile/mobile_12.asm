@@ -624,8 +624,8 @@ Strings_484fb:
 String_484fb: db "Chico@"
 String_484ff: db "Chica@"
 Strings_484fc:
-String_484fc: db " Boy@"
-String_48500: db "Girl@"
+String_484fc: db "Chico@"
+String_48500: db "Chica@"
 
 MenuHeader_0x48504:
 	db MENU_BACKUP_TILES ; flags
