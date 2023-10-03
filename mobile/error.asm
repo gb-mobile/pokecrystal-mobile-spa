@@ -523,7 +523,7 @@ String_17fb6e:
 
 String_17fbb6:
 	db   "No es posible leer" ; "データの　よみこみが　できません"
-	next "la data. Por favor" ; "しばらくまって"
+	next "los datos. Favor" ; "しばらくまって"
 	next "intente de nuevo." ; "かけなおして　ください"
 	next "Si el problema" ; "なおらない　ときは"
 	next "persiste, favor" ; "モバイルサポートセンターへ"
@@ -583,7 +583,7 @@ String_17fd47:
 	
 String_17fd84:
 	db   "No es posible" ; "データの　よみこみが　できません"
-	next "leer la data." ; くわしくは　とりあつかい
+	next "leer los datos." ; くわしくは　とりあつかい
 	next "Favor revise el" ; "せつめいしょを　ごらんください"
 	next "el manual para" 
 	next "más detalles." 
@@ -607,7 +607,7 @@ String_17fdd9:
 
 String_17fe03:
 	db   "No es posible leer" ; "データの　よみこみが　できません"
-	next "la data. Favor" ; "しばらくまって"
+	next "los datos. Favor" ; "しばらくまって"
 	next "intente de nuevo." ; "かけなおして　ください"
 	next "Si el problema" ; "なおらない　ときは"
 	next "persiste, favor" ; "モバイルサポートセンターへ"
