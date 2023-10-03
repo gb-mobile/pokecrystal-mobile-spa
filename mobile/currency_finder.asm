@@ -29,7 +29,7 @@ CopyCurrencyString: ; I know this is ugly, I copied and pasted this function fro
 
 
 
-String_Currency_Cents: ; Note that this is unoptimized, as the string "Is this OK?@" is repeted.
-	db   " cents";"えん"
-	next "Is this OK?@";"かかります　よろしい　ですか？@"
+String_Currency_Cents: ; Note that this is unoptimized, as the string "Is this OK?@" is repeated.
+	db   " centavos.";"えん"
+	next "¿Es correcto?@";"かかります　よろしい　ですか？@"
 	

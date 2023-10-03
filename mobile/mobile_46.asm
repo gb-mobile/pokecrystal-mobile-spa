@@ -6003,7 +6003,7 @@ Text_QuitReadingNews:
 	done
 
 Text_CanceledSendingSaveFile: ; unreferenced
-	text "Envío de FICHERO"
+	text "Envío de ARCHIVO"
 	line "GUARDADO"
 	cont "cancelado."
 	done
@@ -6051,7 +6051,9 @@ Text_CancelBattleRoomChallenge:
 Text_ExitGymLeaderHonorRoll:
 	text "¿Salir de la LISTA"
 	line "de HONOR de los"
-	cont "LÍDER de la SALA?"
+
+	para "LÍDERES de GIMNA-"
+	line "SIO?"
 	done
 
 Text_LinkingWithCenter: ; unreferenced
@@ -6073,26 +6075,17 @@ Text_CheckBattleRoomListByMaxLevel:
 	done
 
 Text_EnterWhichBattleRoom: ; unreferenced
-	text "¿En qué SALA"
+	text "¿A cuál SALA"
 	line "BATALLA desea"
 	cont "entrar?"
 	done
 
 Text_WhichBattleRoom: ; unreferenced
-	text "¿Qué SALA"
+	text "¿Cuál SALA"
 	line "BATALLA?"
 	done
 
 Text_ThisBattleRoomPleaseWait:
-;	text_ram wStringBuffer3
-;	text "'s ROOM"
-;	line "@"
-;	text_ram wStringBuffer4
-;	text "?"
-;	cont "Please wait…"
-;	done
-
-	; less awkward
 	text "¿SALA @"
 	text_ram wStringBuffer4
 	text_start

@@ -1417,16 +1417,17 @@ _TrainerRankingExplanationText:: ; unreferenced
 	text "¡Ranking triple de"
 	line "entrenadores!"
 
-	para "¡El fichero que"
+	para "¡El archivo que"
 	line "acabas de enviar"
 
-	para "generará las"
-	line "posiciones!"
+	para "puede que aparezca"
+	line "en las clasifica-"
+	cont "ciones!"
 	done
 
 _TrainerRankingNoDataText:: ; unreferenced
 	text "No hay datos de"
-	line "posiciones."
+	line "clasificaciones."
 
 	para "Conectando para"
 	line "obtener datos."

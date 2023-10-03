@@ -116,15 +116,15 @@ String_0x49fe9:
 	next "TARJETAS.@"
 
 String_0x4a004:
-	db   "Haz TARJETAS y";"モバイルたいせんや　じぶんのめいしで"
-	next "mensajes combate.@";"つかう　あいさつ¯つくります@"
+	db   "Crea mensajes para";"モバイルたいせんや　じぶんのめいしで"
+	next "TARJETA y combate.@";"つかう　あいさつ¯つくります@"
 
 String_0x4a026:
 	db   "Cambia tu edad";"あなた<NO>じゅうしょや　ねんれいの"
 	next "y dirección.@";"せ<TTE>い¯かえられます@"
 
 String_0x4a042:
-	db   "Escoge config.";"モバイルセンター<NI>せつぞくするとき"
+	db   "Selecciona config.";"モバイルセンター<NI>せつぞくするとき"
 	next "para conectarte.@";"ひつような　こと¯きめます@"
 
 String_0x4a062:
@@ -780,8 +780,8 @@ Strings_4a5f6:
     db "un combate móvil.@";"あいて<NI>みえる　あいさつです@"
     db "Visto al perder@";"モバイル　たいせんで　まけたとき@"
     db "un combate móvil.@";"あいて<NI>みえる　あいさつです@"
-	db "Regresa a la pan-@";"まえ<NO>がめん　<NI>もどります@"
-	db "talla anterior.@"
+	db "Regresa a la@";"まえ<NO>がめん　<NI>もどります@"
+	db "pantalla anterior.@"
 
 Function4a680:
 	ld hl, w2DMenuCursorInitY
