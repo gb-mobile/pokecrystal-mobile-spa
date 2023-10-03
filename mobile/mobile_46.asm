@@ -6188,8 +6188,8 @@ Function11ad1b:
 Function11ad6e:
 	ld a, [wJumptableIndex]
 	ld hl, Jumptable_11ad78
-	call Function11b239
-	jp hl
+	rst JumpTable
+	ret
 
 Jumptable_11ad78:
 	dw Function11b082
@@ -6953,16 +6953,6 @@ CheckSeenMemMon:
 Function11b236:
 	jp FillBoxWithByte
 
-Function11b239:
-	ld e, a
-	ld d, 0
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	ret
-
 Function11b242: ; pokemon to trade
 	hlcoord 8, 2 ;3, 4
 	ld de, wStringBuffer3
@@ -6999,10 +6989,6 @@ Function11b272:
 	ret
 
 Function11b275:
-	call Function11b279
-	ret
-
-Function11b279:
 	ld a, [wTempSpecies]
 	ld [wCurSpecies], a
 	call CheckSeenMemMon
@@ -7010,13 +6996,11 @@ Function11b279:
 	call GetBaseData
 	ld a, [wBaseGender]
 	ld [wcf65], a
-	jr .asm_11b294
+	ret
 
 .asm_11b28f
 	ld a, $ff
 	ld [wcf65], a
-
-.asm_11b294
 	ret
 
 Function11b295: ; Pokémon to receive
@@ -7050,9 +7034,9 @@ Function11b295: ; Pokémon to receive
 	ld b, a
 	ld hl, $0007
 	add hl, bc
-	ld a, $60 ;$50 move pokemon icon off screen
+	ld a, $60
 	ld [hl], a
-	hlcoord 8, 4 ;4, 13
+	hlcoord 8, 4
 	push hl
 	ld de, String_11b30e
 
@@ -7072,13 +7056,6 @@ Function11b295: ; Pokémon to receive
 	ld de, wStringBuffer4
 	jp PlaceString
 
-; bank space, these are unused anyway
-;String_11b2fe: ; unreferenced
-;	db "あげる#@"
-
-;String_11b303: ; unreferenced
-;	db "ほしい#@"
-
 String_11b308:
 	db "　　　　　　　　　　@"
 
@@ -7086,11 +7063,6 @@ String_11b30e:
 	db "??????????@" ;"みはっけん@"
 
 Function11b314:
-	call Function11b31b
-	call Function11b3d9
-	ret
-
-Function11b31b:
 	ld hl, .Coords
 	ld a, [wJumptableIndex]
 	cp 2
@@ -7120,7 +7092,7 @@ Function11b31b:
 
 .load_sprites
 	call Function11b397
-	ret
+	jp Function11b3d9
 
 .Coords:
 	dbpixel  9,  7, 2, 6 ;  0
