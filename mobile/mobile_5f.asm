@@ -354,7 +354,7 @@ Mobile_CopyDefaultMail:
 	ret
 
 .DefaultMessage:
-	db "Hello@"
+	db "¡Hola!@"
 .DefaultMessageEnd:
 
 Mobile_CopyDefaultMailAuthor:
@@ -505,46 +505,46 @@ Function17d246:
 
 MenuHeader_17d26a:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 14, 9
+	menu_coords 0, 0, SCREEN_WIDTH - 2, 9
 	dw MenuData_17d272
 	db 1 ; default option
 
 MenuData_17d272:
 	db STATICMENU_CURSOR | STATICMENU_WRAP ; flags
 	db 4
-	db "RECEIVE NEWS@" 	; "ニュース¯よみこむ@"
-	db "READ NEWS@" 	; "ニュース¯みる@"
-	db "EXPLANATION@" 	; "せつめい@"
-	db "CANCEL@" 		; "やめる@"
+	db "RECIBIR NOTICIAS@" 	; "ニュース¯よみこむ@"
+	db "LEER NOTICIAS@" 	; "ニュース¯みる@"
+	db "EXPLICACIÓN@" 	; "せつめい@"
+	db "SALIR@" 		; "やめる@"
 
 MenuHeader_ChallengeExplanationCancel:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, 7
+	menu_coords 0, 0, SCREEN_WIDTH - 4, 7
 	dw MenuData_ChallengeExplanationCancel
 	db 1 ; default option
 
 MenuData_ChallengeExplanationCancel:
 	db STATICMENU_CURSOR | STATICMENU_WRAP ; flags
 	db 4
-	db "Challenge@"
-	db "Honor Roll@" ; check leaders?
-	db "Explanation@"
-	db "Cancel@"
+	db "Desafío@"
+	db "Lista de honor@" ; check leaders?
+	db "Explicación@"
+	db "Salir@"
 
 MenuHeader_ChallengeRegisterExplanationCancel:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, 11
+	menu_coords 0, 0, SCREEN_WIDTH - 4, 11
 	dw MenuData_ChallengeRegisterExplanationCancel
 	db 1 ; default option
 
 MenuData_ChallengeRegisterExplanationCancel:
 	db STATICMENU_CURSOR | STATICMENU_WRAP ; flags
 	db 5
-	db "Challenge@"
-	db "Honor Roll@" ; check leaders?
-	db "Previous Room@"
-	db "Explanation@"
-	db "Cancel@"
+	db "Desafío@"
+	db "Lista de honor@" ; check leaders?
+	db "Sala Anterior@"
+	db "Explicación@"
+	db "Salir@"
 
 Function17d2b6:
 	call Function17d2c0
@@ -3997,8 +3997,8 @@ Function17f220:
 	ret
 
 .Genders: dw .Boy, .Girl
-.Boy:     db "Boy@"
-.Girl:    db "Girl@"
+.Boy:     db "Chico@"
+.Girl:    db "Chica@"
 
 Function17f27b:
 	pop hl
