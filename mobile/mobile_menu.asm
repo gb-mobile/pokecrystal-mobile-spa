@@ -102,7 +102,7 @@ MobileString1:
 	db   "TARJETERO"
 	next "MENSAJES"
 	next "PERFIL"
-	next "CONFIG."
+	next "OPCIONES"
 	next "SALIR"
 	db   "@"
 
@@ -121,7 +121,7 @@ String_0x4a026:
 	next "y dirección.@";"せ<TTE>い¯かえられます@"
 
 String_0x4a042:
-	db   "Selecciona config.";"モバイルセンター<NI>せつぞくするとき"
+	db   "Elige las opciones";"モバイルセンター<NI>せつぞくするとき"
 	next "para conectarte.@";"ひつような　こと¯きめます@"
 
 String_0x4a062:
@@ -362,8 +362,8 @@ Strings_4a23d:
 	db   "Escoge CENTRO";"いつも　せつぞく¯する"
 	next "MÓVIL a usar.@";"モバイルセンター¯えらびます@"
 
-	db   "CÓDIGO usado";"モバイルセンター<NI>せつぞくするとき"
-	next "para conectar.@";"つかうパスワード¯ほぞんできます@"
+	db   "CÓDIGO usado para";"モバイルセンター<NI>せつぞくするとき"
+	next "conectarte.@";"つかうパスワード¯ほぞんできます@"
 
 	db   "Regresa a la";"まえ<NO>がめん　<NI>もどります@"
 	next "pantalla anterior.@"
