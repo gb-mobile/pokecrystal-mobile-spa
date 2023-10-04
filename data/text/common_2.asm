@@ -1414,8 +1414,9 @@ _OakPCText4::
 	done
 
 _TrainerRankingExplanationText:: ; unreferenced
-	text "¡Ranking triple de"
-	line "entrenadores!"
+	text "¡Clasificatoria"
+	line "triple de entrena-"
+	cont "dores!"
 
 	para "¡El archivo que"
 	line "acabas de enviar"

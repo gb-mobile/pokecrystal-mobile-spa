@@ -442,17 +442,17 @@ String_17f946:
 	db   "@" 
 
 String_17f98e:
-	db   "Error de comunica-" ; "つうしんエラーです"
-	next "ción. Inténtelo" ; "しばらく　まって"
+	db   "Error de conexión." ; "つうしんエラーです"
+	next "Por favor intente" ; "しばらく　まって"
 	next "de nuevo. Si el" ; "かけなおして　ください"
-	next "problema persiste" ; "なおらない　ときは"
+	next "problema persiste," ; "なおらない　ときは"
 	next "por favor contacte" ; "モバイルサポートセンターへ"
 	next "a soporte." ; "おといあわせください"
 	db   "@" 
 
 String_17f9d0:
-	db   "ID de acceso o" ; "ログインパスワードか"
-	next "código inválidos." ; "ログイン　アイディーに"
+	db   "ID o código de" ; "ログインパスワードか"
+	next "acceso inválidos." ; "ログイン　アイディーに"
 	next "Por favor confirme" ; "まちがいがあります"
 	next "su información de" ; "パスワードを　かくにんして"
 	next "acceso e intente" ; "しばらく　まって"
@@ -588,19 +588,18 @@ String_17fd84:
 	db   "@" 
 
 String_17fdb2:
-	db   "La llamada ha" ; "３ぷん　いじょう　なにも"
-	next "terminado debido" ; "にゅうりょく　しなかったので"
-	next "a que no ha habido" ; "でんわが　きれました"
+	db   "La llamada ha ter-" ; "３ぷん　いじょう　なにも"
+	next "minado debido a" ; "にゅうりょく　しなかったので"
+	next "que no ha habido" ; "でんわが　きれました"
 	next "actividad durante" 
 	next "tres minutos." 
 	db   "@"
 
 String_17fdd9:
-	db   "Comunicación fa-" ; "つうしんが　うまく"
-	next "llida. Por favor" ; "できませんでした"
-	next "comience desde el" ; "もういちど　はじめから"
-	next "el inicio e inten-" ; "やりなおしてください"
-	next "te de nuevo." 
+	db   "Conexión fallida." ; "つうしんが　うまく"
+	next "Por favor comience" ; "できませんでした"
+	next "desde el inicio e" ; "もういちど　はじめから"
+	next "intente de nuevo." ; "やりなおしてください"
 	db   "@" 
 
 String_17fe03:
@@ -630,10 +629,10 @@ String_17fe63:
 String_17fe9a: ; unreferenced
 	db   "Las NOTICIAS #-" ; "ポケモンニュースが"
 	next "MON se han actua-" ; "あたらしくなっているので"
-	next "lizado. Favor des-" ; "レポートを　おくれません"
-	next "cargarlas antes" ; "あたらしい　ポケモンニュースの"
-	next "de actualizar" ; "よみこみを　さきに　してください"
-	next "los rankings." 
+	next "lizado. Por favor" ; "レポートを　おくれません"
+	next "descárguelas antes" ; "あたらしい　ポケモンニュースの"
+	next "de actualizar las" ; "よみこみを　さきに　してください"
+	next "clasificaciones." 
 	db   "@" 
 
 String_17fedf:
