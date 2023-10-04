@@ -333,12 +333,12 @@ Function100232:
 	ret
 
 String10024d:
-	db   "Communication"	; "つうしんを　キャンセル　しました@"
-	next "canceled.@"
+	db   "Conexión"	; "つうしんを　キャンセル　しました@"
+	next "cancelada.@"
 
 String10025e:
-	db   "The chosen rooms"	; "おともだちと　えらんだ　へやが"
-	next "differ!@"			; "ちがうようです@"
+	db   "¡Las salas escogi-"	; "おともだちと　えらんだ　へやが"
+	next "das difieren!@"		; "ちがうようです@"
 
 Function100276:
 	ld a, [wcd2b]
@@ -866,8 +866,7 @@ Function100597:
 
 MenuHeader_1005b2:
 	db MENU_BACKUP_TILES ; flags
-	db 6, 14
-	db 10, 19
+	menu_coords 14, 6, SCREEN_WIDTH - 1, 10
 	dw MenuData_1005ba
 	db 1 ; default option
 
@@ -913,16 +912,15 @@ Function1005e1:
 
 MenuHeader_1005fc:
 	db MENU_BACKUP_TILES ; flags
-	db 6, 13;14
-	db 10, 19
+	menu_coords 10, 6, SCREEN_WIDTH - 1, 10
 	dw MenuData_100604
 	db 1 ; default option
 
 MenuData_100604:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 2
-	db "CALL@"		; "かける@"
-	db "WAIT@"		; "まつ@"
+	db "LLAMAR@"		; "かける@"
+	db "ESPERAR@"		; "まつ@"
 
 Mobile_CommunicationStandby:
 	hlcoord 3, 10
@@ -935,7 +933,7 @@ Mobile_CommunicationStandby:
 	ret
 
 .String:
-	db "PLEASE WAIT!@"	; "つうしんたいきちゅう！@"
+	db "¡ESPERA.…!@"	; "つうしんたいきちゅう！@"
 
 AdvanceMobileInactivityTimerAndCheckExpired:
 	push bc
@@ -1049,9 +1047,9 @@ Function100697:
 String1006c2:
 	db " min. @"			; "ふん　@" Minute
 String1006c6:
-	db " sec.@"			; "びょう@" Second
+	db " seg.@"			; "びょう@" Second
 String1006ca:
-	db "1 hour or more @" 		; "１じかんいじょう@" More than 1 hour
+	db "1 hora o más@" 		; "１じかんいじょう@" More than 1 hour
 
 Function1006d3:
 	call UpdateTime
@@ -1329,11 +1327,11 @@ Function100846:
 	ret
 
 String_10088e:
-	db   "MOBILE BATTLE TIME@" 	; "モバイルたいせん　できる"
+	db   "TIEMPO BAT. MÓVIL@" 	; "モバイルたいせん　できる"
 	; "じかん@"
 
 String_10089f:
-	db "UNLIMITED@" 		; "　むせいげん@"
+	db "ILIMITADO@" 		; "　むせいげん@"
 
 MobileBattleGetRemainingTime:
 ; Calculates the difference between 10 minutes and sMobileBattleTimer
@@ -1394,9 +1392,8 @@ Function1008e0:
 	ret
 
 Function100902:
-	hlcoord 0, 10;3, 10
-	ld b, $01
-	ld c, $12 ;$0b
+	hlcoord 0, 10
+	lb bc, 1, SCREEN_WIDTH - 2
 	call Textbox
 	ld a, [wcd6d]
 	ld c, a
@@ -1405,9 +1402,9 @@ Function100902:
 	ld [wStringBuffer2], a
 	jr z, .asm_10093f
 	ld de, .string_100966
-	hlcoord 4, 11
+	hlcoord 1, 11
 	call PlaceString
-	hlcoord 1, 11;8, 11
+	hlcoord 9, 11
 	lb bc, 1, 2
 	ld de, wStringBuffer2
 	call PrintNum
@@ -1420,7 +1417,7 @@ Function100902:
 
 .asm_10093f
 	ld de, .string_10095a
-	hlcoord 5, 11;4, 11
+	hlcoord 6, 11
 	call PlaceString
 	ld de, SFX_4_NOTE_DITTY
 	call PlaySFX
@@ -1430,9 +1427,9 @@ Function100902:
 	ret
 
 .string_10095a
-	db "Time's up!@"		;"たいせん　しゅうりょう@"
+	db "¡Tiempo!@"		;"たいせん　しゅうりょう@"
 .string_100966
-	db "min. remaining!@"	;"のこり　　　ふん！@"
+	db "¡Quedan    min.!@"	;"のこり　　　ふん！@"
 
 Function100970:
 	hlcoord 0, 0
@@ -1910,11 +1907,11 @@ Function100c98:
 	ret
 
 .data:
-	db 13, 5 ; 10, 1
+	db 13, 5 ; cursor start y, x
 	db -1, 1 ; rows, columns
-	db $a0, $00
-	dn 1, 0 ; 2, 0
-	db D_UP | D_DOWN | A_BUTTON | B_BUTTON
+	db $a0, $00 ; flags
+	dn 1, 0 ; cursor offsets
+	db D_UP | D_DOWN | A_BUTTON | B_BUTTON ; accepted buttons
 
 Mobile_PartyMenuSelect:
 	call Function100dd8
@@ -2032,9 +2029,9 @@ Function100d67:
 .MenuData:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 3
-	db "SWITCH@"	; "いれかえる@"  ; TRADE
-	db "STATS@"		; "つよさをみる@" ; STATS
-	db "CANCEL@"	; "キャンセル@"  ; CANCEL
+	db "TRATO@"	; "いれかえる@"   ; TRADE
+	db "ESTAD.@"; "つよさをみる@" ; STATS
+	db "SALIR@"	; "キャンセル@"   ; CANCEL
 
 Function100da5:
 	ld hl, wcd2a
@@ -4535,57 +4532,59 @@ Unknown_101ef5:
 String_101f13:
 	db "@"
 
+; Max. printed space is 15!
 String_101f14:
-	db   "Communicate"	; "モバイルアダプタを　つかって"
-	next "with a friend!@"	; "おともだちと　つうしんします"
+	db   "¡Comunícate con"	; "モバイルアダプタを　つかって"
+	next "un amigo!@"		; "おともだちと　つうしんします"
 
 String_101f32:
-	db   "The caller will"	; "でんわを　かけるひとには"
-	next "be charged.@"		; "つうわりょうきんが　かかります@"
+	db   "El llamador re-"	; "でんわを　かけるひとには"
+	next "cibirá cargos.@"	; "つうわりょうきんが　かかります@"
 
 String_101f4f:
-	db   "Is the MOBILE"	; "モバイルアダプタの　じゅんびは"
-	next "ADAPTER ready?@"	; "できて　いますか？@"
+	db   "¿El ADAPT. MÓ-"	; "モバイルアダプタの　じゅんびは"
+	next "VIL está listo?@"	; "できて　いますか？@"
 
 String_101f69:
-	db   "Want to call"		; "あなたが　おともだちに"
-	next "your friend?@"	; "でんわを　かけますか？@"
+	db   "¿Deseas llamar"	; "あなたが　おともだちに"
+	next "a tu amigo?@"		; "でんわを　かけますか？@"
 
 String_101f81:
-	db   "Use the"			; "めいしフォルダーを"
-	next "CARD FOLDER?@"	; "つかいますか？@"
+	db   "¿Deseas usar el"	; "めいしフォルダーを"
+	next "TARJETERO?@"		; "つかいますか？@"
 
 String_101f93:
-	db   "Please enter a"	; "でんわばんごうを　にゅうりょく"
-	next "phone number.@"	; "してください@"
+	db   "Favor ingrese"	; "でんわばんごうを　にゅうりょく"
+	next "número móvil.@"	; "してください@"
 
 String_101faa:
-	db   "Waiting for"		; "それでは　おともだちからの"
-	next "a call…@"			; "でんわを　おまちします⋯@"
+	db   "Esperando una"	; "それでは　おともだちからの"
+	next "llamada…@"	; "でんわを　おまちします⋯@"
 
 String_101fc5:
-	db 	"Call this no.?@"	; "に　でんわを　かけます@"
+	db 	 "¿Llamar n.°?@" ; "に　でんわを　かけます@"
 
 String_101fd2:
-	db 	"Calling…@"			; "に　でんわを　かけています@"
+	db 	 "Llamando…@"	; "に　でんわを　かけています@"
 
 String_101fe1:
-	db   "Call connected!@"	; "でんわが　つながりました!@"
+	db   "¡Llamada" 	; "でんわが　つながりました!@"
+	next "conectada!@"
 
 String_101fef:
-	db   "Ending call…@"	; "つうわを"
-	;next 					; "しゅうりょう　します⋯@"
+	db   "Terminando" 	; "つうわを"
+	next "llamada…@" 	; "しゅうりょう　します⋯@"
 
 String_102000:
-	db   "Communication"	; "つうしん　しゅうりょう@"
-	next "ended.@"
+	db   "Conexión"	; "つうしん　しゅうりょう@"
+	next "terminada.@"
 
 String_10200c:
-	db   "CALL TIME@"		; "つうわ　じかん@"
+	db   "TIEMPO LLAMADA@"	; "つうわ　じかん@"
 
 String_102014:
-	db   "Please choose"	; "それでは　つうしんの"
-	next "the settings.@"	; "せっていを　してください@"
+	db   "Por favor elija"	; "それでは　つうしんの"
+	next "las opciones.@"	; "せっていを　してください@"
 
 Function10202c:
 	farcall Function115d99
@@ -4604,7 +4603,7 @@ Function102048:
 	ret
 
 Function10204c:
-	hlcoord 3, 4;3, 2
+	hlcoord 4, 4
 	ld c, $10
 	ld de, wcd53
 .asm_102054
@@ -6032,8 +6031,8 @@ Function1029fe:
 	ret
 
 String_102a26:
-	db   "TRADE"
-	next "CANCEL"
+	db   "TRATO"
+	next "CANCELAR"
 	db   "@"
 
 MenuData3_102a33:
@@ -6540,7 +6539,7 @@ Function102e07:
 	ret
 
 .waiting
-	db "Waiting...!@"
+	db "¡ESPERA.…!@"
 
 Function102e3e:
 	ld de, .CancelString
@@ -6637,8 +6636,8 @@ Function102ee7:
 	ret
 
 String_102ef4:
-	db   "Too bad! The trade"
-	next "was canceled!"
+	db   "¡Mal! ¡El trato"
+	next "está cancelado!"
 	db   "@"
 
 Function102f15:
@@ -6649,8 +6648,8 @@ Function102f15:
 	ret
 
 .TooBadTheTradeWasCanceled:
-	db   "Canceling the"		; "こうかんを　キャンセルしました@"
-	next "trade..."
+	db   "Cancelando"		; "こうかんを　キャンセルしました@"
+	next "trato..."
 	db   "@"
 
 Function102f32:
@@ -6661,7 +6660,7 @@ Function102f32:
 	ret
 
 .TradeCompleted:
-	db "Trade completed!@"
+	db "¡Trato completado!@"
 
 Function102f50:
 	call Function102dc3
@@ -6671,8 +6670,8 @@ Function102f50:
 	ret
 
 .PleaseWait:
-	db   "Please wait a"		; "しょうしょう　おまち　ください@"
-	next "moment...@"
+	db   "Por favor, espera"		; "しょうしょう　おまち　ください@"
+	next "un momento...@"
 
 Function102f6d:
 	call Function102dc3
@@ -6682,7 +6681,7 @@ Function102f6d:
 	ret
 
 .Finished:
-	db "Finishing trade...@"	; "しゅうりょう　します@"
+	db "Completando trato...@"	; "しゅうりょう　します@"
 
 Function102f85:
 	ld a, [wd003]
@@ -6727,9 +6726,9 @@ Function102fce:
 	ret
 
 String_102fdb:
-	db   "Your friend's"		; "あいてがわ<NO>せんたくに"
-	next "#MON appears"			; "いじょう<PKMN>あるようです！！"
-	cont "to be abnormal!"
+	db   "¡El #MON de tu"		; "あいてがわ<NO>せんたくに"
+	next "amigo/a no parece"	; "いじょう<PKMN>あるようです！！"
+	cont "estar bien!"
 	done
 
 Function102ff5:
@@ -6740,9 +6739,9 @@ Function102ff5:
 	ret
 
 String_103002:
-	db   "If you trade that"	; "その#を　こうかんすると"
-	next "#MON, you won't"		; "せんとう　できなく　なっちゃうよ！"
-	cont "be able to battle."
+	db   "Si cambias ese"	; "その#を　こうかんすると"
+	next "#MON, no podrás"	; "せんとう　できなく　なっちゃうよ！"
+	cont "luchar."
 	db   "@"
 
 Function103021:
@@ -6753,9 +6752,8 @@ Function103021:
 	ret
 
 String_10302e:
-	db   "Your friend"		; "あいてが　ちゅうしを　えらんだので"
-	next "chose to end"		; "こうかんを　ちゅうし　します"
-	cont "the trade."
+	db   "Tu amigo decidió"		; "あいてが　ちゅうしを　えらんだので"
+	next "terminar el trato."	; "こうかんを　ちゅうし　します"
 	db   "@"
 
 Function10304f:
@@ -7169,7 +7167,7 @@ Function10343c:
 
 .asm_10347d
 	call Function10350f
-	ld bc, 14;11
+	ld bc, 11
 	call Function103487
 	ret
 
@@ -7288,18 +7286,18 @@ Unknown_103522:
 	dw String_103545
 
 String_103545: db "@"
-String_103546: db " BATTLE SCENE@"			; "せんとう　アニメ@"
-String_10354f: db " PHONE NUMBER@"			; "でんわばんごう@"
-String_103557: db " CARD TRADE@"			; "めいしこうかん@"
-String_10355f: db "Caller decides.@"		; "でんわを　かけるひとが　きめられる@"
-String_103571: db "Input method.@"			; "でんわばんごうの　にゅうりょくのしかた@" ; Entering a phone number
-String_103585: db "Replace old CARD.@"		; "あたらしいめいしが　あれば　こうかん@" ; Replace if there is a new card
-String_103598: db "<LF>:OFF@"				; "とばして　みる@"; Skip to see
-String_1035a0: db "<LF>:ON @"				; "じっくり　みる@" ; Watch carefully
-String_1035a8: db "<LF>:CARD@"				; "めいしからえらぶ@" ; Choose from cards
-String_1035b1: db "<LF>:DIAL@"				; "すうじで　いれる@"
-String_1035ba: db "<LF>:ON @"				; "する@"
-String_1035bd: db "<LF>:OFF@"				; "しない@"
+String_103546: db " ESCENA BATALLA@"		; "せんとう　アニメ@"
+String_10354f: db " NÚMERO MÓVIL@"			; "でんわばんごう@"
+String_103557: db " CAMBIO TARJETA@"		; "めいしこうかん@"
+String_10355f: db "Llamador decide.@"		; "でんわを　かけるひとが　きめられる@"
+String_103571: db "Método de llamada.@"		; "でんわばんごうの　にゅうりょくのしかた@" ; Entering a phone number
+String_103585: db "Enviar nueva TARJ.@"		; "あたらしいめいしが　あれば　こうかん@" ; Replace if there is a new card
+String_103598: db "<LF>:NO@"				; "とばして　みる@"; Skip to see
+String_1035a0: db "<LF>:SÍ@"				; "じっくり　みる@" ; Watch carefully
+String_1035a8: db "<LF>:TARJETA@"			; "めいしからえらぶ@" ; Choose from cards
+String_1035b1: db "<LF>:MARCADO@"			; "すうじで　いれる@"
+String_1035ba: db "<LF>:SÍ@"				; "する@"
+String_1035bd: db "<LF>:NO@"				; "しない@"
 String_1035c1: db " OK@"					; "けってい@"
 
 Function1035c6:
@@ -7379,14 +7377,14 @@ AskMobileOrCable:
 
 MenuHeader_103640:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 11, 6, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 12, 6, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw MenuData_103648
 	db 1 ; default option
 
 MenuData_103648:
 	db STATICMENU_CURSOR ; flags
 	db 2
-	db "MOBILE@"	; "モバイル@"
+	db "MÓVIL@"		; "モバイル@"
 	db "CABLE@"		; "ケーブル@"
 
 Function103654:
@@ -7527,16 +7525,16 @@ Function103700:
 
 MenuHeader_103747:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 11, 5, SCREEN_WIDTH - 1, TEXTBOX_Y - 1;13, 5, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 12, 5, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw MenuData_10374f
 	db 1 ; default option
 
 MenuData_10374f:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 3
-	db "YES@"		; "はい@"
-	db "CANCEL@"	; "やめる@"
-	db "INFO@"		; "せつめい@"
+	db "SÍ@"	; "はい@"
+	db "SALIR@"	; "やめる@"
+	db "INFO@"	; "せつめい@"
 
 MobileBattleMustPickThreeMonText:
 	text_far _MobileBattleMustPickThreeMonText

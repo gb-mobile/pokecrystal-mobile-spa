@@ -5651,78 +5651,79 @@ Function11a63c:
 	call PlaceString
 	ret
 
+; Max. printed space is 15!
 String_11a661:
-	db   "Dialing the"
-	next "MOBILE CENTER…@"
+	db   "Llamando al"
+	next "CENTRO MÓVIL…@"
 
 String_11a679:
-	db   "Is the MOBILE"
-	next "ADAPTER ready?@"
+	db   "¿EL ADAPT. MÓ-"
+	next "VIL está listo?@"
 
 String_11a692:
-	db   "Please wait"
-	next "a moment…@"
+	db   "Favor, espere"
+	next "un momento…@"
 
 String_11a6aa:
-	db   "Charges will"
-	next "apply.@"
+	db   "Se aplicarán"
+	next "cargos.@"
 
 String_11a6c8:
-	db   "Connected.@";"せつぞく　しました@"
+	db   "Conectado.@";"せつぞく　しました@"
 
 String_11a6d2:
-	db   "Communicating…@";"つうしん　ちゅう@"
+	db   "Comunicando…@";"つうしん　ちゅう@"
 
 String_11a6db:
-	db   "Communication";"つうしん　ちゅう"
-	next "canceled.@";"セレクト　エーでちゅうし@"
+	db   "Conexión";"つうしん　ちゅう"
+	next "cancelada.@";"セレクト　エーでちゅうし@"
 
 String_11a6f1:
-	db   "This is a";"この　サービスには"
-	next "paid service.@";"つうわりょう<NO>ほかに@"
+	db   "Este es un";"この　サービスには"
+	next "servicio pago.@";"つうわりょう<NO>ほかに@"
 
 String_11a706:
-	db   "Cost:@";"おかね<GA>@"
+	db   "Coste:@";"おかね<GA>@"
 
 String_11a71e:
-	db   "Communication";"つうしん　しゅうりょう@" ; ???
-	next "ended.@"
+	db   "Conexión";"つうしん　しゅうりょう@" ; ???
+	next "terminada.@"
 
 String_11a72a:
-	db   "CALL TIME";"つないだ　じかん"
-	next "   min.    sec.@"
+	db   "TIEMPO LLAMADA";"つないだ　じかん"
+	next "   min.    seg.@"
 
 String_11a743:
-    db   "There is no";"もっていない　データが"
-    next "stored data!@";"あります！@"
+    db   "¡No hay datos";"もっていない　データが"
+    next "almacenados!@";"あります！@"
 	
 String_11a755:
-    db   "Read the";"データ<WO>よみこみますか？@"
-    next "data?@"
+    db   "¿Leer los";"データ<WO>よみこみますか？@"
+    next "datos?@"
 	
 String_11a762:
-    db   "Read the";"おなじ　データ<WO>よみこんだ"
-    next "same data.@";"こと<GA>ありますが@"
+    db   "Leer los mismos";"おなじ　データ<WO>よみこんだ"
+    next "datos.@";"こと<GA>ありますが@"
 	
 String_11a779:
-    db   "The data is";"そのデータ<WA>なくなっているか"
-    next "corrupted.@";"こわれて　います@"
+    db   "Los datos están";"そのデータ<WA>なくなっているか"
+    next "corruptos.@";"こわれて　います@"
 	
 String_11a791:
-    db   "This data";"もっている　データと"
-    next "already exists!@";"おなじデータしか　ありません！@"
+    db   "¡Estos datos ya";"もっている　データと"
+    next "existen!@";"おなじデータしか　ありません！@"
 	
 String_11a7ac:
-    db   "Quit reading";"データの よみこみを"
-    next "data?@";"ちゅうし しますか？""
+    db   "¿Dejar de leer";"データの よみこみを"
+    next "los datos?@";"ちゅうし しますか？""
 
 String_11a7c1:
-	db   "There was no"
-	next "more NEWS.@"
+	db   "No hay más"
+	next "NOTICIAS.@"
 
 String_11a7d7:
-	db   "Receive the"
-	next "latest NEWS?@"
+	db   "¿Recibir últi-"
+	next "mas NOTICIAS?@"
 
 String_11a7f4:
 	db   "　　　　　　　　　　　　　　　@"
@@ -5979,11 +5980,11 @@ Function11a9f4: ; unreferenced
 
 Text_SaveFileWillBeSent:
 	text "Se enviará el"
-	line "FICHERO GUARDADO."
+	line "ARCHIVO GUARDADO."
 	done
 
 Text_SentSaveFileReadingNews:
-	text "FICHERO GUARDADO"
+	text "ARCHIVO GUARDADO"
 	line "enviado."
 	cont "Leyendo NOTICIAS…"
 	done
@@ -6216,11 +6217,11 @@ Function11ad95:
 	ld hl, MenuHeader_11ae38
 	call LoadMenuHeader
 	call MenuBox
-	hlcoord 10, 12 ;12, 12
+	hlcoord 12, 12
 	ld de, String_11ae40
 	call PlaceString
-	hlcoord 8, 10, wAttrmap ;10, 10, wAttrmap
-	lb bc, 8, 10 ;8
+	hlcoord 10, 10, wAttrmap
+	lb bc, 8, 8
 	call Function11afd6
 	farcall ReloadMapPart
 	call MobileIncJumptableIndex
@@ -6306,12 +6307,12 @@ Function11adc4:
 
 MenuHeader_11ae38:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords  8, 10, 17, SCREEN_HEIGHT - 1
+	menu_coords  10, 10, SCREEN_WIDTH - 3, SCREEN_HEIGHT - 1
 	dw NULL
 	db 0 ; default option
 
 String_11ae40:
-	db   "EITHER"
+	db   "AMBOS"
 	next "♂" ; male
 	next "♀" ; female
 	db   "@"
@@ -6518,9 +6519,9 @@ asm_11afbd:
 	ret
 
 Unknown_11afcc:
-	dwcoord 9, 12 ;11, 12
-	dwcoord 9, 14 ;11, 14
-	dwcoord 9, 16 ;11, 16
+	dwcoord 11, 12
+	dwcoord 11, 14
+	dwcoord 11, 16
 
 Unknown_11afd2:
 	dwcoord 15,  8
@@ -6550,12 +6551,12 @@ MenuHeader_11afe8:
 	db 0 ; default option
 
 String_11aff0:
-	db   "Is this OK?@"
-	;next ""
+	db   "¿Es correc-"
+	next "to?@"
 
 String_11b003:
-	db   "Cancel the"
-	next "trade?@"
+	db   "¿Cancelar"
+	next "el trato?@"
 
 MenuHeader_11b013:
 	db MENU_BACKUP_TILES ; flags

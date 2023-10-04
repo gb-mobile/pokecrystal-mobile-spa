@@ -4079,8 +4079,8 @@ Function8aba9: ; pick a friend to call
 	ret
 
 String_8ac3b:
-	db   "Call this";"こ<NO>ともだち<NI>でんわを"
-	next "friend?@";"かけますか？@"
+	db   "¿Llamar a este";"こ<NO>ともだち<NI>でんわを"
+	next "amigo?@";"かけますか？@"
 
 Function8ac4e:
 	xor a
@@ -4260,12 +4260,12 @@ Mobile22_AskOverwriteCardEntry:
 	ret
 
 String_AskOverwriteCard:
-	db   "Overwrite";"こ<NO>めいし<WO>けして"
-	next "this data?@";"いれかえますか？@"
+	db   "¿Sobreescribir";"こ<NO>めいし<WO>けして"
+	next "estos datos?@";"いれかえますか？@"
 
 String_KeepFriendsName:
-	db   "Keep the";"おともだち<NO>なまえを"
-	next "friend's name?@";"のこして　おきますか？@"
+	db   "¿Conservar nombre";"おともだち<NO>なまえを"
+	next "del amigo?@";"のこして　おきますか？@"
 
 Function8adb3:
 	call Mobile22_ClearScreen
