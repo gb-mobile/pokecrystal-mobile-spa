@@ -5679,8 +5679,8 @@ String_11a6db:
 	next "cancelada.@";"セレクト　エーでちゅうし@"
 
 String_11a6f1:
-	db   "Este es un";"この　サービスには"
-	next "servicio pago.@";"つうわりょう<NO>ほかに@"
+	db   "Este es un ser-";"この　サービスには"
+	next "vicio de pago.@";"つうわりょう<NO>ほかに@"
 
 String_11a706:
 	db   "Coste:@";"おかね<GA>@"
