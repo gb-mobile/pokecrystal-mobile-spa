@@ -530,9 +530,11 @@ GoldenrodPokecomCenterWeWillTradeYourMonForNewText:
 
 	para "@"
 	text_ram wStringBuffer3
-	text " por un"
-	line "#MON que no"
-	cont "hayas visto nunca."
+	text_start
+	line "por un #MON que"
+
+	para "no hayas visto"
+	line "nunca."
 
 	para "Necesitamos tu"
 	line "#MON durante"
