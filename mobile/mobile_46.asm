@@ -6217,11 +6217,11 @@ Function11ad95:
 	ld hl, MenuHeader_11ae38
 	call LoadMenuHeader
 	call MenuBox
-	hlcoord 12, 12
+	hlcoord 10, 12
 	ld de, String_11ae40
 	call PlaceString
-	hlcoord 10, 10, wAttrmap
-	lb bc, 8, 8
+	hlcoord 8, 10, wAttrmap
+	lb bc, 8, 10
 	call Function11afd6
 	farcall ReloadMapPart
 	call MobileIncJumptableIndex
@@ -6307,14 +6307,14 @@ Function11adc4:
 
 MenuHeader_11ae38:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords  10, 10, SCREEN_WIDTH - 3, SCREEN_HEIGHT - 1
+	menu_coords 8, 10, SCREEN_WIDTH - 3, SCREEN_HEIGHT - 1
 	dw NULL
 	db 0 ; default option
 
 String_11ae40:
 	db   "AMBOS"
-	next "♂" ; male
-	next "♀" ; female
+	next "♂MACHO" ; male
+	next "♀HEMBRA" ; female
 	db   "@"
 
 Function11ae4e:
@@ -6519,9 +6519,9 @@ asm_11afbd:
 	ret
 
 Unknown_11afcc:
-	dwcoord 11, 12
-	dwcoord 11, 14
-	dwcoord 11, 16
+	dwcoord 9, 12
+	dwcoord 9, 14
+	dwcoord 9, 16
 
 Unknown_11afd2:
 	dwcoord 15,  8
@@ -6607,11 +6607,11 @@ Function11b03d:
 	jr nz, .got_string
 	ld hl, .MaleString
 .got_string
-	ld bc, 3 ; string length
+	ld bc, 8 ; string length
 	jp CopyBytes
 
-.MaleString: db "　♂@"
-.FemaleString: db "　♀@"
+.MaleString: db "　macho@@"
+.FemaleString: db "　hembra@"
 
 Function11b082:
 	call Function11b242
