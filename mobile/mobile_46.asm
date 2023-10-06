@@ -6607,11 +6607,11 @@ Function11b03d:
 	jr nz, .got_string
 	ld hl, .MaleString
 .got_string
-	ld bc, 8 ; string length
+	ld bc, 2 ; string length
 	jp CopyBytes
 
-.MaleString: db "　macho@@"
-.FemaleString: db "　hembra@"
+.MaleString: db "♂@"
+.FemaleString: db "♀@"
 
 Function11b082:
 	call Function11b242

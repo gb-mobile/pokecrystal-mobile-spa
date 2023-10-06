@@ -508,10 +508,9 @@ GoldenrodPokecomCenterWeWillTradeYourMonForMonText:
 
 	para "@"
 	text_ram wStringBuffer3
-	text_start
-	line "por un"
+	text " por un"
 
-	cont "@"
+	line "@"
 	text_ram wStringBuffer4
 	text "."
 
