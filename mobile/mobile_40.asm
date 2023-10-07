@@ -5987,14 +5987,14 @@ Jumptable_1029cb:
 
 Function1029cf:
 	call LoadStandardMenuHeader
-	hlcoord 10, 7
+	hlcoord 9, 7
 	ld b, 3
-	ld c, 8
+	ld c, 9
 	ld d, h
 	ld e, l
 	farcall _LinkTextbox
 	ld de, String_102a26
-	hlcoord 12, 8
+	hlcoord 11, 8
 	call PlaceString
 	ld hl, wcd4b
 	set 1, [hl]
@@ -6036,7 +6036,7 @@ String_102a26:
 	db   "@"
 
 MenuData3_102a33:
-	db 8, 11 ; cursor start y, x
+	db 8, 10 ; cursor start y, x
 	db 2, 1 ; rows, columns
 	db $80, $00 ; flags
 	dn 2, 0 ; cursor offset
