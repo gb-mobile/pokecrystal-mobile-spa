@@ -1269,16 +1269,16 @@ BattleTowerRoomMenu_UpdatePickLevelMenu:
 ; this no longer works properly in the english version without a slight adjustment due to there being a space in the beginning of the strings displayed
 .asm_1189b5
 	ld a, [hli]
-	cp $50
+	cp "@"
 	jr z, .asm_1189c4
-	cp $7f
+	cp " "
 	jr z, .asm_1189b5;.asm_1189c2 ; skip space instead of finishing string
 	ld [bc], a
 	inc bc
 	jr .asm_1189b5
 
 .asm_1189c2
-	ld a, $50
+	ld a, "@"
 
 .asm_1189c4
 	ld [bc], a
@@ -1387,7 +1387,7 @@ RemovedFunction:
     jr nz, jr_046_4aba
 
     ld hl, wc3ee
-    ld a, [hl+]
+    ld a, [hli]
     or [hl]
     jr z, jr_046_4abf
 
@@ -1503,14 +1503,14 @@ jr_046_4b51:
 ; save the current selection to wStringBuffer4 for later display in a textbox
 jr_046_4b6b:
     push af
-    ld a, [hl+]
+    ld a, [hli]
     ld [de], a
     inc de
     pop af
     dec a
     jr nz, jr_046_4b6b
 
-    ld a, $50
+    ld a, "@"
     ld [de], a
     pop af
     ldh [rSVBK], a
@@ -1721,7 +1721,7 @@ jr_046_4cba:
     ld a, [de]
     inc de
     add $30
-    ld [hl-], a
+    ld [hld], a
     pop af
     dec a
     jr nz, jr_046_4cba
@@ -1733,7 +1733,7 @@ jr_046_4cba:
 jr_046_4ccc:
     ld a, [de]
     dec de
-    ld [hl+], a
+    ld [hli], a
     dec c
     jr nz, jr_046_4ccc
 
@@ -2766,7 +2766,7 @@ Function119223:
 	call OpenSRAM
 	ld hl, wEmailAddress
 	ld de, s5_b092
-	ld bc, 31
+	ld bc, MOBILE_EMAIL_LENGTH + 1
 	call CopyBytes
 	dec de
 	xor a
@@ -2915,7 +2915,7 @@ Function119300:
 .asm_11931a
 	ld a, [de]
 	inc de
-	cp $50
+	cp "@"
 	jr z, .asm_119324
 	ld [hli], a
 	inc bc
@@ -5087,7 +5087,7 @@ Function11a1e6:
 Function11a1ff:
 .asm_11a1ff
 	ld a, [hli]
-	cp $50
+	cp "@"
 	ret z
 	ld [de], a
 	inc de
@@ -5141,10 +5141,10 @@ BattleTowerRoomMenu2_UpdateYesNoMenu:
 	xor a
 	ld [wMobileInactivityTimerMinutes], a
 	hlcoord 16, 8
-	ld a, $ed
+	ld a, "▶"
 	ld [hl], a
 	hlcoord 16, 10
-	ld a, $7f
+	ld a, " "
 	ld [hl], a
 	jr .asm_11a24c
 
@@ -5158,10 +5158,10 @@ BattleTowerRoomMenu2_UpdateYesNoMenu:
 	inc a
 	ld [wMobileInactivityTimerMinutes], a
 	hlcoord 16, 8
-	ld a, $7f
+	ld a, " "
 	ld [hl], a
 	hlcoord 16, 10
-	ld a, $ed
+	ld a, "▶"
 	ld [hl], a
 	jr .asm_11a24c
 
@@ -5542,10 +5542,10 @@ Function11a536:
 	xor a
 	ld [wMobileInactivityTimerMinutes], a
 	hlcoord 15, 7
-	ld a, $ed
+	ld a, "▶"
 	ld [hl], a
 	hlcoord 15, 9
-	ld a, $7f
+	ld a, " "
 	ld [hl], a
 	jr .asm_11a54d
 
@@ -5559,10 +5559,10 @@ Function11a536:
 	inc a
 	ld [wMobileInactivityTimerMinutes], a
 	hlcoord 15, 7
-	ld a, $7f
+	ld a, " "
 	ld [hl], a
 	hlcoord 15, 9
-	ld a, $ed
+	ld a, "▶"
 	ld [hl], a
 	jr .asm_11a54d
 
@@ -5914,7 +5914,7 @@ Function11a971:
 	ld [wc31b], a
 	ld a, d
 	ld [wc31c], a
-	ld a, $50
+	ld a, "@"
 	ld [hl], a
 	ld a, [wc31d]
 	ld l, a
@@ -5927,7 +5927,7 @@ Function11a971:
 	ld a, b
 	ld [wc31e], a
 	ld a, [wcd8d]
-	cp $50
+	cp "@"
 	jr nz, .asm_11a9bf
 	xor a
 	ld [wc31a], a
@@ -6364,7 +6364,7 @@ Function11ae98:
 	call PlayClickSFX
 .asm_11aeb4
 	hlcoord 6, 4 ;2, 14 ; Changed from 7, 4 ; Gender symbol location on Mobile Trade screen
-	ld a, $7f
+	ld a, " "
 	ld [hl], a
 	ld a, $1
 	ld [wJumptableIndex], a
@@ -6454,7 +6454,7 @@ Function11af4e:
 	call PlayClickSFX
 .asm_11af6a
 	hlcoord 6, 4 ;2, 14 ; Changed from 7, 4 ; Gender symbol location on Mobile Trade screen
-	ld a, $7f
+	ld a, " "
 	ld [hl], a
 	ld a, $1
 	ld [wJumptableIndex], a
@@ -6499,11 +6499,11 @@ Function11af4e:
 	ret
 
 Function11afb7:
-	ld e, $ed
+	ld e, "▶"
 	jr asm_11afbd
 
 Function11afbb:
-	ld e, $7f
+	ld e, " "
 
 asm_11afbd:
 	ld a, [wMenuCursorY]
@@ -6948,13 +6948,13 @@ Function11b242: ; pokemon to trade
 	ld [bc], a
 
 Function11b267:
-	ld [hl], $ef
+	ld [hl], "♂"
 	ret
 
 asm_11b26a:
 	xor a
 	ld [bc], a
-	ld [hl], $7f
+	ld [hl], " "
 	ret
 
 asm_11b26f:
@@ -6962,7 +6962,7 @@ asm_11b26f:
 	ld [bc], a
 
 Function11b272:
-	ld [hl], $f5
+	ld [hl], "♀"
 	ret
 
 Function11b275:

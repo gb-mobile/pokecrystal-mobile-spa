@@ -21,7 +21,7 @@ DetermineCurrencyName:
 CopyCurrencyString: ; I know this is ugly, I copied and pasted this function from mobile_46.asm
 .loop
 	ld a, [hli]
-	cp $50
+	cp "@"
 	ret z
 	ld [de], a
 	inc de
