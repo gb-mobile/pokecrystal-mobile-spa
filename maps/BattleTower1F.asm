@@ -643,7 +643,7 @@ Text_CantBeRegistered_PreviousRecordDeleted:
 	done
 
 Text_CheckTheLeaderHonorRoll: ; unreferenced
-	text "¿Miras la LISTA"
+	text "¿Mirar la LISTA"
 	line "de HONOR?"
 	done
 
