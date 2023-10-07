@@ -923,14 +923,13 @@ MenuData_100604:
 	db "ESPERAR@"		; "まつ@"
 
 Mobile_CommunicationStandby:
-	hlcoord 3, 10
+	hlcoord 4, 10
 	ld b, 1
-	ld c, 12
+	ld c, 10
 	call Function3eea
 	ld de, .String
-	hlcoord 4, 11
-	call PlaceString
-	ret
+	hlcoord 5, 11
+	jp PlaceString
 
 .String:
 	db "¡ESPERA.…!@"	; "つうしんたいきちゅう！@"
@@ -6514,9 +6513,9 @@ Function102dec:
 	ret
 
 Function102e07:
-	hlcoord 3, 10
-	ld b,  1
-	ld c, 11
+	hlcoord 4, 10
+	ld b, 1
+	ld c, 10
 	ld a, [wBattleMode]
 	and a
 	jr z, .link_battle
@@ -6524,19 +6523,14 @@ Function102e07:
 	jr .okay
 
 .link_battle
-; the next three operations are pointless
-	hlcoord 3, 10
-	ld b,  1
-	ld c, 11
 	ld d, h
 	ld e, l
 	farcall _LinkTextbox
 
 .okay
 	ld de, .waiting
-	hlcoord 4, 11
-	call PlaceString
-	ret
+	hlcoord 5, 11
+	jp PlaceString
 
 .waiting
 	db "¡ESPERA.…!@"
