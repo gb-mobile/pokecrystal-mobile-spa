@@ -1256,7 +1256,7 @@ _CardWasListedText::
 	line "@"
 	text_ram wStringBuffer2
 	text " ha"
-	line "sido la n.° @"
+	cont "sido la n.° @"
 	text_decimal wStringBuffer1, 1, 2
 	text "."
 	prompt

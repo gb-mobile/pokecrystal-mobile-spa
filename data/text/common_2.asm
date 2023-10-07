@@ -287,7 +287,7 @@ _NameCardReceivedCardText::
 	prompt
 
 _NameCardListedCardText::
-	text "La tarjeta de"
+	text "La TARJETA de"
 	line "@"
 	text_ram wMysteryGiftCardHolderName
 	text " fue"
