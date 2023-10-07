@@ -5078,8 +5078,8 @@ Function11a1e6:
 	call Function11a1ff
 	ld hl, wcd85
 	call Function11a1ff
-	farcall WriteCurrencyName ; Copies the currency string at the end of the current string pointed by address stored into DE.
-	ld a, $50
+	; Copies the currency string at the end of the current string pointed by address stored into DE.
+	farcall WriteCurrencyName
 	ld [de], a
 	ret
 
@@ -5683,7 +5683,7 @@ String_11a6f1:
 	next "vicio de pago.@";"つうわりょう<NO>ほかに@"
 
 String_11a706:
-	db   "Coste:@";"おかね<GA>@"
+	db   "Coste: @";"おかね<GA>@"
 
 String_11a71e:
 	db   "Conexión";"つうしん　しゅうりょう@" ; ???

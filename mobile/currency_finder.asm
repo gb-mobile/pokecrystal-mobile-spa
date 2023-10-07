@@ -27,9 +27,7 @@ CopyCurrencyString: ; I know this is ugly, I copied and pasted this function fro
 	inc de
 	jr .loop
 
-
-
 String_Currency_Cents: ; Note that this is unoptimized, as the string "Is this OK?@" is repeated.
-	db   " centavos.";"えん"
+	db   " cts.";"えん"
 	next "¿Es correcto?@";"かかります　よろしい　ですか？@"
 	
