@@ -5080,6 +5080,7 @@ Function11a1e6:
 	call Function11a1ff
 	; Copies the currency string at the end of the current string pointed by address stored into DE.
 	farcall WriteCurrencyName
+	ld a, "@"
 	ld [de], a
 	ret
 
