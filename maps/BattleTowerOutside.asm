@@ -76,8 +76,8 @@ BattleTowerOutsideYoungsterText_Mobile:
 	text "¡Guau, la TORRE"
 	line "BATALLA es enorme!"
 
-	para "Habiendo tanto"
-	line "entrenador ahí"
+	para "Habiendo tantos"
+	line "entrenadores ahí"
 
 	para "dentro, también"
 	line "debe de haber una"
