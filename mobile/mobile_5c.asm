@@ -646,7 +646,7 @@ MenuHeader_171c6b:
 
 String_171c73:
 	db   "CENTRO MÓVIL";"モバイルセンターを　けってい"
-	next "establecido.@";"しました@"
+	next "elegido.@";"しました@"
 
 Function171c87:
 	call DisableLCD

@@ -359,8 +359,8 @@ Function4a239:
 	jp Function4a13b
 
 Strings_4a23d:
-	db   "Escoge CENTRO";"いつも　せつぞく¯する"
-	next "MÓVIL a usar.@";"モバイルセンター¯えらびます@"
+	db   "Elige cuál CENTRO";"いつも　せつぞく¯する"
+	next "MÓVIL usar.@";"モバイルセンター¯えらびます@"
 
 	db   "CÓDIGO usado para";"モバイルセンター<NI>せつぞくするとき"
 	next "conectarte.@";"つかうパスワード¯ほぞんできます@"
