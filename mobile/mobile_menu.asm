@@ -100,7 +100,7 @@ Function49f16:
 
 MobileString1:
 	db   "Tarjetero"
-	next "Mensajes"
+	next "Saludos"
 	next "Perfil"
 	next "Opciones"
 	next "Salir"
@@ -113,7 +113,7 @@ String_0x49fe9:
 	next "TARJETAS.@"
 
 String_0x4a004:
-	db   "Crea mensajes para";"モバイルたいせんや　じぶんのめいしで"
+	db   "Crea saludos para";"モバイルたいせんや　じぶんのめいしで"
 	next "TARJETA y combate.@";"つかう　あいさつ¯つくります@"
 
 String_0x4a026:
