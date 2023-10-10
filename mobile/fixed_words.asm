@@ -2327,20 +2327,20 @@ EZChatString_MessageDescription: ; Message usage strings
 	dw EZChatString_MessageBattleLoseDescription
 
 EZChatString_MessageIntroDescription:
-	db   "Visto como una";"じこしょうかい　は"
-	next "introducción. ¿OK?@";"この　あいさつで　いいですか？@"
+	db   "Visto cuando te";"じこしょうかい　は"
+	next "presentas. ¿OK?@";"この　あいさつで　いいですか？@"
 
 EZChatString_MessageBattleStartDescription:
 	db   "Visto cuando ini-";"たいせん　<GA>はじまるとき　は"
 	next "cia combate. ¿OK?@";"この　あいさつで　いいですか？@"
 
 EZChatString_MessageBattleWinDescription:
-	db   "Visto cuando";"たいせん　<NI>かったとき　は"
-	next "gana combate. ¿OK?@";"この　あいさつで　いいですか？@"
+	db   "Visto cuando ganas";"たいせん　<NI>かったとき　は"
+	next "combate. ¿OK?@";"この　あいさつで　いいですか？@"
 
 EZChatString_MessageBattleLoseDescription:
 	db   "Visto cuando pier-";"たいせん　<NI>まけたとき　は"
-	next "de combate. ¿OK?@";"この　あいさつで　いいですか？@"
+	next "des combate. ¿OK?@";"この　あいさつで　いいですか？@"
 
 EZChatString_MessageSet: ; message accept strings, one for each type of message.
 	dw EZChatString_MessageIntroSet
@@ -2349,20 +2349,20 @@ EZChatString_MessageSet: ; message accept strings, one for each type of message.
 	dw EZChatString_MessageBattleLoseSet
 
 EZChatString_MessageIntroSet:
-	db   "¡Mensaje INTRODUC-"		;"じこしょうかい　の"
-	next "CIÓN establecido!@"	;next "あいさつ¯とうろくした！@"
+	db   "¡Mensaje de intro-"		;"じこしょうかい　の"
+	next "ducción elegido!@"	;next "あいさつ¯とうろくした！@"
 
 EZChatString_MessageBattleStartSet:
-	db   "¡Mensaje de COM-"		;"たいせん　<GA>はじまるとき　の"
-	next "BATE establecido!@"	;next "あいさつ¯とうろくした！@"
+	db   "¡Mensaje de com-"		;"たいせん　<GA>はじまるとき　の"
+	next "bate elegido!@"	;next "あいさつ¯とうろくした！@"
 
 EZChatString_MessageBattleWinSet:
-	db   "¡Mensaje de VICTO-"		;"たいせん　<NI>かったとき　の"
-	next "RIA establecido!@"	;next "あいさつ¯とうろくした！@"
+	db   "¡Mensaje de victo-"		;"たいせん　<NI>かったとき　の"
+	next "RIA elegido!@"	;next "あいさつ¯とうろくした！@"
 
 EZChatString_MessageBattleLoseSet:
-	db   "¡Mensaje de DERRO-"		;"たいせん　<NI>まけたとき　の"
-	next "TA establecido!@"	;next "あいさつ¯とうろくした！@"
+	db   "¡Mensaje de derro-"		;"たいせん　<NI>まけたとき　の"
+	next "ta elegido!@"	;next "あいさつ¯とうろくした！@"
 
 EZChatMenu_WarnEmptyMessage:
 	ld de, EZChatBKG_SortBy

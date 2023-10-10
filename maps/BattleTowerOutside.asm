@@ -64,7 +64,7 @@ BattleTowerOutsideDoor:
 .mobile
 	jumptext BattleTowerOutsideText_DoorsOpen
 
-BattleTowerOutsideYoungsterText_NotYetOpen: ; unreferenced
+BattleTowerOutsideYoungsterText_NotYetOpen:
 	text "¡Guau, la TORRE es"
 	line "inmensa!"
 
@@ -72,12 +72,12 @@ BattleTowerOutsideYoungsterText_NotYetOpen: ; unreferenced
 	line "de alzar la vista."
 	done
 
-BattleTowerOutsideYoungsterText_Mobile: ; unreferenced
+BattleTowerOutsideYoungsterText_Mobile:
 	text "¡Guau, la TORRE"
 	line "BATALLA es enorme!"
 
-	para "Habiendo tanto"
-	line "entrenador ahí"
+	para "Habiendo tantos"
+	line "entrenadores ahí"
 
 	para "dentro, también"
 	line "debe de haber una"
@@ -86,16 +86,16 @@ BattleTowerOutsideYoungsterText_Mobile: ; unreferenced
 	line "#MON."
 	done
 
-BattleTowerOutsideYoungsterText:
+BattleTowerOutsideYoungsterText: ; unreferenced
 	text "¡Guau, la TORRE"
 	line "BATALLA es enorme!"
 
 	para "¡Debe de haber"
-	line "muchas clases de "
+	line "muchas clases de"
 	cont "#MON dentro!"
 	done
 
-BattleTowerOutsideBeautyText_NotYetOpen: ; unreferenced
+BattleTowerOutsideBeautyText_NotYetOpen:
 	text "¿Pero qué es lo"
 	line "que hacen aquí?"
 
@@ -117,7 +117,7 @@ BattleTowerOutsideBeautyText:
 	line "batalla…"
 	done
 
-BattleTowerOutsideSailorText_Mobile: ; unreferenced
+BattleTowerOutsideSailorText_Mobile:
 	text "Jejeje… Me"
 	line "escapé del trabajo"
 	cont "para venir."
@@ -127,7 +127,7 @@ BattleTowerOutsideSailorText_Mobile: ; unreferenced
 	cont "ser LÍDER!"
 	done
 
-BattleTowerOutsideSailorText:
+BattleTowerOutsideSailorText: ; unreferenced
 	text "Je, je… Me escapé"
 	line "del trabajo."
 
@@ -140,7 +140,7 @@ BattleTowerOutsideSailorText:
 	cont "ganarlo!"
 	done
 
-BattleTowerOutsideSignText_NotYetOpen: ; unreferenced
+BattleTowerOutsideSignText_NotYetOpen:
 ; originally shown when the Battle Tower was closed
 	text "TORRE BATALLA"
 	done
@@ -152,13 +152,13 @@ BattleTowerOutsideSignText:
 	line "definitivo!"
 	done
 
-BattleTowerOutsideText_DoorsClosed: ; unreferenced
+BattleTowerOutsideText_DoorsClosed:
 ; originally shown when the Battle Tower was closed
 	text "La TORRE BATALLA"
 	line "está cerrada…"
 	done
 
-BattleTowerOutsideText_DoorsOpen: ; unreferenced
+BattleTowerOutsideText_DoorsOpen:
 ; originally shown after the Battle Tower opened
 	text "¡Está abierta!"
 	done

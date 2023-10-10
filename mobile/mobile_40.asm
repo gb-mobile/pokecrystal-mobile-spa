@@ -4582,7 +4582,7 @@ String_10200c:
 	db   "TIEMPO LLAMADA@"	; "つうわ　じかん@"
 
 String_102014:
-	db   "Por favor elija"	; "それでは　つうしんの"
+	db   "Por favor elige"	; "それでは　つうしんの"
 	next "las opciones.@"	; "せっていを　してください@"
 
 Function10202c:
