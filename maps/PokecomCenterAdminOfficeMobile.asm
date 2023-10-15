@@ -90,15 +90,15 @@ PokecomCenterAdminOfficeMobileComputer2:
 
 .Computer2MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 13, 8
+	menu_coords 0, 0, SCREEN_WIDTH - 2, 8
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 3 ; items
-	db "GUÍA DE USO@" ; Use phone
-	db "PROBLEMAS@" ; Don't use phone
+	db "USO DEL TELÉFONO@" ; Use phone
+	db "SIN SERVICIO@" ; Don't use phone
 	db "SALIR@" ; QUIT
 
 PokecomCenterAdminOfficeMobileComputer3:
