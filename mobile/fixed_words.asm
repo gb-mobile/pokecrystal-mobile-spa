@@ -1148,7 +1148,7 @@ EZChat_SortMenuBackground:
 	ret
 
 EZChatString_Stop_Mode_Cancel:
-	db "ELI  　MODO　　SALIR@";"けす　　　　モード　　　やめる@"
+	db "BORRA　MODO　　SALIR@";"けす　　　　モード　　　やめる@"
 
 EZChatCoord_Categories: ; Category Coordinates
 	dwcoord  1,  7 ; PKMN
