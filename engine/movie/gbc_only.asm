@@ -124,7 +124,7 @@ DrawGBCOnlyGraphic:
 	ret
 
 GBCOnlyString:
-	db   "Esta cartucho está"
+	db   "Este cartucho está"
 	next "diseñado para ser"
 	next "usado únicamente"
 	next "en Game Boy Color.@"
