@@ -1264,9 +1264,9 @@ _NewDexDataText::
 	para "de @"
 	text_ram wEnemyMonNickname
 	text "."
+	line "@"
 	sound_slot_machine_start
-	text "@"
-	text_promptbutton
+	text_waitbutton
 	text_end
 
 	text_end ; unreferenced
