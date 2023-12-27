@@ -1,5 +1,6 @@
 	db "GAS@" ; species name
-	dw 13, 1 ; height, weight
+		db 13
+	dw 1 ; height, weight
 
 	db   "Su estrategia con-"
 	next "siste en envolver"

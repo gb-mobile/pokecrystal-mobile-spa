@@ -1,5 +1,6 @@
 	db "MONO CERDO@" ; species name
-	dw 10, 320 ; height, weight
+		db 10
+	dw 320 ; height, weight
 
 	db   "Ataca a todo aquel"
 	next "que le enfade."

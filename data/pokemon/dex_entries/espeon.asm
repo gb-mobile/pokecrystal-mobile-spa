@@ -1,5 +1,6 @@
 	db "SOL@" ; species name
-	dw 9, 265 ; height, weight
+		db 9
+	dw 265 ; height, weight
 
 	db   "Al predecir el si-"
 	next "guiente movimiento"

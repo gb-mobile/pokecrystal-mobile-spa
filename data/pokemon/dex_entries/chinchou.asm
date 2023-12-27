@@ -1,5 +1,6 @@
 	db "RAPE@" ; species name
-	dw 5, 120 ; height, weight
+		db 5
+	dw 120 ; height, weight
 
 	db   "Lo que ahora es"
 	next "una antena, antes"

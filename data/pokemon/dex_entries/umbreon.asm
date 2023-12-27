@@ -1,5 +1,6 @@
 	db "LUZ LUNAR@" ; species name
-	dw 10, 270 ; height, weight
+		db 10
+	dw 270 ; height, weight
 
 	db   "Cuando hay luna"
 	next "llena, o cuando"

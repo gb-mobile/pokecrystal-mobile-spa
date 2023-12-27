@@ -1,5 +1,6 @@
 	db "RENACUAJO@" ; species name
-	dw 10, 200 ; height, weight
+		db 10
+	dw 200 ; height, weight
 
 	db   "Aunque es hábil en"
 	next "tierra, prefiere"

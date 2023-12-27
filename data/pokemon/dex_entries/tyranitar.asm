@@ -1,5 +1,6 @@
 	db "CORAZA@" ; species name
-	dw 20, 2020 ; height, weight
+		db 20
+	dw 2020 ; height, weight
 
 	db   "En una de sus"
 	next "poderosas garras"

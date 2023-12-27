@@ -1,5 +1,6 @@
 	db "TALADRO@" ; species name
-	dw 14, 620 ; height, weight
+		db 14
+	dw 620 ; height, weight
 
 	db   "Está dotado de"
 	next "fornidas extremi-"

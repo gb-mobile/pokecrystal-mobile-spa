@@ -1,5 +1,6 @@
 	db "FÓSIL@" ; species name
-	dw 18, 590 ; height, weight
+		db 18
+	dw 590 ; height, weight
 
 	db   "Al parecer, en"
 	next "tiempos prehistó-"

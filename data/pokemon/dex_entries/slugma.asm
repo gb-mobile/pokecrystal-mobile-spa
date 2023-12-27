@@ -1,5 +1,6 @@
 	db "LAVA@" ; species name
-	dw 7, 350 ; height, weight
+		db 7
+	dw 350 ; height, weight
 
 	db   "Suele ir en grupo"
 	next "por zonas"

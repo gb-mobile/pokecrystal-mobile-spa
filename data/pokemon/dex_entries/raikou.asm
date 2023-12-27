@@ -1,5 +1,6 @@
 	db "TRUENO@" ; species name
-	dw 19, 1780 ; height, weight
+		db 19
+	dw 1780 ; height, weight
 
 	db   "Este duro #MON"
 	next "almacena energía"

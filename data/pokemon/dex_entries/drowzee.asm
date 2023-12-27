@@ -1,5 +1,6 @@
 	db "HIPNOSIS@" ; species name
-	dw 10, 324 ; height, weight
+		db 10
+	dw 324 ; height, weight
 
 	db   "Cuando tuerce el"
 	next "hocico, nota si"

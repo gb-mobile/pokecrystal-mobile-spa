@@ -1,5 +1,6 @@
 	db "VIRTUAL@" ; species name
-	dw 6, 325 ; height, weight
+		db 6
+	dw 325 ; height, weight
 
 	db   "Este avanzado"
 	next "#MON es obra"

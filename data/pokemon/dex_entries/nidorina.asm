@@ -1,5 +1,6 @@
 	db "PIN VENENO@" ; species name
-	dw 8, 200 ; height, weight
+		db 8
+	dw 200 ; height, weight
 
 	db   "Es dócil por natu-"
 	next "raleza. Pero,"

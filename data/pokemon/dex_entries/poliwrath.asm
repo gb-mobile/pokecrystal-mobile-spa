@@ -1,5 +1,6 @@
 	db "RENACUAJO@" ; species name
-	dw 13, 540 ; height, weight
+		db 13
+	dw 540 ; height, weight
 
 	db   "Puede utilizar sus"
 	next "fornidos brazos y"

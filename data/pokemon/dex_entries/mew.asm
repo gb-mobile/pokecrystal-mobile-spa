@@ -1,5 +1,6 @@
 	db "N. ESPECIE@" ; species name
-	dw 4, 40 ; height, weight
+		db 4
+	dw 40 ; height, weight
 
 	db   "Como es capaz de"
 	next "aprender todos los"

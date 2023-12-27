@@ -1,5 +1,6 @@
 	db "MISTERIOSO@" ; species name
-	dw 11, 800 ; height, weight
+		db 11
+	dw 800 ; height, weight
 
 	db   "Parece ser que"
 	next "utiliza el núcleo"

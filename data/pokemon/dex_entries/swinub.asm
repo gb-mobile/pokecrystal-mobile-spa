@@ -1,5 +1,6 @@
 	db "CERDO@" ; species name
-	dw 4, 65 ; height, weight
+		db 4
+	dw 65 ; height, weight
 
 	db   "Usa el hocico para"
 	next "buscar comida por"

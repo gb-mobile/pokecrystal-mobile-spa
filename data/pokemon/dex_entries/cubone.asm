@@ -1,5 +1,6 @@
 	db "SOLITARIO@" ; species name
-	dw 4, 65 ; height, weight
+		db 4
+	dw 65 ; height, weight
 
 	db   "Nada más nacer"
 	next "perdió a su madre."

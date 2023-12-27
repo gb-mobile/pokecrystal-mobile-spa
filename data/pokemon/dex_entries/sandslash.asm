@@ -1,5 +1,6 @@
 	db "RATÓN@" ; species name
-	dw 10, 295 ; height, weight
+		db 10
+	dw 295 ; height, weight
 
 	db   "Lo suyo es trepar"
 	next "árboles, hacerse"

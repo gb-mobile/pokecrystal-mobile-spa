@@ -1,5 +1,6 @@
 	db "LODO@" ; species name
-	dw 9, 300 ; height, weight
+		db 9
+	dw 300 ; height, weight
 
 	db   "Cuando se une"
 	next "a otro compañero"

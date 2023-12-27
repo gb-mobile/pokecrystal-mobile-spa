@@ -1,5 +1,6 @@
 	db "HIBERNANTE@" ; species name
-	dw 18, 1258 ; height, weight
+		db 18
+	dw 1258 ; height, weight
 
 	db   "Aunque es muy"
 	next "grande, no se le"

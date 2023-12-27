@@ -1,5 +1,6 @@
 	db "TORTUGUITA@" ; species name
-	dw 5, 90 ; height, weight
+		db 5
+	dw 90 ; height, weight
 
 	db   "Cuando se siente"
 	next "amenazado, esconde"

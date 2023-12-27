@@ -1,5 +1,6 @@
 	db "ELÉCTRICO@" ; species name
-	dw 6, 235 ; height, weight
+		db 6
+	dw 235 ; height, weight
 
 	db   "Adora los rayos"
 	next "más violentos. La"

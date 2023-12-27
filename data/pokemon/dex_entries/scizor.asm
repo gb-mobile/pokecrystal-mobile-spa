@@ -1,5 +1,6 @@
 	db "TIJERAS@" ; species name
-	dw 18, 1180 ; height, weight
+		db 18
+	dw 1180 ; height, weight
 
 	db   "Las pinzas que po-"
 	next "see tienen acero."

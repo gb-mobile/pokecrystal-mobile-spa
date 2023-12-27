@@ -1,5 +1,6 @@
 	db "CAPULLO@" ; species name
-	dw 6, 100 ; height, weight
+		db 6
+	dw 100 ; height, weight
 
 	db   "Casi incapaz de"
 	next "moverse, descansa"

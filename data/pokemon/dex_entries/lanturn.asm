@@ -1,5 +1,6 @@
 	db "LUZ@" ; species name
-	dw 12, 225 ; height, weight
+		db 12
+	dw 225 ; height, weight
 
 	db   "Utiliza la parte"
 	next "brillante del"

@@ -1,5 +1,6 @@
 	db "GAS VENENO@" ; species name
-	dw 12, 95 ; height, weight
+		db 12
+	dw 95 ; height, weight
 
 	db   "Al inhalar los"
 	next "gases tóxicos que"

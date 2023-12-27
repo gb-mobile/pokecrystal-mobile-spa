@@ -1,5 +1,6 @@
 	db "NARIZOTAS@" ; species name
-	dw 5, 335 ; height, weight
+		db 5
+	dw 335 ; height, weight
 
 	db   "A primera hora de"
 	next "la mañana, se"

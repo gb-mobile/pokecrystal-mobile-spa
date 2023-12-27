@@ -1,5 +1,6 @@
 	db "ALGADÓN@" ; species name
-	dw 8, 30 ; height, weight
+		db 8
+	dw 30 ; height, weight
 
 	db   "Aunque sople el"
 	next "viento más fuerte,"

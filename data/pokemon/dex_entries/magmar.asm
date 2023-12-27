@@ -1,5 +1,6 @@
 	db "ESCUPFUEGO@" ; species name
-	dw 13, 445 ; height, weight
+		db 13
+	dw 445 ; height, weight
 
 	db   "Es más frecuente"
 	next "encontrarle en"

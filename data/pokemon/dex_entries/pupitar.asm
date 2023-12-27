@@ -1,5 +1,6 @@
 	db "CAPARAZÓN@" ; species name
-	dw 12, 1520 ; height, weight
+		db 12
+	dw 1520 ; height, weight
 
 	db   "No se está quieto"
 	next "ni aun dentro de"

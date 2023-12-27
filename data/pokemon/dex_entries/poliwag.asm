@@ -1,5 +1,6 @@
 	db "RENACUAJO@" ; species name
-	dw 6, 124 ; height, weight
+		db 6
+	dw 124 ; height, weight
 
 	db   "La espiral que"
 	next "tiene en la panza"

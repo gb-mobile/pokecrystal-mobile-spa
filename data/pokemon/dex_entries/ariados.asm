@@ -1,5 +1,6 @@
 	db "PATA LARGA@" ; species name
-	dw 11, 335 ; height, weight
+		db 11
+	dw 335 ; height, weight
 
 	db   "Por las noches, en"
 	next "lugar de hacer el"

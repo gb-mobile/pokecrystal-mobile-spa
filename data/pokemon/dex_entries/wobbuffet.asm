@@ -1,5 +1,6 @@
 	db "PACIENTE@" ; species name
-	dw 13, 285 ; height, weight
+		db 13
+	dw 285 ; height, weight
 
 	db   "Con el fin de que"
 	next "nadie le vea la"

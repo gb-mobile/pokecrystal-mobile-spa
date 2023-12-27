@@ -1,5 +1,6 @@
 	db "VOLCÁN@" ; species name
-	dw 9, 190 ; height, weight
+		db 9
+	dw 190 ; height, weight
 
 	db   "Antes de empezar a"
 	next "luchar, se gira"

@@ -1,5 +1,6 @@
 	db "PUERCO@" ; species name
-	dw 11, 558 ; height, weight
+		db 11
+	dw 558 ; height, weight
 
 	db   "Aunque tiene las"
 	next "patas cortas, las"

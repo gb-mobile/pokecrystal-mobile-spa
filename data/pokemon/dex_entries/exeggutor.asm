@@ -1,5 +1,6 @@
 	db "COCO@" ; species name
-	dw 20, 1200 ; height, weight
+		db 20
+	dw 1200 ; height, weight
 
 	db   "Deben estar en un"
 	next "buen entorno para"

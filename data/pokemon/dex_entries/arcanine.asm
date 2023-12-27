@@ -1,5 +1,6 @@
 	db "LEGENDARIO@" ; species name
-	dw 19, 1550 ; height, weight
+		db 19
+	dw 1550 ; height, weight
 
 	db   "Cuenta un antiguo"
 	next "pergamino que la"

@@ -1,5 +1,6 @@
 	db "FELICIDAD@" ; species name
-	dw 6, 32 ; height, weight
+		db 6
+	dw 32 ; height, weight
 
 	db   "Aunque no bate mu-"
 	next "cho las alas, pue-"

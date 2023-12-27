@@ -1,5 +1,6 @@
 	db "PATO SALV.@" ; species name
-	dw 8, 150 ; height, weight
+		db 8
+	dw 150 ; height, weight
 
 	db   "Muchas son las"
 	next "personas que se"

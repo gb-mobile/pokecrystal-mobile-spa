@@ -1,5 +1,6 @@
 	db "5ESTRELLAS@" ; species name
-	dw 10, 108 ; height, weight
+		db 10
+	dw 108 ; height, weight
 
 	db   "Es muy tímido y"
 	next "se refugia con los"

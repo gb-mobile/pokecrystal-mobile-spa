@@ -1,5 +1,6 @@
 	db "FLOR@" ; species name
-	dw 7, 40 ; height, weight
+		db 7
+	dw 40 ; height, weight
 
 	db   "Si detecta algún"
 	next "movimiento, no du-"

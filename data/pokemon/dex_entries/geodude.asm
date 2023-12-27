@@ -1,5 +1,6 @@
 	db "ROCA@" ; species name
-	dw 4, 200 ; height, weight
+		db 4
+	dw 200 ; height, weight
 
 	db   "Está orgulloso del"
 	next "cuerpo robusto que"

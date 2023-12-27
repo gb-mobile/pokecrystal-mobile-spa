@@ -1,5 +1,6 @@
 	db "ALA CLARA@" ; species name
-	dw 12, 380 ; height, weight
+		db 12
+	dw 380 ; height, weight
 
 	db   "Puede ver en todas"
 	next "direcciones sin"

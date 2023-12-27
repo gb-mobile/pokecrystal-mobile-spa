@@ -1,5 +1,6 @@
 	db "HUEVO@" ; species name
-	dw 11, 346 ; height, weight
+		db 11
+	dw 346 ; height, weight
 
 	db   "Es un #MON muy"
 	next "codiciado por los"

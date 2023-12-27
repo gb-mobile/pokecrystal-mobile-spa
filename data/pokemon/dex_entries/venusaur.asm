@@ -1,5 +1,6 @@
 	db "SEMILLA@" ; species name
-	dw 20, 1000 ; height, weight
+		db 20
+	dw 1000 ; height, weight
 
 	db   "Cuando se calienta"
 	next "al absorber la luz"

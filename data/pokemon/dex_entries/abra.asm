@@ -1,5 +1,6 @@
 	db "PSI@" ; species name
-	dw 9, 195 ; height, weight
+		db 9
+	dw 195 ; height, weight
 
 	db   "Se hipnotiza a sí"
 	next "mismo para usar"

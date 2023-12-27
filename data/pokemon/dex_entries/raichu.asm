@@ -1,5 +1,6 @@
 	db "RATÓN@" ; species name
-	dw 8, 300 ; height, weight
+		db 8
+	dw 300 ; height, weight
 
 	db   "Cuando descarga"
 	next "los mofletes,"

@@ -1,5 +1,6 @@
 	db "PSI@" ; species name
-	dw 15, 480 ; height, weight
+		db 15
+	dw 480 ; height, weight
 
 	db   "Tiene un C.I."
 	next "fuera de lo común."

@@ -1,5 +1,6 @@
 	db "BURBUJA@" ; species name
-	dw 10, 290 ; height, weight
+		db 10
+	dw 290 ; height, weight
 
 	db   "Como puede usar"
 	next "las aletas que"

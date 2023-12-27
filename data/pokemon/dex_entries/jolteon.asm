@@ -1,5 +1,6 @@
 	db "RELÁMPAGO@" ; species name
-	dw 8, 245 ; height, weight
+		db 8
+	dw 245 ; height, weight
 
 	db   "Los iones que le"
 	next "rodean el cuerpo"

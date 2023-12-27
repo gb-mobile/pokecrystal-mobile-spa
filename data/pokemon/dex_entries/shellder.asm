@@ -1,5 +1,6 @@
 	db "BIVALVO@" ; species name
-	dw 3, 40 ; height, weight
+		db 3
+	dw 40 ; height, weight
 
 	db   "Cuando utiliza la"
 	next "TENAZA en combate,"

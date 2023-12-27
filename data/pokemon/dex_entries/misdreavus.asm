@@ -1,5 +1,6 @@
 	db "CHIRRIDO@" ; species name
-	dw 7, 10 ; height, weight
+		db 7
+	dw 10 ; height, weight
 
 	db   "Adora mirar a la"
 	next "gente que ha asus-"

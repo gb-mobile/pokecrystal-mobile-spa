@@ -1,5 +1,6 @@
 	db "TOPO@" ; species name
-	dw 7, 333 ; height, weight
+		db 7
+	dw 333 ; height, weight
 
 	db   "Estos trillizos"
 	next "DIGLETT cavan"

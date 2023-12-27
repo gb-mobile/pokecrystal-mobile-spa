@@ -1,5 +1,6 @@
 	db "DRAGÓN@" ; species name
-	dw 4, 80 ; height, weight
+		db 4
+	dw 80 ; height, weight
 
 	db   "Cuando están en un"
 	next "lugar seguro, se"

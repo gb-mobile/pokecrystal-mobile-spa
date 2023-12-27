@@ -1,5 +1,6 @@
 	db "HADA@" ; species name
-	dw 14, 487 ; height, weight
+		db 14
+	dw 487 ; height, weight
 
 	db   "Con sólo enseñar"
 	next "las fauces, conse-"

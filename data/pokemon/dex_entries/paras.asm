@@ -1,5 +1,6 @@
 	db "HONGO@" ; species name
-	dw 3, 54 ; height, weight
+		db 3
+	dw 54 ; height, weight
 
 	db   "La gran seta que"
 	next "lleva a cuestas"

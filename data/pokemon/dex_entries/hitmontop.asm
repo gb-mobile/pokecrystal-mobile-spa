@@ -1,5 +1,6 @@
 	db "BOCA ABAJO@" ; species name
-	dw 14, 480 ; height, weight
+		db 14
+	dw 480 ; height, weight
 
 	db   "Tras hacer el pino"
 	next "para despistar a"

@@ -1,5 +1,6 @@
 	db "HADA@" ; species name
-	dw 6, 75 ; height, weight
+		db 6
+	dw 75 ; height, weight
 
 	db   "Aunque no es muy"
 	next "común, se le puede"

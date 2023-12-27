@@ -1,5 +1,6 @@
 	db "TRANSPORTE@" ; species name
-	dw 25, 2200 ; height, weight
+		db 25
+	dw 2200 ; height, weight
 
 	db   "A este amable"
 	next "#MON le encanta"

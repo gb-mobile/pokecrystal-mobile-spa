@@ -1,5 +1,6 @@
 	db "MILANO@" ; species name
-	dw 21, 2200 ; height, weight
+		db 21
+	dw 2200 ; height, weight
 
 	db   "Va nadando por ahí"
 	next "tranquilamente,"

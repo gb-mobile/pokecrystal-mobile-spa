@@ -1,5 +1,6 @@
 	db "ZORRO@" ; species name
-	dw 6, 99 ; height, weight
+		db 6
+	dw 99 ; height, weight
 
 	db   "A medida que crece"
 	next "se le embellecen"

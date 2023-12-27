@@ -1,5 +1,6 @@
 	db "CLAVOS@" ; species name
-	dw 10, 1150 ; height, weight
+		db 10
+	dw 1150 ; height, weight
 
 	db   "La cabeza no le da"
 	next "para retener más"

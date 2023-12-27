@@ -1,5 +1,6 @@
 	db "SEMILLA@" ; species name
-	dw 7, 69 ; height, weight
+		db 7
+	dw 69 ; height, weight
 
 	db   "Cuando es joven,"
 	next "crece con los"

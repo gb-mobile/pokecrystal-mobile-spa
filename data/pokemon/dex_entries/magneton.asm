@@ -1,5 +1,6 @@
 	db "IMÁN@" ; species name
-	dw 10, 600 ; height, weight
+		db 10
+	dw 600 ; height, weight
 
 	db   "Al unirse varios"
 	next "MAGNETON, se crea"

@@ -1,5 +1,6 @@
 	db "IMITACIÓN@" ; species name
-	dw 12, 380 ; height, weight
+		db 12
+	dw 380 ; height, weight
 
 	db   "Si ves una rama"
 	next "moverse cuando no"

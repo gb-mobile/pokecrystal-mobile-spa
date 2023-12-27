@@ -1,5 +1,6 @@
 	db "AVE TRIPLE@" ; species name
-	dw 18, 852 ; height, weight
+		db 18
+	dw 852 ; height, weight
 
 	db   "Más vale no perder"
 	next "de vista ninguna"

@@ -1,5 +1,6 @@
 	db "5ESTRELLAS@" ; species name
-	dw 14, 356 ; height, weight
+		db 14
+	dw 356 ; height, weight
 
 	db   "Por la mañana,"
 	next "cuando hace calor,"

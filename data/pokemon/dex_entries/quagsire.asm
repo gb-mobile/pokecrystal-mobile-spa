@@ -1,5 +1,6 @@
 	db "PEZ AGUA@" ; species name
-	dw 14, 750 ; height, weight
+		db 14
+	dw 750 ; height, weight
 
 	db   "Es resbaladizo."
 	next "Suele chocarse"

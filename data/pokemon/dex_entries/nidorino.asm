@@ -1,5 +1,6 @@
 	db "PIN VENENO@" ; species name
-	dw 9, 195 ; height, weight
+		db 9
+	dw 195 ; height, weight
 
 	db   "Se altera con"
 	next "facilidad y usa"

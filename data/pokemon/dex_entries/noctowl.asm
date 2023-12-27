@@ -1,5 +1,6 @@
 	db "BÚHO@" ; species name
-	dw 16, 408 ; height, weight
+		db 16
+	dw 408 ; height, weight
 
 	db   "Tiene un plumaje"
 	next "tan suave que,"

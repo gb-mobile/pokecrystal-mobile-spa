@@ -1,5 +1,6 @@
 	db "MATAMOSCAS@" ; species name
-	dw 17, 155 ; height, weight
+		db 17
+	dw 155 ; height, weight
 
 	db   "Cuando este"
 	next "#MON ingiere"

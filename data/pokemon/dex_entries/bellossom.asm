@@ -1,5 +1,6 @@
 	db "FLOR@" ; species name
-	dw 4, 58 ; height, weight
+		db 4
+	dw 58 ; height, weight
 
 	db   "Si los BELLOSSOM"
 	next "se ponen a bailar"

@@ -1,5 +1,6 @@
 	db "LEÓN MAR.@" ; species name
-	dw 17, 1200 ; height, weight
+		db 17
+	dw 1200 ; height, weight
 
 	db   "Duerme en aguas"
 	next "poco profundas"

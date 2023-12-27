@@ -1,5 +1,6 @@
 	db "CORAZA@" ; species name
-	dw 11, 1200 ; height, weight
+		db 11
+	dw 1200 ; height, weight
 
 	db   "Como la piel de"
 	next "este #MON es"

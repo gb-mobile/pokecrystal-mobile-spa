@@ -1,5 +1,6 @@
 	db "TALADRO@" ; species name
-	dw 19, 1200 ; height, weight
+		db 19
+	dw 1200 ; height, weight
 
 	db   "Con poco que haga"
 	next "girar el cuerno"

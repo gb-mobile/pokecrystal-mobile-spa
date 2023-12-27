@@ -1,5 +1,6 @@
 	db "SERPIENTE@" ; species name
-	dw 20, 69 ; height, weight
+		db 20
+	dw 69 ; height, weight
 
 	db   "Percibe el olor de"
 	next "su presa moviendo"

@@ -1,5 +1,6 @@
 	db "LAVA@" ; species name
-	dw 8, 550 ; height, weight
+		db 8
+	dw 550 ; height, weight
 
 	db   "Tiene un cuerpo"
 	next "que no deja de"

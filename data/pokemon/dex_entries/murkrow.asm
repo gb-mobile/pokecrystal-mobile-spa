@@ -1,5 +1,6 @@
 	db "OSCURIDAD@" ; species name
-	dw 5, 21 ; height, weight
+		db 5
+	dw 21 ; height, weight
 
 	db   "Esconde objetos"
 	next "brillantes en un"

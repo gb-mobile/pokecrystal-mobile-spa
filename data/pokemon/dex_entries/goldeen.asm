@@ -1,5 +1,6 @@
 	db "PEZ COLOR@" ; species name
-	dw 6, 150 ; height, weight
+		db 6
+	dw 150 ; height, weight
 
 	db   "En época de"
 	next "desove, resulta"

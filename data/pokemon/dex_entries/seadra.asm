@@ -1,5 +1,6 @@
 	db "DRAGÓN@" ; species name
-	dw 12, 250 ; height, weight
+		db 12
+	dw 250 ; height, weight
 
 	db   "En esta especie,"
 	next "es el macho quien"

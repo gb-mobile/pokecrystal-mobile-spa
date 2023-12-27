@@ -1,5 +1,6 @@
 	db "ESTRELLADA@" ; species name
-	dw 3, 30 ; height, weight
+		db 3
+	dw 30 ; height, weight
 
 	db   "Allá donde haya"
 	next "impactado un"

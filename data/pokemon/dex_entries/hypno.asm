@@ -1,5 +1,6 @@
 	db "HIPNOSIS@" ; species name
-	dw 16, 756 ; height, weight
+		db 16
+	dw 756 ; height, weight
 
 	db   "Cuanto más haga"
 	next "oscilar el péndulo"

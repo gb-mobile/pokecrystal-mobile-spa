@@ -1,5 +1,6 @@
 	db "TENAZA@" ; species name
-	dw 13, 600 ; height, weight
+		db 13
+	dw 600 ; height, weight
 
 	db   "Las grandes dimen-"
 	next "siones de la pinza"

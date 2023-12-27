@@ -1,5 +1,6 @@
 	db "CONEJOAGUA@" ; species name
-	dw 8, 285 ; height, weight
+		db 8
+	dw 285 ; height, weight
 
 	db   "Gracias al dibujo"
 	next "que tiene en el"

@@ -1,5 +1,6 @@
 	db "ALGADÓN@" ; species name
-	dw 4, 5 ; height, weight
+		db 4
+	dw 5 ; height, weight
 
 	db   "Es tan ligero, que"
 	next "la brisa más leve"

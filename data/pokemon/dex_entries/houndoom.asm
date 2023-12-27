@@ -1,5 +1,6 @@
 	db "SINIESTRO@" ; species name
-	dw 14, 350 ; height, weight
+		db 14
+	dw 350 ; height, weight
 
 	db   "Las acres llamas"
 	next "que lanza por la"

@@ -1,5 +1,6 @@
 	db "VIRTUAL@" ; species name
-	dw 8, 365 ; height, weight
+		db 8
+	dw 365 ; height, weight
 
 	db   "Es un #MON"
 	next "artificial, creado"

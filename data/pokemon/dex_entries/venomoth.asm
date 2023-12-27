@@ -1,5 +1,6 @@
 	db "POLILLA V.@" ; species name
-	dw 15, 125 ; height, weight
+		db 15
+	dw 125 ; height, weight
 
 	db   "Lanza unas escamas"
 	next "que paralizan a"

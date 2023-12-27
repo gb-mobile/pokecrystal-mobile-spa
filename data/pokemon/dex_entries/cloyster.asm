@@ -1,5 +1,6 @@
 	db "BIVALVO@" ; species name
-	dw 15, 1325 ; height, weight
+		db 15
+	dw 1325 ; height, weight
 
 	db   "Ni el misil más"
 	next "devastador podría"

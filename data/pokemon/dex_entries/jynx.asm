@@ -1,5 +1,6 @@
 	db "F. HUMANA@" ; species name
-	dw 14, 406 ; height, weight
+		db 14
+	dw 406 ; height, weight
 
 	db   "Uno de sus rasgos"
 	next "es el amplio aba-"

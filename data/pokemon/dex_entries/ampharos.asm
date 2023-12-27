@@ -1,5 +1,6 @@
 	db "LUZ@" ; species name
-	dw 14, 615 ; height, weight
+		db 14
+	dw 615 ; height, weight
 
 	db   "Al anochecer, la"
 	next "luz intensa que se"

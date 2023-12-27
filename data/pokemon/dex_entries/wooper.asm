@@ -1,5 +1,6 @@
 	db "PEZ AGUA@" ; species name
-	dw 4, 85 ; height, weight
+		db 4
+	dw 85 ; height, weight
 
 	db   "Está cubierto por"
 	next "una membrana muco-"

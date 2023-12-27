@@ -1,5 +1,6 @@
 	db "ESPIRAL@" ; species name
-	dw 4, 75 ; height, weight
+		db 4
+	dw 75 ; height, weight
 
 	db   "En tiempos prehis-"
 	next "tóricos, vivía en"

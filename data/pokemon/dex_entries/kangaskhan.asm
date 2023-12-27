@@ -1,5 +1,6 @@
 	db "PADRES@" ; species name
-	dw 22, 800 ; height, weight
+		db 22
+	dw 800 ; height, weight
 
 	db   "Tiene la costumbre"
 	next "de dormir de pie"

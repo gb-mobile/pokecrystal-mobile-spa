@@ -1,5 +1,6 @@
 	db "LECHERA@" ; species name
-	dw 12, 755 ; height, weight
+		db 12
+	dw 755 ; height, weight
 
 	db   "Para poder ordeñar"
 	next "a MILTANK, se re-"

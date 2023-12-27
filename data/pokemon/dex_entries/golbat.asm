@@ -1,5 +1,6 @@
 	db "MURCIÉLAGO@" ; species name
-	dw 16, 550 ; height, weight
+		db 16
+	dw 550 ; height, weight
 
 	db   "Al precipitarse"
 	next "sobre su víctima,"

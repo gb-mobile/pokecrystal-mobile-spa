@@ -1,5 +1,6 @@
 	db "MARISCO@" ; species name
-	dw 16, 855 ; height, weight
+		db 16
+	dw 855 ; height, weight
 
 	db   "Planta firmemente"
 	next "las patas en el"

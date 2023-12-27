@@ -1,5 +1,6 @@
 	db "HOJA@" ; species name
-	dw 9, 64 ; height, weight
+		db 9
+	dw 64 ; height, weight
 
 	db   "Le encanta"
 	next "disfrutar del sol."

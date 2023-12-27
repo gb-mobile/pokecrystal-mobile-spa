@@ -1,5 +1,6 @@
 	db "HONGO@" ; species name
-	dw 10, 295 ; height, weight
+		db 10
+	dw 295 ; height, weight
 
 	db   "Cuando ya no queda"
 	next "nada del bicho,"

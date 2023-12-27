@@ -1,5 +1,6 @@
 	db "TORTUGA@" ; species name
-	dw 10, 225 ; height, weight
+		db 10
+	dw 225 ; height, weight
 
 	db   "Tiene una cola"
 	next "larga y peluda"

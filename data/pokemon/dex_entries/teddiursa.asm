@@ -1,5 +1,6 @@
 	db "OSITO@" ; species name
-	dw 6, 88 ; height, weight
+		db 6
+	dw 88 ; height, weight
 
 	db   "Se pasa el día"
 	next "lamiendo miel. De"

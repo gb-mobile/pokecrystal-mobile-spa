@@ -1,5 +1,6 @@
 	db "LODO@" ; species name
-	dw 12, 300 ; height, weight
+		db 12
+	dw 300 ; height, weight
 
 	db   "A medida que se"
 	next "mueve, va goteando"

@@ -1,5 +1,6 @@
 	db "MANTIS@" ; species name
-	dw 15, 560 ; height, weight
+		db 15
+	dw 560 ; height, weight
 
 	db   "Está orgulloso de"
 	next "la velocidad que"

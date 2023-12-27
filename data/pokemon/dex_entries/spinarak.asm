@@ -1,5 +1,6 @@
 	db "ESCUPESOGA@" ; species name
-	dw 5, 85 ; height, weight
+		db 5
+	dw 85 ; height, weight
 
 	db   "Atrapa a su presa"
 	next "en su telaraña."

@@ -1,5 +1,6 @@
 	db "DORMIR@" ; species name
-	dw 21, 4600 ; height, weight
+		db 21
+	dw 4600 ; height, weight
 
 	db   "Este #MON tiene"
 	next "un estómago a"

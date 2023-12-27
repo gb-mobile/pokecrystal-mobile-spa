@@ -1,5 +1,6 @@
 	db "ALGADÓN@" ; species name
-	dw 6, 10 ; height, weight
+		db 6
+	dw 10 ; height, weight
 
 	db   "En cuanto caen las"
 	next "primeras gotas,"

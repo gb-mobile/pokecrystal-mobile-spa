@@ -1,5 +1,6 @@
 	db "RATÓN@" ; species name
-	dw 4, 60 ; height, weight
+		db 4
+	dw 60 ; height, weight
 
 	db   "Cuando se enfada,"
 	next "este #MON des-"

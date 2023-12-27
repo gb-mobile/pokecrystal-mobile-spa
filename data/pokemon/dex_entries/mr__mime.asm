@@ -1,5 +1,6 @@
 	db "BARRERA@" ; species name
-	dw 13, 545 ; height, weight
+		db 13
+	dw 545 ; height, weight
 
 	db   "Tiene una rara"
 	next "habilidad: puede"

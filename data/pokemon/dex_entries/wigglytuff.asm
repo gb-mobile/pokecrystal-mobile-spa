@@ -1,5 +1,6 @@
 	db "GLOBO@" ; species name
-	dw 10, 120 ; height, weight
+		db 10
+	dw 120 ; height, weight
 
 	db   "Es como un peluche"
 	next "suave, tan lanudo"

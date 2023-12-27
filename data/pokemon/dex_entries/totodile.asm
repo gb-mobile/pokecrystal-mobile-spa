@@ -1,5 +1,6 @@
 	db "GRAN FAUCE@" ; species name
-	dw 6, 95 ; height, weight
+		db 6
+	dw 95 ; height, weight
 
 	db   "Esta increíble"
 	next "criatura le clava"

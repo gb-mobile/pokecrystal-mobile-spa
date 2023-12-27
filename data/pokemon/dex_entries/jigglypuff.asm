@@ -1,5 +1,6 @@
 	db "GLOBO@" ; species name
-	dw 5, 55 ; height, weight
+		db 5
+	dw 55 ; height, weight
 
 	db   "Cierra los ojitos"
 	next "y usa su CANTO"

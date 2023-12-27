@@ -1,5 +1,6 @@
 	db "BOLA@" ; species name
-	dw 12, 666 ; height, weight
+		db 12
+	dw 666 ; height, weight
 
 	db   "Cuanta más energía"
 	next "almacena, mayor"

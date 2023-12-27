@@ -1,5 +1,6 @@
 	db "MONO CERDO@" ; species name
-	dw 5, 280 ; height, weight
+		db 5
+	dw 280 ; height, weight
 
 	db   "Vive en grupos en"
 	next "las copas de los"

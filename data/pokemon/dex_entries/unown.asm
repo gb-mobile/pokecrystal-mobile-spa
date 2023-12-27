@@ -1,5 +1,6 @@
 	db "SÍMBOLO@" ; species name
-	dw 5, 50 ; height, weight
+		db 5
+	dw 50 ; height, weight
 
 	db   "Se dice que, como"
 	next "hay muchos tipos"

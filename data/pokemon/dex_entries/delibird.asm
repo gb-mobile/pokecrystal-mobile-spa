@@ -1,5 +1,6 @@
 	db "REPARTO@" ; species name
-	dw 9, 160 ; height, weight
+		db 9
+	dw 160 ; height, weight
 
 	db   "Siempre lleva"
 	next "la comida consigo,"

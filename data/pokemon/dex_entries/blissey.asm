@@ -1,5 +1,6 @@
 	db "FELICIDAD@" ; species name
-	dw 15, 468 ; height, weight
+		db 15
+	dw 468 ; height, weight
 
 	db   "Morder uno de los"
 	next "deliciosos huevos"

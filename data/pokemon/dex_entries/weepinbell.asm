@@ -1,5 +1,6 @@
 	db "MATAMOSCAS@" ; species name
-	dw 10, 64 ; height, weight
+		db 10
+	dw 64 ; height, weight
 
 	db   "Cuando tiene"
 	next "hambre, agita las"

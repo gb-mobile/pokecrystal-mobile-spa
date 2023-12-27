@@ -1,5 +1,6 @@
 	db "GLOBO@" ; species name
-	dw 3, 10 ; height, weight
+		db 3
+	dw 10 ; height, weight
 
 	db   "Para caminar, en"
 	next "lugar de usar los"

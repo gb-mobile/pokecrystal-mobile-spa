@@ -1,5 +1,6 @@
 	db "PSI@" ; species name
-	dw 13, 565 ; height, weight
+		db 13
+	dw 565 ; height, weight
 
 	db   "Cuando cierra los"
 	next "ojos, el número de"

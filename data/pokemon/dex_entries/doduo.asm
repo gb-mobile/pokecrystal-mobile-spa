@@ -1,5 +1,6 @@
 	db "AVE GEMELA@" ; species name
-	dw 14, 392 ; height, weight
+		db 14
+	dw 392 ; height, weight
 
 	db   "Vive en los pasti-"
 	next "zales, desde donde"

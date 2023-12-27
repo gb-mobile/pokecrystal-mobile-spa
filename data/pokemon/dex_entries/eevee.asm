@@ -1,5 +1,6 @@
 	db "EVOLUCIÓN@" ; species name
-	dw 3, 65 ; height, weight
+		db 3
+	dw 65 ; height, weight
 
 	db   "Es capaz de evolu-"
 	next "cionar de muchas"

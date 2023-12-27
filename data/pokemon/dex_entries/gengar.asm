@@ -1,5 +1,6 @@
 	db "SOMBRA@" ; species name
-	dw 15, 405 ; height, weight
+		db 15
+	dw 405 ; height, weight
 
 	db   "De noche, se ocul-"
 	next "ta en las sombras"

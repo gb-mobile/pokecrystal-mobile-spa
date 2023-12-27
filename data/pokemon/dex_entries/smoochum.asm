@@ -1,5 +1,6 @@
 	db "BESO@" ; species name
-	dw 4, 60 ; height, weight
+		db 4
+	dw 60 ; height, weight
 
 	db   "Sus labios son la"
 	next "parte más sensible"

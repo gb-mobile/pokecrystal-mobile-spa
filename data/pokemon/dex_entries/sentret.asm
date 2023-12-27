@@ -1,5 +1,6 @@
 	db "EXPLORADOR@" ; species name
-	dw 8, 60 ; height, weight
+		db 8
+	dw 60 ; height, weight
 
 	db   "Cuando hace de"
 	next "centinela, avisa"

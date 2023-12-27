@@ -1,5 +1,6 @@
 	db "REACTOR@" ; species name
-	dw 9, 285 ; height, weight
+		db 9
+	dw 285 ; height, weight
 
 	db   "Por instinto, se"
 	next "entierra en hoyos."

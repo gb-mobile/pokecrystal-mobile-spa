@@ -1,5 +1,6 @@
 	db "APILAHUESO@" ; species name
-	dw 10, 450 ; height, weight
+		db 10
+	dw 450 ; height, weight
 
 	db   "En algún rincón"
 	next "del mundo, hay un"

@@ -1,5 +1,6 @@
 	db "DRAGÓN@" ; species name
-	dw 40, 165 ; height, weight
+		db 40
+	dw 165 ; height, weight
 
 	db   "Se refieren a él"
 	next "como el #MON"

@@ -1,5 +1,6 @@
 	db "SEMILLA@" ; species name
-	dw 3, 18 ; height, weight
+		db 3
+	dw 18 ; height, weight
 
 	db   "Es débil. La única"
 	next "forma que tiene de"

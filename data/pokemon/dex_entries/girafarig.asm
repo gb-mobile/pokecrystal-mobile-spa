@@ -1,5 +1,6 @@
 	db "GRANCUELLO@" ; species name
-	dw 15, 415 ; height, weight
+		db 15
+	dw 415 ; height, weight
 
 	db   "Cuando está en"
 	next "peligro, la cola"

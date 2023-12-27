@@ -1,5 +1,6 @@
 	db "ZORRO@" ; species name
-	dw 11, 199 ; height, weight
+		db 11
+	dw 199 ; height, weight
 
 	db   "Cuentan que llega"
 	next "a vivir hasta mil"

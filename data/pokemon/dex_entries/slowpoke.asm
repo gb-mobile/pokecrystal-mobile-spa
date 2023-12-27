@@ -1,5 +1,6 @@
 	db "ATONTADO@" ; species name
-	dw 12, 360 ; height, weight
+		db 12
+	dw 360 ; height, weight
 
 	db   "Está siempre tan"
 	next "ensimismado que,"

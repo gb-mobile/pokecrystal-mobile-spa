@@ -1,5 +1,6 @@
 	db "CAPULLO@" ; species name
-	dw 7, 99 ; height, weight
+		db 7
+	dw 99 ; height, weight
 
 	db   "Ésta es la forma"
 	next "pre-evolucionada."

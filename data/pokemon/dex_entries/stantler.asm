@@ -1,5 +1,6 @@
 	db "GRANCUERNO@" ; species name
-	dw 14, 712 ; height, weight
+		db 14
+	dw 712 ; height, weight
 
 	db   "Las redondas bolas"
 	next "de su cornamenta"

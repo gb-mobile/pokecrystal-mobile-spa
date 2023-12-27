@@ -1,5 +1,6 @@
 	db "PATEANDO@" ; species name
-	dw 15, 498 ; height, weight
+		db 15
+	dw 498 ; height, weight
 
 	db   "Se le conoce como"
 	next "el Maestro de las"

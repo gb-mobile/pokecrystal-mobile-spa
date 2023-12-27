@@ -1,5 +1,6 @@
 	db "HIERBA@" ; species name
-	dw 18, 1005 ; height, weight
+		db 18
+	dw 1005 ; height, weight
 
 	db   "Estar a su lado es"
 	next "muy refrescante."

@@ -1,5 +1,6 @@
 	db "GARRA-FILO@" ; species name
-	dw 9, 280 ; height, weight
+		db 9
+	dw 280 ; height, weight
 
 	db   "Este #MON es"
 	next "muy astuto."

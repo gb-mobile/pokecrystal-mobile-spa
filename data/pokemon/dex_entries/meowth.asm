@@ -1,5 +1,6 @@
 	db "GATO ARAÑA@" ; species name
-	dw 4, 42 ; height, weight
+		db 4
+	dw 42 ; height, weight
 
 	db   "Le fascina todo lo"
 	next "que brilla. Si ve"

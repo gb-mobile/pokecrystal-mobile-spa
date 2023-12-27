@@ -1,5 +1,6 @@
 	db "PAJARITO@" ; species name
-	dw 2, 20 ; height, weight
+		db 2
+	dw 20 ; height, weight
 
 	db   "Sabe trepar muy"
 	next "bien por el tronco"

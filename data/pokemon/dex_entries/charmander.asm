@@ -1,5 +1,6 @@
 	db "LAGARTIJA@" ; species name
-	dw 6, 85 ; height, weight
+		db 6
+	dw 85 ; height, weight
 
 	db   "Si está sano, la"
 	next "llama que tiene"

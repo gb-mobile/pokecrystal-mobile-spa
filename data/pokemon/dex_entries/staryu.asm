@@ -1,5 +1,6 @@
 	db "ESTRELLADA@" ; species name
-	dw 8, 345 ; height, weight
+		db 8
+	dw 345 ; height, weight
 
 	db   "Por la noche, con"
 	next "el centelleo de"

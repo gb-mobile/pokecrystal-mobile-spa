@@ -1,5 +1,6 @@
 	db "MOHO@" ; species name
-	dw 6, 205 ; height, weight
+		db 6
+	dw 205 ; height, weight
 
 	db   "El fluido que po-"
 	next "see sirve para ha-"

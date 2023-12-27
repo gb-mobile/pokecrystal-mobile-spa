@@ -1,5 +1,6 @@
 	db "ATROCIDAD@" ; species name
-	dw 65, 2350 ; height, weight
+		db 65
+	dw 2350 ; height, weight
 
 	db   "Huele las batallas"
 	next "a leguas. Allá"

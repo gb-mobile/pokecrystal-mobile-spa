@@ -1,5 +1,6 @@
 	db "GUSANO@" ; species name
-	dw 3, 29 ; height, weight
+		db 3
+	dw 29 ; height, weight
 
 	db   "Se agazapa en el"
 	next "follaje donde se"

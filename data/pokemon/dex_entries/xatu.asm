@@ -1,5 +1,6 @@
 	db "MÍSTICO@" ; species name
-	dw 15, 150 ; height, weight
+		db 15
+	dw 150 ; height, weight
 
 	db   "Cuando se pone a"
 	next "meditar al ama-"

@@ -1,5 +1,6 @@
 	db "SUPERPODER@" ; species name
-	dw 15, 705 ; height, weight
+		db 15
+	dw 705 ; height, weight
 
 	db   "Este gran #MON"
 	next "está siempre en su"

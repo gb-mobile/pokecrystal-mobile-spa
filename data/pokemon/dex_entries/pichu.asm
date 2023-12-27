@@ -1,5 +1,6 @@
 	db "RATONCITO@" ; species name
-	dw 3, 20 ; height, weight
+		db 3
+	dw 20 ; height, weight
 
 	db   "No se le da muy"
 	next "bien el almacena-"

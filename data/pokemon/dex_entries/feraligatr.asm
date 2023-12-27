@@ -1,5 +1,6 @@
 	db "GRAN FAUCE@" ; species name
-	dw 23, 888 ; height, weight
+		db 23
+	dw 888 ; height, weight
 
 	db   "A pesar de ser tan"
 	next "corpulento, gra-"

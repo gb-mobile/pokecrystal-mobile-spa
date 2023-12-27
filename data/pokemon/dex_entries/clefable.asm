@@ -1,5 +1,6 @@
 	db "HADA@" ; species name
-	dw 13, 400 ; height, weight
+		db 13
+	dw 400 ; height, weight
 
 	db   "Se dice que este"
 	next "#MON hada vive"

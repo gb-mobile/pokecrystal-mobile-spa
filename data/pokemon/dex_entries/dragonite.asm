@@ -1,5 +1,6 @@
 	db "DRAGÓN@" ; species name
-	dw 22, 2100 ; height, weight
+		db 22
+	dw 2100 ; height, weight
 
 	db   "Dicen que viven en"
 	next "una isla en algún"

@@ -1,5 +1,6 @@
 	db "COLA LARGA@" ; species name
-	dw 8, 115 ; height, weight
+		db 8
+	dw 115 ; height, weight
 
 	db   "Se vale de la cola"
 	next "para colgarse de"

@@ -1,5 +1,6 @@
 	db "REACTOR@" ; species name
-	dw 6, 120 ; height, weight
+		db 6
+	dw 120 ; height, weight
 
 	db   "Para escapar de su"
 	next "oponente, puede"

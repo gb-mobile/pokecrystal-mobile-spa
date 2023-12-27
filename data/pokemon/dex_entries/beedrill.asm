@@ -1,5 +1,6 @@
 	db "ABEJA VEN.@" ; species name
-	dw 10, 295 ; height, weight
+		db 10
+	dw 295 ; height, weight
 
 	db   "Usa aguijones"
 	next "venenosos para"

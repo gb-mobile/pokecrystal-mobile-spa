@@ -1,5 +1,6 @@
 	db "GATO FINO@" ; species name
-	dw 10, 320 ; height, weight
+		db 10
+	dw 320 ; height, weight
 
 	db   "Tras su aspecto"
 	next "ligero y elegante,"

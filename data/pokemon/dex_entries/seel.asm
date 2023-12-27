@@ -1,5 +1,6 @@
 	db "LEÓN MAR.@" ; species name
-	dw 11, 900 ; height, weight
+		db 11
+	dw 900 ; height, weight
 
 	db   "Está cubierto de"
 	next "un pelaje de color"

@@ -1,5 +1,6 @@
 	db "LAMIENDO@" ; species name
-	dw 12, 655 ; height, weight
+		db 12
+	dw 655 ; height, weight
 
 	db   "Este #MON está"
 	next "provisto de una"

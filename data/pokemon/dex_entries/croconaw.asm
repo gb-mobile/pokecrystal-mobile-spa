@@ -1,5 +1,6 @@
 	db "GRAN FAUCE@" ; species name
-	dw 11, 250 ; height, weight
+		db 11
+	dw 250 ; height, weight
 
 	db   "Si agarra con las"
 	next "fauces a su presa,"

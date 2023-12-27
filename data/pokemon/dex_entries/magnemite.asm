@@ -1,5 +1,6 @@
 	db "IMÁN@" ; species name
-	dw 3, 60 ; height, weight
+		db 3
+	dw 60 ; height, weight
 
 	db   "La gran cantidad"
 	next "de electricidad"

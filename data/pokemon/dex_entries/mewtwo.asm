@@ -1,5 +1,6 @@
 	db "GENÉTICO@" ; species name
-	dw 20, 1220 ; height, weight
+		db 20
+	dw 1220 ; height, weight
 
 	db   "Parece que descan-"
 	next "sa tranquilamente"

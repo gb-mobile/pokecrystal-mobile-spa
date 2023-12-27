@@ -1,5 +1,6 @@
 	db "LLAMA@" ; species name
-	dw 11, 190 ; height, weight
+		db 11
+	dw 190 ; height, weight
 
 	db   "Si se inquieta en"
 	next "combate, expulsa"

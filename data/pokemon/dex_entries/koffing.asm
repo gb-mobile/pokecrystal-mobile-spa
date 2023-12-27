@@ -1,5 +1,6 @@
 	db "GAS VENENO@" ; species name
-	dw 6, 10 ; height, weight
+		db 6
+	dw 10 ; height, weight
 
 	db   "Si alguien se le"
 	next "acerca cuando li-"

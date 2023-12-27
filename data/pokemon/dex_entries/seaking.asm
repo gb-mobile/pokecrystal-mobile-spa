@@ -1,5 +1,6 @@
 	db "PEZ COLOR@" ; species name
-	dw 13, 390 ; height, weight
+		db 13
+	dw 390 ; height, weight
 
 	db   "Con la llegada del"
 	next "otoño, los machos"

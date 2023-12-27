@@ -1,5 +1,6 @@
 	db "ERMITAÑO@" ; species name
-	dw 16, 785 ; height, weight
+		db 16
+	dw 785 ; height, weight
 
 	db   "Tiene una cola tan"
 	next "apetecible, que el"

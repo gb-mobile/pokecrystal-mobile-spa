@@ -1,5 +1,6 @@
 	db "VOLCÁN@" ; species name
-	dw 17, 795 ; height, weight
+		db 17
+	dw 795 ; height, weight
 
 	db   "Cuando el calor"
 	next "que libera supera"

@@ -1,5 +1,6 @@
 	db "MARISCO@" ; species name
-	dw 5, 115 ; height, weight
+		db 5
+	dw 115 ; height, weight
 
 	db   "Hace 300 millones"
 	next "de años permanecía"

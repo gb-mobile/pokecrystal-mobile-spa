@@ -1,5 +1,6 @@
 	db "MEGATÓN@" ; species name
-	dw 14, 3000 ; height, weight
+		db 14
+	dw 3000 ; height, weight
 
 	db   "Tiene un cuerpo"
 	next "rocoso tan fuerte"

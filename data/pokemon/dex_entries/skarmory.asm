@@ -1,5 +1,6 @@
 	db "CORAZA-AVE@" ; species name
-	dw 17, 505 ; height, weight
+		db 17
+	dw 505 ; height, weight
 
 	db   "Tiene unas plumas"
 	next "en las alas muy"

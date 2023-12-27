@@ -1,5 +1,6 @@
 	db "MARIPOSA@" ; species name
-	dw 11 ; height, weight weight="320 ; height, weight
+		db 11
+	dw 320 ; height, weight
 
 	db   "Revolotea de flor"
 	next "en flor,"

@@ -1,5 +1,6 @@
 	db "PELEÓN@" ; species name
-	dw 7, 210 ; height, weight
+		db 7
+	dw 210 ; height, weight
 
 	db   "Para mejorar sus"
 	next "técnicas de lucha,"

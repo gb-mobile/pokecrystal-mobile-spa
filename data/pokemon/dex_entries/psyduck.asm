@@ -1,5 +1,6 @@
 	db "PATO@" ; species name
-	dw 8, 196 ; height, weight
+		db 8
+	dw 196 ; height, weight
 
 	db   "Está dotado de un"
 	next "poder psíquico que"

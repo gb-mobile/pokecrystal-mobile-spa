@@ -1,5 +1,6 @@
 	db "LLAMA@" ; species name
-	dw 9, 250 ; height, weight
+		db 9
+	dw 250 ; height, weight
 
 	db   "Una vez ha almace-"
 	next "nado el calor"
