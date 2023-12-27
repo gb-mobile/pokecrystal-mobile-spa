@@ -22,6 +22,7 @@ _PrintNum::
 	cp 2
 	jr z, .word
 ; maximum 3 bytes
+.long
 	ld a, [de]
 	ldh [hPrintNumBuffer + 1], a
 	inc de
@@ -67,7 +68,7 @@ _PrintNum::
 	cp 6
 	jr z, .six
 
-; seven
+.seven
 	ld a, HIGH(1000000 >> 8)
 	ldh [hPrintNumBuffer + 4], a
 	ld a, HIGH(1000000) ; mid
@@ -157,7 +158,6 @@ _PrintNum::
 	ld a, "0"
 	add b
 	ld [hli], a
-
 	bit 5, d
 	jr z, .stop
 	ld a, "¥"
