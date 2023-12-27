@@ -958,7 +958,7 @@ EZChatString_ChatExplanation: ; Explanation string
 	db   "@"
 
 EZChatString_ChatExplanationBottom: ; Explanation commands string
-	db "REINI　SALIR 　OK@";"ぜんぶけす　やめる　　　けってい@"
+	db "BORRA　SALIR　　OK@";"ぜんぶけす　やめる　　　けってい@"
 
 EZChatDraw_CategoryMenu: ; Open category menu
 ; might need no change here
@@ -2490,17 +2490,17 @@ Function11cdaa:
 
 EZChatString_SortByCategory:
 ; Words will be displayed by category
-	db   "Display words";"ことば¯しゅるいべつに"
-	next "by category@";"えらべます@"
+	db   "Mostrar por";"ことば¯しゅるいべつに"
+	next "categoría.@";"えらべます@"
 
 EZChatString_SortByAlphabetical:
 ; Words will be displayed in alphabetical order
-	db   "Display words in";"ことば¯アイウエオ　の"
-	next "alphabetical order@";"じゅんばんで　ひょうじ　します@"
+	db   "Mostrar en orden";"ことば¯アイウエオ　の"
+	next "alfabético.@";"じゅんばんで　ひょうじ　します@"
 
 EZChatString_SortByMenu:
-	db   "GROUP MODE";"しゅるいべつ　モード"  ; Category mode
-	next "ABC MODE@";"アイウエオ　　モード@" ; ABC mode
+	db   "MODO GRUPAL";"しゅるいべつ　モード"  ; Category mode
+	next "MODO A a Z@";"アイウエオ　　モード@" ; ABC mode
 
 EZChatDraw_SortByCharacter: ; Sort by Character Menu
 	call EZChat_ClearBottom12Rows
