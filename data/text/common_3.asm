@@ -746,8 +746,7 @@ _MobileStadiumEntryText::
 	para "pueden leerse"
 	line "aquí."
 
-	para "¿Deseas leer los"
-	line "datos?"
+	para "¿Lees los datos?"
 	done
 
 _MobileStadiumSuccessText::
@@ -769,13 +768,14 @@ _MainMenuTimeUnknownText::
 	done
 
 _DeleteSavedLoginPasswordText::
-	text "¿Borrar el CÓDIGO"
-	line "DE ACCESO?"
+	text "¿Borras la CONTRA-"
+	line "SEÑA de ACCESO?"
 	done
 
+; unused mobile
 _DeletedTheLoginPasswordText::
-	text "CÓDIGO DE ACCESO"
-	line "borrado."
+	text "CONTRASEÑA de"
+	line "ACCESO borrada."
 	done
 
 _MobilePickThreeMonForBattleText::
@@ -825,10 +825,10 @@ _MobileCardFolderIntro2Text::
 	para "Una vez hayas in-"
 	line "troducido tu núme-"
 	cont "ro de teléfono,"
-	
-	para "podrás cambiar"
-	line "TARJETAS con tus"
-	cont "amigos/as."
+	cont "podrás cambiar"
+
+	para "TARJETAS con tus"
+	line "amigos/as."
 	prompt
 
 _MobileCardFolderIntro3Text::
@@ -891,13 +891,14 @@ _MobileCardFolderAskOpenOldText::
 	done
 
 _MobileCardFolderAskDeleteOldText::
-	text "¿Deseas borrar el"
-	line "TARJETERO antiguo?"
+	text "¿Borras el TARJE-"
+	line "TERO antiguo?"
 	done
 
+; unused mobile
 _MobileCardFolderFinishRegisteringCardsText::
-	text "¿Terminaste de re-"
-	line "gistrar TARJETAS?"
+	text "¿Acabas de regis-"
+	line "trar TARJETAS?"
 	done
 
 _PhoneWrongNumberText::
@@ -1128,12 +1129,12 @@ _BuenaIsThatRightText::
 
 _BuenaHereYouGoText::
 	text "¡Vale!"
-	done
+	prompt
 
 _BuenaNotEnoughPointsText::
 	text "No tienes puntos"
 	line "suficientes."
-	done
+	prompt
 
 _BuenaNoRoomText::
 	text "No tienes sitio"
@@ -1148,12 +1149,12 @@ _BuenaComeAgainText::
 
 _BTExcuseMeText::
 	text "¡Disculpa!"
-	done
+	prompt
 
 _ExcuseMeYoureNotReadyText::
 	text "Discúlpame."
 	line "No estás a punto."
-	done
+	prompt
 
 _BattleTowerReturnWhenReadyText::
 	text "Por favor, vuelve"
@@ -1164,17 +1165,17 @@ _BattleTowerReturnWhenReadyText::
 _NeedAtLeastThreeMonText::
 	text "Necesitas al menos"
 	line "tres #MON."
-	done
+	prompt
 
 _EggDoesNotQualifyText::
 	text "Lo siento."
 	line "Un HUEVO no vale."
-	done
+	prompt
 
 _OnlyThreeMonMayBeEnteredText::
 	text "Sólo puedes usar"
 	line "tres #MON."
-	done
+	prompt
 
 _TheMonMustAllBeDifferentKindsText::
 	text "Los @"
@@ -1199,7 +1200,7 @@ _TheMonMustNotHoldTheSameItemsText::
 _YouCantTakeAnEggText::
 	text "¡No puedes llevar"
 	line "un HUEVO!"
-	done
+	prompt
 
 _BallDodgedText::
 	text "¡Esquivó la BALL!"
@@ -1431,8 +1432,8 @@ _BallBoxFullText::
 	prompt
 
 _ItemUsedText::
-	text "<PLAYER> usó@"
-	text_low
+	text "<PLAYER> usó"
+	line "@"
 	text_ram wStringBuffer2
 	text "."
 	done

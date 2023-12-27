@@ -112,7 +112,7 @@ _CameToItsSensesText::
 	done
 
 _EnterNewPasscodeText::
-	text "Por favor, ingrese"
+	text "Por favor, mete"
 	line "cualquier número"
 	cont "de 4 cifras."
 	done
@@ -126,10 +126,11 @@ _ConfirmPasscodeText::
 _PasscodesNotSameText::
 	text "Ése no es el"
 	line "mismo número."
-	prompt
+	done
 
 _PasscodeSetText::
-	text "CONTRASEÑA fijada."
+	text "PASSWORD"
+	line "fijado."
 
 	para "Introduce este"
 	line "número la próxima"
@@ -144,14 +145,14 @@ _FourZerosInvalidText::
 	prompt
 
 _EnterPasscodeText::
-	text "Introduce la"
-	next "CONTRASEÑA del"
+	text "Introduce el"
+	next "CÓDIGO del"
 	cont "TARJETERO."
 	done
 
 _IncorrectPasscodeText::
-	text "¡CONTRASEÑA"
-	line "incorrecta!"
+	text "¡CÓDIGO"
+	line "incorrecto!"
 	prompt
 
 _CardFolderOpenText::
@@ -187,7 +188,7 @@ _OakTimeHowManyMinutesText::
 	done
 
 _OakTimeWhoaMinutesText::
-	text "Whoa!@"
+	text "¡Uauu!@"
 	text_end
 
 _OakTimeMinutesQuestionMarkText::

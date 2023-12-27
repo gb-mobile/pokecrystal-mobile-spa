@@ -1413,26 +1413,25 @@ _OakPCText4::
 	line "PC del PROF. OAK."
 	done
 
-_TrainerRankingExplanationText:: ; unreferenced
-	text "¡Clasificatoria"
-	line "triple de entrena-"
-	cont "dores!"
+_TrainerRankingExplanationText::
+	text "¡Ranking triple de"
+	line "entrenadores!"
 
-	para "¡El archivo que"
+	para "¡El fichero que"
 	line "acabas de enviar"
 
-	para "puede que aparezca"
-	line "en las clasifica-"
-	cont "ciones!"
-	done
+	para "generará las"
+	line "posiciones!"
+	prompt
 
-_TrainerRankingNoDataText:: ; unreferenced
+; unused
+_TrainerRankingNoDataText::
 	text "No hay datos de"
-	line "clasificaciones."
+	line "posiciones."
 
 	para "Conectando para"
 	line "obtener datos."
-	done
+	prompt
 
 _MemoryGameYeahText::
 	text ", ¡sí!"
