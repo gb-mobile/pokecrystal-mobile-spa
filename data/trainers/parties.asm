@@ -583,7 +583,7 @@ BirdKeeperGroup:
 	db -1 ; end
 
 	; BIRD_KEEPER (3)
-		db "BENI@", TRAINERTYPE_NORMAL
+	db "BRIAN@", TRAINERTYPE_NORMAL
 	db 12, PIDGEY
 	db 14, PIDGEOTTO
 	db -1 ; end
@@ -830,7 +830,7 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	; COOLTRAINERM (5)
-		db "BEA@", TRAINERTYPE_NORMAL
+	db "MIKI@", TRAINERTYPE_NORMAL
 	db 37, DRAGONAIR
 	db -1 ; end
 
@@ -855,7 +855,7 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	; COOLTRAINERM (9)
-		db "JACK@", TRAINERTYPE_MOVES
+	db "JACK@", TRAINERTYPE_MOVES
 	db 33, PARASECT,   LEECH_LIFE, SPORE, SLASH, SWORDS_DANCE
 	db 35, GOLDUCK,    CONFUSION, SCREECH, PSYCH_UP, FURY_SWIPES
 	db -1 ; end
@@ -880,7 +880,7 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	; COOLTRAINERM (13)
-		db "PEP@", TRAINERTYPE_NORMAL
+	db "ERIC@", TRAINERTYPE_NORMAL
 	db 10, BULBASAUR
 	db 10, CHARMANDER
 	db 10, SQUIRTLE
@@ -922,7 +922,7 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	; COOLTRAINERM (19)
-		db "ARTURO@", TRAINERTYPE_MOVES
+	db "ALAN@", TRAINERTYPE_MOVES
 	db 27, CHARMELEON, EMBER, SMOKESCREEN, RAGE, SCARY_FACE
 	db -1 ; end
 
@@ -958,7 +958,7 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	; COOLTRAINERF (5)
-		db "LUISA@", TRAINERTYPE_NORMAL
+	db "LISA@", TRAINERTYPE_NORMAL
 	db 26, SHELLDER
 	db 28, CLOYSTER
 	db -1 ; end
@@ -988,7 +988,7 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	; COOLTRAINERF (10)
-		db "TELMA@", TRAINERTYPE_NORMAL
+	db "TARA@", TRAINERTYPE_NORMAL
 	db 31, STARMIE
 	db 33, NIDOQUEEN
 	db 31, STARMIE
@@ -1042,14 +1042,14 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	; COOLTRAINERF (19)
-		db "TELMA@", TRAINERTYPE_NORMAL
+	db "TARA@", TRAINERTYPE_NORMAL
 	db 34, STARMIE
 	db 36, NIDOQUEEN
 	db 34, STARMIE
 	db -1 ; end
 
 	; COOLTRAINERF (20)
-		db "TELMA@", TRAINERTYPE_ITEM_MOVES
+	db "TARA@", TRAINERTYPE_ITEM_MOVES
 	db 38, STARMIE,    NO_ITEM,      DOUBLE_TEAM, PSYCHIC_M, WATERFALL, CONFUSE_RAY
 	db 40, NIDOQUEEN,  PINK_BOW,     EARTHQUAKE, DOUBLE_KICK, TOXIC, BODY_SLAM
 	db 38, STARMIE,    NO_ITEM,      BLIZZARD, PSYCHIC_M, WATERFALL, RECOVER
@@ -1159,7 +1159,7 @@ BeautyGroup:
 
 PokemaniacGroup:
 	; POKEMANIAC (1)
-		db "EUGENIO@", TRAINERTYPE_NORMAL
+	db "NICO@", TRAINERTYPE_NORMAL
 	db 10, SLOWPOKE
 	db -1 ; end
 
@@ -1217,7 +1217,7 @@ PokemaniacGroup:
 	db -1 ; end
 
 	; POKEMANIAC (12)
-		db "RAFA@", TRAINERTYPE_NORMAL
+	db "DON@", TRAINERTYPE_NORMAL
 	db 10, SLOWPOKE
 	db 10, SLOWPOKE
 	db -1 ; end
@@ -1442,7 +1442,7 @@ GentlemanGroup:
 	db -1 ; end
 
 	; GENTLEMAN (3)
-		db "GREGORIO@", TRAINERTYPE_NORMAL
+	db "GREG@", TRAINERTYPE_NORMAL
 	db 37, PIKACHU
 	db 33, FLAAFFY
 	db -1 ; end
@@ -1672,7 +1672,7 @@ FisherGroup:
 	db -1 ; end
 
 	; FISHER (10)
-		db "SAÚL@", TRAINERTYPE_NORMAL
+	db "DAVID@", TRAINERTYPE_NORMAL
 	db 23, GOLDEEN
 	db 23, GOLDEEN
 	db 25, SEAKING
@@ -1737,7 +1737,7 @@ FisherGroup:
 	db -1 ; end
 
 	; FISHER (20)
-		db "SAÚL@", TRAINERTYPE_NORMAL
+	db "DAVID@", TRAINERTYPE_NORMAL
 	db 29, GOLDEEN
 	db 29, GOLDEEN
 	db 32, SEAKING
@@ -1751,7 +1751,7 @@ FisherGroup:
 	db -1 ; end
 
 	; FISHER (22)
-		db "SAÚL@", TRAINERTYPE_MOVES
+	db "DAVID@", TRAINERTYPE_MOVES
 	db 34, SEAKING,    SUPERSONIC, WATERFALL, FLAIL, FURY_ATTACK
 	db 34, SEAKING,    SUPERSONIC, WATERFALL, FLAIL, FURY_ATTACK
 	db 38, REMORAID,   PSYBEAM, AURORA_BEAM, BUBBLEBEAM, HYPER_BEAM
@@ -1850,7 +1850,7 @@ SwimmerMGroup:
 	db -1 ; end
 
 	; SWIMMERM (12)
-		db "RUBÉN@", TRAINERTYPE_NORMAL
+	db "ROY@", TRAINERTYPE_NORMAL
 	db 15, HORSEA
 	db 15, HORSEA
 	db 20, SEADRA
@@ -1897,7 +1897,7 @@ SwimmerMGroup:
 	db -1 ; end
 
 	; SWIMMERM (19)
-		db "ARAN@", TRAINERTYPE_NORMAL
+	db "JAIME@", TRAINERTYPE_NORMAL
 	db 13, STARYU
 	db 18, STARMIE
 	db 16, HORSEA
@@ -2035,7 +2035,7 @@ SailorGroup:
 	db -1 ; end
 
 	; SAILOR (2)
-		db "CURRO@", TRAINERTYPE_NORMAL
+	db "KEN@", TRAINERTYPE_NORMAL
 	db 18, POLIWAG
 	db 18, POLIWHIRL
 	db -1 ; end
@@ -2070,7 +2070,7 @@ SailorGroup:
 	db -1 ; end
 
 	; SAILOR (8)
-		db "JONAY@", TRAINERTYPE_NORMAL
+	db "DEREK@", TRAINERTYPE_NORMAL
 	db 28, MACHOP
 	db 28, MACHOP
 	db 28, POLIWRATH
@@ -2090,19 +2090,19 @@ SailorGroup:
 	db -1 ; end
 
 	; SAILOR (11)
-		db "CURRO@", TRAINERTYPE_NORMAL
+	db "KEN@", TRAINERTYPE_NORMAL
 	db 28, POLIWHIRL
 	db 28, POLIWHIRL
 	db -1 ; end
 
 	; SAILOR (12)
-		db "CURRO@", TRAINERTYPE_NORMAL
+	db "KEN@", TRAINERTYPE_NORMAL
 	db 34, POLIWHIRL
 	db 34, POLIWRATH
 	db -1 ; end
 
 	; SAILOR (13)
-		db "CURRO@", TRAINERTYPE_MOVES
+	db "KEN@", TRAINERTYPE_MOVES
 	db 38, POLITOED,   WHIRLPOOL, RAIN_DANCE, BODY_SLAM, PERISH_SONG
 	db 38, POLIWRATH,  SURF, STRENGTH, ICE_PUNCH, SUBMISSION
 	db -1 ; end
@@ -2188,7 +2188,7 @@ SuperNerdGroup:
 	db -1 ; end
 
 	; SUPER_NERD (14)
-		db "RÚPER@", TRAINERTYPE_MOVES
+	db "MARC@", TRAINERTYPE_MOVES
 	db 19, SLOWPOKE,   CURSE, WATER_GUN, GROWL, STRENGTH
 	db -1 ; end
 
@@ -2282,7 +2282,7 @@ HikerGroup:
 	db -1 ; end
 
 	; HIKER (3)
-		db "RAMÓN@", TRAINERTYPE_NORMAL
+	db "RICKY@", TRAINERTYPE_NORMAL
 	db 23, GEODUDE
 	db 23, GEODUDE
 	db 23, GRAVELER
@@ -3151,7 +3151,7 @@ SageGroup:
 
 MediumGroup:
 	; MEDIUM (1)
-		db "YAIZA@", TRAINERTYPE_NORMAL
+	db "EMMA@", TRAINERTYPE_NORMAL
 	db 18, GASTLY
 	db 20, HAUNTER
 	db 20, GASTLY
@@ -3179,7 +3179,7 @@ MediumGroup:
 	db -1 ; end
 
 	; MEDIUM (6)
-		db "ISABEL@", TRAINERTYPE_NORMAL
+	db "RUTH@", TRAINERTYPE_NORMAL
 	db 35, DROWZEE
 	db 35, HYPNO
 	db -1 ; end
@@ -3289,7 +3289,7 @@ PokefanMGroup:
 	db -1 ; end
 
 	; POKEFANM (14)
-		db "ARAN@", TRAINERTYPE_ITEM
+	db "JAIME@", TRAINERTYPE_ITEM
 	db 35, TEDDIURSA,  BERRY
 	db -1 ; end
 
@@ -3317,7 +3317,7 @@ KimonoGirlGroup:
 	db -1 ; end
 
 	; KIMONO_GIRL (5)
-		db "NORMA@", TRAINERTYPE_NORMAL
+	db "KIM@", TRAINERTYPE_NORMAL
 	db 17, VAPOREON
 	db -1 ; end
 
@@ -3389,7 +3389,7 @@ TwinsGroup:
 
 PokefanFGroup:
 	; POKEFANF (1)
-		db "DANIELA@", TRAINERTYPE_ITEM
+	db "JULIA@", TRAINERTYPE_ITEM
 	db 14, SNUBBULL,   BERRY
 	db -1 ; end
 
@@ -3399,12 +3399,12 @@ PokefanFGroup:
 	db -1 ; end
 
 	; POKEFANF (3)
-		db "DANIELA@", TRAINERTYPE_ITEM
+	db "JULIA@", TRAINERTYPE_ITEM
 	db 18, SNUBBULL,   BERRY
 	db -1 ; end
 
 	; POKEFANF (4)
-		db "DANIELA@", TRAINERTYPE_ITEM
+	db "JULIA@", TRAINERTYPE_ITEM
 	db 30, GRANBULL,   BERRY
 	db -1 ; end
 
