@@ -1424,7 +1424,6 @@ _TrainerRankingExplanationText::
 	line "posiciones!"
 	prompt
 
-; unused
 _TrainerRankingNoDataText::
 	text "No hay datos de"
 	line "posiciones."

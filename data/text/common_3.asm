@@ -772,7 +772,6 @@ _DeleteSavedLoginPasswordText::
 	line "SEÑA de ACCESO?"
 	done
 
-; unused mobile
 _DeletedTheLoginPasswordText::
 	text "CONTRASEÑA de"
 	line "ACCESO borrada."
@@ -895,7 +894,6 @@ _MobileCardFolderAskDeleteOldText::
 	line "TERO antiguo?"
 	done
 
-; unused mobile
 _MobileCardFolderFinishRegisteringCardsText::
 	text "¿Acabas de regis-"
 	line "trar TARJETAS?"
