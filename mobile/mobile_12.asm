@@ -328,7 +328,7 @@ GenderPressed:
 .asm_482f1
 	ld d, h
 	ld e, l
-	hlcoord 14, 5 ; Gender position
+	hlcoord 13, 5 ; Gender position
 	call PlaceString
 	ld a, [wMobileProfileParametersFilled]
 	set 0, a
