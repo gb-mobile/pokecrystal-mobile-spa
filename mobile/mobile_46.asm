@@ -6328,7 +6328,7 @@ Function11ae4e:
 	ld hl, MenuHeader_11b013
 	call LoadMenuHeader
 	call MenuBox
-	hlcoord 16, 8
+	hlcoord 17, 8
 	ld de, String_11b01b
 	call PlaceString
 	hlcoord 14, 7, wAttrmap
@@ -6418,7 +6418,7 @@ Function11af04:
 	ld hl, MenuHeader_11b013
 	call LoadMenuHeader
 	call MenuBox
-	hlcoord 16, 8
+	hlcoord 17, 8
 	ld de, String_11b01b
 	call PlaceString
 	hlcoord 14, 7, wAttrmap
@@ -6525,8 +6525,8 @@ Unknown_11afcc:
 	dwcoord 9, 16
 
 Unknown_11afd2:
-	dwcoord 15,  8
-	dwcoord 15, 10
+	dwcoord 16,  8
+	dwcoord 16, 10
 
 Function11afd6:
 	ld de, SCREEN_WIDTH
@@ -6561,7 +6561,7 @@ String_11b003:
 
 MenuHeader_11b013:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 14, 7, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 15, 7, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw NULL
 	db 1 ; default option
 
