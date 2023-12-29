@@ -565,7 +565,7 @@ PlacePartyMonMobileBattleSelection:
 .String_NotAble:
 	db "NO PUEDE@"
 .String_Kettei_Yameru:
-	db "OK  CANCELAR@";"けってい　　やめる@" ; Quit
+	db "OK  SALIR@";"けってい　　やめる@" ; Quit
 .Strings_1_2_3:
 	db "PRIMERO@", "SEGUNDO@", "TERCERO@" ; 1st, 2nd, 3rd
 
