@@ -474,10 +474,10 @@ Function1178aa:
 	call MenuBox
 	call MenuBoxCoord2Tile
 	farcall ReloadMapPart
-	hlcoord 16, 8
+	hlcoord 17, 8
 	ld de, YessNoString_1179c5
 	call PlaceString
-	hlcoord 15, 10
+	hlcoord 16, 10
 	ld a, "▶"
 	ld [hl], a
 	hlcoord 1, 14
@@ -502,10 +502,10 @@ Function1178e8:
 	ret z
 	dec a
 	ld [wcd4e], a
-	hlcoord 15, 8
+	hlcoord 16, 8
 	ld a, "▶"
 	ld [hl], a
-	hlcoord 15, 10
+	hlcoord 16, 10
 	ld a, " "
 	ld [hl], a
 	ret
@@ -516,10 +516,10 @@ Function1178e8:
 	ret nz
 	inc a
 	ld [wcd4e], a
-	hlcoord 15, 8
+	hlcoord 16, 8
 	ld a, " "
 	ld [hl], a
-	hlcoord 15, 10
+	hlcoord 16, 10
 	ld a, "▶"
 	ld [hl], a
 	ret
@@ -600,7 +600,7 @@ MenuHeader_1179b5:
 
 MenuHeader_1179bd:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 14, 7, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 15, 7, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw NULL
 	db 0 ; default option
 
@@ -729,10 +729,10 @@ Function117b31:
 	call LoadMenuHeader
 	call MenuBox
 	call MenuBoxCoord2Tile
-	hlcoord 16, 8
+	hlcoord 17, 8
 	ld de, YesNo117ccc
 	call PlaceString
-	hlcoord 15, 8
+	hlcoord 16, 8
 	ld a, "▶"
 	ld [hl], a
 	jp MobileStudium_JumptableIncrement
@@ -752,10 +752,10 @@ Function117b4f:
 	ret z
 	dec a
 	ld [wcf64], a
-	hlcoord 15, 8
+	hlcoord 16, 8
 	ld a, "▶"
 	ld [hl], a
-	hlcoord 15, 10
+	hlcoord 16, 10
 	ld a, " "
 	ld [hl], a
 	ret
@@ -766,10 +766,10 @@ Function117b4f:
 	ret nz
 	inc a
 	ld [wcf64], a
-	hlcoord 15, 8
+	hlcoord 16, 8
 	ld a, " "
 	ld [hl], a
-	hlcoord 15, 10
+	hlcoord 16, 10
 	ld a, "▶"
 	ld [hl], a
 	ret
@@ -939,7 +939,7 @@ MenuHeader_117cbc:
 
 MenuHeader_117cc4:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 14, 7, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 15, 7, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw NULL
 	db 0 ; default item
 

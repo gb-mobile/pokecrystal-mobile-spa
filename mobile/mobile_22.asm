@@ -230,7 +230,7 @@ Mobile22_ConfirmationDialog:
 	ld hl, wMenuBorderTopCoord
 	ld a, c
 	ld [hli], a
-	ld a, b
+	ld a, $e
 	ld [hli], a
 	ld a, c
 	add $4

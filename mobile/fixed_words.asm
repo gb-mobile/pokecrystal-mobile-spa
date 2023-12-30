@@ -2031,13 +2031,13 @@ EZChatMenu_EraseSubmenu: ; Erase submenu controls
 	ret
 
 Function11ca01: ; Erase Yes/No Menu (?)
-	hlcoord 14, 7, wAttrmap
+	hlcoord 15, 7, wAttrmap
 	ld de, $14
 	ld a, $5
 	ld c, a
 .asm_11ca0a
 	push hl
-	ld a, $6
+	ld a, $5
 	ld b, a
 	ld a, $7
 .asm_11ca10
@@ -2113,7 +2113,7 @@ EZChatDraw_ConfirmationSubmenu:
 	hlcoord 1, 14
 	pop de
 	call PlaceString
-	hlcoord 16, 8
+	hlcoord 17, 8
 	ld de, EZChatString_EraseConfirmation
 	call PlaceString
 	call Function11ca01
@@ -2723,8 +2723,8 @@ EZChatBKG_SortBy: ; Sort Menu
 	db 20,  6 ; end coords
 
 EZChatBKG_SortByConfirmation:
-	db 14,  7 ; start coords
-	db  6,  5 ; end coords
+	db 15,  7 ; start coords
+	db  5,  5 ; end coords
 
 EZChat_Textbox:
 	hlcoord 0, 0
@@ -3255,8 +3255,8 @@ AnimateEZChatCursor: ; EZChat cursor drawing code, extends all the way down to r
 	dbpixel  11, 16 ; 8, 16 MENU_WIDTH
 
 .Coords_Four: ; Yes/No Box
-	dbpixel 16, 10 ; YES
-	dbpixel 16, 12 ; NO
+	dbpixel 17, 10 ; YES
+	dbpixel 17, 12 ; NO
 
 .Coords_Five: ; Sort By Menu
 	dbpixel  4, 10 ; Group Mode
