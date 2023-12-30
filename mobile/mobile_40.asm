@@ -866,7 +866,7 @@ Function100597:
 
 MenuHeader_1005b2:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 14, 6, SCREEN_WIDTH - 1, 10
+	menu_coords 15, 6, SCREEN_WIDTH - 1, 10
 	dw MenuData_1005ba
 	db 1 ; default option
 
