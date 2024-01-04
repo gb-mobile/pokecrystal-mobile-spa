@@ -823,8 +823,7 @@ Text_ThisWayToMobileRoom: ; unreferenced
 
 Text_BattleReceptionistIntro:
 	text "Éste es el COLISEO"
-	line "del CLUB DEL"
-	cont "CABLE."
+	line "del CLUB #COM."
 	
 	para "Puedes luchar con"
 	line "un/a amigo/a aquí."
@@ -834,9 +833,9 @@ Text_BattleReceptionistIntro:
 	done
 
 Text_TradeReceptionistIntro:
-		text "Éste es el CENTRO"
+	text "Éste es el CENTRO"
 	line "DE CAMBIO del CLUB"
-	cont "DEL CABLE."
+	cont "#COM."
 
 	para "Puedes cambiar un"
 	line "#MON aquí"
@@ -849,7 +848,7 @@ Text_TradeReceptionistIntro:
 Text_TimeCapsuleReceptionistIntro:
 	text "Ésta es la CÁPSULA"
 	line "DEL TIEMPO del"
-	cont "CLUB DEL CABLE."
+	cont "CLUB #COM."
 
 	para "Puedes viajar al"
 	line "pasado y cambiar"

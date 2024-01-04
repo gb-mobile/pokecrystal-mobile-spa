@@ -5985,9 +5985,8 @@ Text_SaveFileWillBeSent:
 	done
 
 Text_SentSaveFileReadingNews:
-	text "ARCHIVO GUARDADO"
-	line "enviado."
-	cont "Leyendo NOTICIAS…"
+	text "ARCHIVO enviado."
+	line "Leyendo NOTICIAS…"
 	done
 
 Text_ReadingNews:
