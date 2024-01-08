@@ -1281,8 +1281,8 @@ Pokedex_DrawSearchResultsScreenBG:
 
 .BottomWindowText:
 	db   "RESULT. BUSCA"
-	next "  TIPO"	
-	next "    HALLADO(S)!"
+	next "  TIPO"
+	next "¡    HALLADO(S)!"
 	db   "@"
 
 Pokedex_PlaceSearchResultsTypeStrings:
