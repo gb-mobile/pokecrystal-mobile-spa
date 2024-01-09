@@ -929,7 +929,7 @@ Mobile_CommunicationStandby:
 	call Function3eea
 	ld de, .String
 	hlcoord 5, 11
-	call PlaceString
+	jp PlaceString
 
 .String:
 	db "¡ESPERA.…!@"	; "つうしんたいきちゅう！@"
