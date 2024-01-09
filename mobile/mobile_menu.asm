@@ -419,9 +419,9 @@ Function4a28a:
 	call PlaceHollowCursor
 	ld hl, DeleteSavedLoginPasswordText
 	call PrintText
-	hlcoord 14, 7
+	hlcoord 15, 7
 	ld b, 3
-	ld c, 4
+	ld c, 3
 	call Textbox
 	farcall Mobile_OpenAndCloseMenu_HDMATransferTilemapAndAttrmap
 	ld hl, DeletePassword_YesNo_MenuHeader
@@ -468,7 +468,7 @@ DeletedTheLoginPasswordText:
 
 DeletePassword_YesNo_MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 14, 7, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 15, 7, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw MenuData_0x4a36a
 	db 2 ; default option
 
