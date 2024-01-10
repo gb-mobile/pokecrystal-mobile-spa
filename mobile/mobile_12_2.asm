@@ -709,9 +709,9 @@ Function4ac58:
 	jr .asm_4ac96
 
 .asm_4ac89
-	hlcoord 11, 9;11, 9
+	hlcoord 8, 9;11, 9
 	ld b, $7
-	ld c, $7;$7
+	ld c, $a;$7
 	call Textbox
 	call Function4ad68
 
@@ -749,7 +749,7 @@ Function4acaa:
 	ld [wMenuDataItems], a
 	ld a, $8
 	ld [wMenuBorderTopCoord], a
-	ld a, $b;$b
+	ld a, $8;$b
 	ld [wMenuBorderLeftCoord], a
 
 .asm_4accc
@@ -844,17 +844,17 @@ Function4ad67: ; unreferenced
 	ret
 
 Function4ad68:
-	hlcoord 13, 12;13, 12
+	hlcoord 10, 12;13, 12
 	ld de, String_4ad88
 	call PlaceString
 	call Function4adb2
 	jr c, .asm_4ad7e
-	hlcoord 13, 10;13, 10
+	hlcoord 10, 10;13, 10
 	ld de, String_4ada0
 	jr .asm_4ad84
 
 .asm_4ad7e
-	hlcoord 13, 10;13, 10
+	hlcoord 10, 10;13, 10
 	ld de, String_4ad9a
 
 .asm_4ad84
@@ -870,7 +870,7 @@ String_4ad9a:
 	db   "ENTRAR@";"さんかする@"
 
 String_4ada0:
-	db   "SACAR@";"さんかしない@"
+	db   "NO ENTRAR@";"さんかしない@"
 
 String_4ada7:
 	db   "ESTAD.";"つよさをみる"
