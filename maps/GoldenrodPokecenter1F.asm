@@ -529,11 +529,9 @@ GoldenrodPokecomCenterWeWillTradeYourMonForNewText:
 
 	para "@"
 	text_ram wStringBuffer3
-	text_start
-	line "por un #MON que"
-
-	para "no hayas visto"
-	line "nunca."
+	text " por un"
+	line "#MON que no"
+	cont "hayas visto nunca."
 
 	para "Necesitamos tu"
 	line "#MON durante"
@@ -876,7 +874,7 @@ GoldenrodPokecomCenterMakingPreparationsText:
 	done
 
 GoldenrodPokecomCenterSaveBeforeNewsMachineText:
-	text "Vamos a GUARDAR tu"
+	text "GUARDAREMOS tu"
 	line "progreso antes de"
 
 	para "poner en marcha la"
@@ -1064,7 +1062,7 @@ GoldenrodPokecenter1FLassText:
 	line "nivel superior no"
 	cont "siempre gana."
 
-	para "Aún así, su tipo"
+	para "Aun así, su tipo"
 	line "puede tener alguna"
 	cont "desventaja."
 
