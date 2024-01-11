@@ -1107,7 +1107,7 @@ _KarpGuruRecordText::
 	line "fue atrapado por"
 	cont "@"
 	text_ram wMagikarpRecordHoldersName
-	text_promptbutton
+	text_linkwaitbutton
 	text_end
 	text_end ; unreferenced
 
