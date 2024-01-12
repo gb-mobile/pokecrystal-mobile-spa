@@ -73,7 +73,7 @@ GiftSpearowName:
 GiftSpearowOTName:
 	db "LUCAS@"
 
-	db 0 ; unused
+	db 0, " ES@", 0 ; filler
 
 Route35GoldenrodGatePokefanFScript:
 	faceplayer
