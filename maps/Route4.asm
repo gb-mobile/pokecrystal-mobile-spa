@@ -105,7 +105,7 @@ PicnickerSharonSeenText:
 	done
 
 PicnickerSharonBeatenText:
-	text "…"
+	text "<……>"
 	done
 
 PicnickerSharonAfterBattleText:

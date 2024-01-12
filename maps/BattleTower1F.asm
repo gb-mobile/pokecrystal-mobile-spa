@@ -540,7 +540,7 @@ Text_PleaseConfirmOnThisMonitor:
 
 Text_ThankYou: ; unreferenced
 	text "¡Gracias!"
-	done
+	prompt
 
 Text_ThanksForVisiting:
 	text "¡Gracias por tu"
@@ -643,7 +643,7 @@ Text_CantBeRegistered_PreviousRecordDeleted:
 	done
 
 Text_CheckTheLeaderHonorRoll: ; unreferenced
-	text "¿Mirar la LISTA"
+	text "¿Miras la LISTA"
 	line "de HONOR?"
 	done
 

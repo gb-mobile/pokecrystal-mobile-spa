@@ -567,7 +567,7 @@ Continue_LoadMenuHeader:
 .MenuData_NoDex:
 	db 0 ; flags
 	db 4 ; items
-	db "JUGAD. <PLAYER>@"
+	db "JUGAD.@"
 	db "MEDALLAS@"
 	db " @"
 	db "TIEMPO J.@"
@@ -602,7 +602,7 @@ Continue_PrintGameTime:
 	ret
 
 Continue_UnknownGameTime:
-	decoord 9, 8, 0
+	decoord 11, 8, 0
 	add hl, de
 	ld de, .three_question_marks
 	call PlaceString

@@ -556,6 +556,8 @@ _OPT_MaryText1::
 	text_ram wStringBuffer1
 	text_end
 
+	text_end ; unused
+
 _OPT_SweetAdorablyText::
 	text_start
 	line "dulce y adorable…"
@@ -1003,11 +1005,15 @@ _RocketRadioText7::
 	text_pause
 	text_end
 
+	text_end ; unused
+
 _RocketRadioText8::
 	text_start
 	line "¿Oíste? Lo hicimos@"
 	text_pause
 	text_end
+
+	text_end ; unused
 
 _RocketRadioText9::
 	text_start
@@ -1102,11 +1108,13 @@ _BuenaRadioMidnightText8::
 	done
 
 _BuenaRadioMidnightText9::
-	text "¡Me voy!"
+	text_start
+	line "¡Me voy!"
 	done
 
 _BuenaRadioMidnightText10::
-	text "…"
+	text_start
+	line "…"
 	done
 
 _BuenaOffTheAirText::

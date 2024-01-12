@@ -620,13 +620,13 @@ Route36NationalParkGateOfficer1EggAsFirstMonText:
 	done
 
 Route36NationalParkGateOfficer1WantToFinishText:
-	 text "Aún te quedan @" 
-	 text_ram wStringBuffer3 
-	 text_start 
-	 line "minutos." 
-	 
-	 para "¿Quieres terminar" 
-	 line "ahora?" 
+	text "Aún te quedan @"
+	text_ram wStringBuffer3
+	text_start
+	line "minutos."
+
+	para "¿Quieres terminar"
+	line "ahora?"
 	done
 
 Route36NationalParkGateOfficer1WaitHereForAnnouncementText:

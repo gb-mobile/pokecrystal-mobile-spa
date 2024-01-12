@@ -61,7 +61,7 @@ BattleTowerTrainers:
 	db "AGUAS@@@@@", SWIMMERM
 	db "SERES@@@@@", BIRD_KEEPER
 	db "ROC@@@@@@@", BOARDER
-	db "VICENT@@@@", LASS
+	db "TURNER@@@@", LASS
 	db "VICENT@@@@", OFFICER
 	db "VANDY@@@@@", SKIER
 	db "RANGO@@@@@", SCHOOLBOY

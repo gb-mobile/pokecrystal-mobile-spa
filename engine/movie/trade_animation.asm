@@ -958,9 +958,9 @@ TrademonStats_Egg:
 	ret
 
 .EggData:
-	db   "EGG"
-	next "OT/?????"
-	next "<ID>№.?????"
+	db   "HUEVO"
+	next "EO/¿¿??"
+	next "№<ID> ¿¿??@"
 
 TrademonStats_WaitBGMap:
 	call WaitBGMap

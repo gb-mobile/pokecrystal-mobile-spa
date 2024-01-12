@@ -44,12 +44,11 @@ ParryPhoneFullText:
 	done
 
 ParryRematchText:
-	text "Hey, here comes"
-	line "the kid! Let's go!"
-	
-	para "Ready for my usual"
-	line "no-brainer, all-"
-	cont ""
+	text "¡Eh, aquí llega!"
+	line "¡Adelante!"
+
+	para "Aquí llega mi ata-"
+	line "que sin cuartel…"
 	done
 
 ParryPackFullText:

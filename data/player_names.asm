@@ -15,7 +15,7 @@ MalePlayerNameArray:
 	db "ÁLEX@"
 	db "EMILIO@"
 	db 2 ; title indent
-	db " NAME @" ; title
+	db " NOMBRE @" ; title
 
 KrisNameMenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -34,4 +34,4 @@ FemalePlayerNameArray:
 	db "SUSANA@"
 	db "YOLANDA@"
 	db 2 ; title indent
-	db " NAME @" ; title
+	db " NOMBRE @" ; title

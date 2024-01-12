@@ -288,7 +288,7 @@ OlivineCityBattleTowerSignPreMobileText:
 OlivineCityBattleTowerSignMobileText:
 	text "HACIA LA TORRE"
 	line "BATALLA"
-	cont "¡Ya hemos abierto!"
+	cont "¡Ya hemos abierto!"	
 	done
 
 OlivineCity_MapEvents:

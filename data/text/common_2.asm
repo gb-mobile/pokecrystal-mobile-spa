@@ -287,7 +287,7 @@ _NameCardReceivedCardText::
 	prompt
 
 _NameCardListedCardText::
-	text "La TARJETA de"
+	text "La tarjeta de"
 	line "@"
 	text_ram wMysteryGiftCardHolderName
 	text " fue"
@@ -336,7 +336,7 @@ _CutNothingText::
 _BlindingFlashText::
 	text "¡Un DESTELLO"
 	line "ilumina la zona!@"
-	text_promptbutton
+	text_waitbutton
 	text_end
 
 	text_end ; unreferenced

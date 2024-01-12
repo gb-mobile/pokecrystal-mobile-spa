@@ -64,14 +64,14 @@ RandyScript:
 
 GiftSpearowMail:
 	db FLOWER_MAIL
-	db   "DARK CAVE leads"
-	next "to another road@"
+	db   "CUEVA OSCURA da"
+	next "a otro camino  @"
 
 GiftSpearowName:
-	db "KENYA@"
+	db "ESPIA@"
 
 GiftSpearowOTName:
-	db "RANDY@"
+	db "LUCAS@"
 
 	db 0 ; unused
 
