@@ -5981,12 +5981,13 @@ Function11a9f4: ; unreferenced
 
 Text_SaveFileWillBeSent:
 	text "Se enviará el"
-	line "ARCHIVO GUARDADO."
+	line "FICHERO GUARDADO."
 	done
 
 Text_SentSaveFileReadingNews:
-	text "ARCHIVO enviado."
-	line "Leyendo NOTICIAS…"
+	text "FICHERO GUARDADO"
+	line "enviado."
+	cont "Leyendo NOTICIAS…"
 	done
 
 Text_ReadingNews:
@@ -6044,17 +6045,15 @@ Text_UberRestriction:
 	done
 
 Text_CancelBattleRoomChallenge:
-	text "¿Cancelar tu"
+	text "¿Cancelas tu"
 	line "desafío de SALA"
 	cont "BATALLA?"
 	done
 
 Text_ExitGymLeaderHonorRoll:
-	text "¿Salir de la LISTA"
+	text "¿Sales de la LISTA"
 	line "de HONOR de los"
-
-	para "LÍDERES de GIMNA-"
-	line "SIO?"
+	cont "LíD. de GIMNASIO?"
 	done
 
 Text_LinkingWithCenter: ; unreferenced
@@ -6068,7 +6067,7 @@ Text_WhatLevelDoYouWantToChallenge:
 	done
 
 Text_CheckBattleRoomListByMaxLevel:
-	text "¿Comprobar la"
+	text "¿Compruebas la"
 	line "lista de SALAS"
 
 	para "BATALLA por nivel"
@@ -6076,13 +6075,12 @@ Text_CheckBattleRoomListByMaxLevel:
 	done
 
 Text_EnterWhichBattleRoom: ; unreferenced
-	text "¿A cuál SALA"
-	line "BATALLA desea"
-	cont "entrar?"
+	text "¿En qué SALA"
+	line "BATALLA entras?"
 	done
 
 Text_WhichBattleRoom: ; unreferenced
-	text "¿Cuál SALA"
+	text "¿Qué SALA"
 	line "BATALLA?"
 	done
 
@@ -6093,7 +6091,7 @@ Text_ThisBattleRoomPleaseWait:
 	line "de @"
 	text_ram wStringBuffer3
 	text "?"
-	cont "Por favor, espere…"
+	cont "Por favor, espera…"
 	done
 
 Function11ac3e:
