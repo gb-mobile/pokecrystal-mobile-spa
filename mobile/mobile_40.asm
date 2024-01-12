@@ -6654,7 +6654,7 @@ Function102f32:
 	ret
 
 .TradeCompleted:
-	db "¡Trato completado!@"
+	db "TRATO COMPLETADO@"
 
 Function102f50:
 	call Function102dc3
