@@ -1,5 +1,6 @@
 TownMap_ConvertLineBreakCharacters:
 	ld hl, wStringBuffer1
+	;ld c, STRING_BUFFER_LENGTH - 1
 .loop
 	ld a, [hl]
 	cp "@"
@@ -8,8 +9,14 @@ TownMap_ConvertLineBreakCharacters:
 	jr z, .line_feed
 	cp "¯"
 	jr z, .line_feed
+	cp "<¯>"
+	jr z, .hyphen_split
 	inc hl
 	jr .loop
+
+.hyphen_split
+	ld [hl], "<->"
+	jr .end
 
 .line_feed
 	ld [hl], "<LF>"
