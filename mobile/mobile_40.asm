@@ -7280,7 +7280,7 @@ Unknown_103522:
 	dw String_103545
 
 String_103545: db "@"
-String_103546: db " ESCENA BATALLA@"		; "せんとう　アニメ@"
+String_103546: db " ANIMACIÓN BATALLA@"		; "せんとう　アニメ@"
 String_10354f: db " NÚMERO MÓVIL@"			; "でんわばんごう@"
 String_103557: db " CAMBIO TARJETA@"		; "めいしこうかん@"
 String_10355f: db "Llamador decide.@"		; "でんわを　かけるひとが　きめられる@"
