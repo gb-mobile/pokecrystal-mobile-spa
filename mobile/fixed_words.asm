@@ -951,7 +951,7 @@ EZChatDrawBKG_ChatWords:
 	ret
 
 EZChatString_ChatExplanation: ; Explanation string
-	db   "Combine cuatro pa-";"６つのことば¯くみあわせます"
+db   "Combine cuatro pa-";"６つのことば¯くみあわせます"
 	next "labras o frases.";"かえたいところ¯えらぶと　でてくる"
 	next "Comience eligiendo";"ことばのグループから　いれかえたい"
 	next "un espacio.";"たんご¯えらんでください"
@@ -959,6 +959,19 @@ EZChatString_ChatExplanation: ; Explanation string
 
 EZChatString_ChatExplanationBottom: ; Explanation commands string
 	db "BORRA　SALIR　　OK@";"ぜんぶけす　やめる　　　けってい@"
+
+; ezchat categories defines
+def EZCHAT_CATEGORIES_ROWS EQU 5
+def EZCHAT_CATEGORIES_COLUMNS EQU 2
+def EZCHAT_DISPLAYED_CATEGORIES EQU (EZCHAT_CATEGORIES_ROWS * EZCHAT_CATEGORIES_COLUMNS)
+def EZCHAT_NUM_CATEGORIES EQU 15
+def EZCHAT_NUM_EXTRA_ROWS EQU ((EZCHAT_NUM_CATEGORIES + 1 - EZCHAT_DISPLAYED_CATEGORIES) / 2)
+def EZCHAT_EMPTY_VALUE EQU ((EZCHAT_NUM_EXTRA_ROWS << 5) | (EZCHAT_DISPLAYED_CATEGORIES - 1))
+
+	const_def EZCHAT_DISPLAYED_CATEGORIES
+	const EZCHAT_CATEGORY_CANC
+	const EZCHAT_CATEGORY_MODE
+	const EZCHAT_CATEGORY_OK
 
 EZChatDraw_CategoryMenu: ; Open category menu
 ; might need no change here
@@ -993,27 +1006,39 @@ EZChatMenu_CategoryMenu: ; Category Menu Controls
 
 	ld a, [de]
 	and D_UP
-	jr nz, .up
+	jp nz, .up
 
 	ld a, [de]
 	and D_DOWN
-	jr nz, .down
+	jp nz, .down
 
 	ld a, [de]
 	and D_LEFT
-	jr nz, .left
+	jp nz, .left
 
 	ld a, [de]
 	and D_RIGHT
-	jr nz, .right
+	jp nz, .right
 
+; manage blinkies
+	ld a, [hl]
+	and $0f
+	cp EZCHAT_CATEGORY_CANC
+	ld hl, wEZChatBlinkingMask
+	jr nc, .blink
+; no blink
+	res 1, [hl]
+	ret
+.blink
+	set 1, [hl]
 	ret
 
 .a
 	ld a, [wEZChatCategorySelection]
-	cp 15
+	and $0f
+	cp EZCHAT_CATEGORY_CANC
 	jr c, .got_category
-	sub 15
+	sub EZCHAT_CATEGORY_CANC
 	jr z, .done
 	dec a
 	jr z, .mode
@@ -1059,82 +1084,158 @@ EZChatMenu_CategoryMenu: ; Category Menu Controls
 
 .up
 	ld a, [hl]
-	cp $3
+	cp EZCHAT_CATEGORIES_COLUMNS
 	ret c
-	sub $3
+	ld e, a
+	and $f0
+	ld d, a
+	ld a, e
+	and $0f
+	cp EZCHAT_CATEGORIES_COLUMNS
+	jr nc, .normal_up
+	ld a, e
+	sub EZCHAT_CATEGORIES_COLUMNS << 4
+	ld [hl], a
+	ld a, EZCHAT_DRAW_CATEGORY_MENU
+	jr .go_to_function
+
+.normal_up
+	ld a, e
+	and $0f
+	cp EZCHAT_CATEGORY_MODE
+	jr c, .continue_normal_up
+	ld a, EZCHAT_CATEGORY_CANC
+.continue_normal_up
+	sub EZCHAT_CATEGORIES_COLUMNS
+.up_end
+	or d
 	jr .finish_dpad
 
 .down
 	ld a, [hl]
-	cp $f
+	cp EZCHAT_EMPTY_VALUE - EZCHAT_CATEGORIES_COLUMNS
+	jr nz, .continue_down
+	dec a
+.continue_down
+	ld e, a
+	and $f0
+	ld d, a
+	ld a, e
+	and $0f
+	cp EZCHAT_CATEGORY_CANC
 	ret nc
-	add $3
+	cp EZCHAT_DISPLAYED_CATEGORIES - EZCHAT_CATEGORIES_COLUMNS
+	jr c, .normal_down
+	ld a, d
+	cp EZCHAT_NUM_EXTRA_ROWS << 5
+	jr nz, .print_down
+	ld a, EZCHAT_CATEGORY_CANC
+	jr .down_end
+.print_down
+	ld a, e
+	add EZCHAT_CATEGORIES_COLUMNS << 4
+	cp EZCHAT_EMPTY_VALUE
+	jr nz, .continue_print_down
+	dec a
+.continue_print_down
+	ld [hl], a
+	ld a, EZCHAT_DRAW_CATEGORY_MENU
+	jr .go_to_function
+
+.normal_down
+	add EZCHAT_CATEGORIES_COLUMNS
+.down_end
+	or d
 	jr .finish_dpad
 
 .left
 	ld a, [hl]
-	and a
+	and $0f
+	cp EZCHAT_CATEGORY_OK
+	jr z, .left_okay
+	bit 0, a
 	ret z
-	cp $3
-	ret z
-	cp $6
-	ret z
-	cp $9
-	ret z
-	cp $c
-	ret z
-	cp $f
-	ret z
+.left_okay
+	ld a, [hl]
 	dec a
 	jr .finish_dpad
 
 .right
 	ld a, [hl]
-	cp $2
+	cp EZCHAT_EMPTY_VALUE - 1
 	ret z
-	cp $5
+	and $0f
+	cp EZCHAT_CATEGORY_MODE
+	jr z, .right_okay
+	bit 0, a
+	ret nz
+	cp EZCHAT_CATEGORY_OK
 	ret z
-	cp $8
-	ret z
-	cp $b
-	ret z
-	cp $e
-	ret z
-	cp $11
-	ret z
+.right_okay
+	ld a, [hl]
 	inc a
 
 .finish_dpad
 	ld [hl], a
 	ret
 
-EZChat_PlaceCategoryNames:
-	ld de, MobileEZChatCategoryNames
-	ld bc, EZChatCoord_Categories
-	ld a, 15 ; Number of EZ Chat categories displayed
-.loop
-	push af
-	ld a, [bc]
-	inc bc
-	ld l, a
-	ld a, [bc]
-	inc bc
-	ld h, a
-	push bc
-	call PlaceString
+EZChat_FindNextCategoryName:
 	; The category names are padded with "@".
 	; To find the next category, the system must
 	; find the first character at de that is not "@".
-.find_next_string_loop
-	inc de
+.find_end_loop
 	ld a, [de]
+	inc de
 	cp "@"
-	jr z, .find_next_string_loop
-	pop bc
+	jr nz, .find_end_loop
+.find_next_loop
+	ld a, [de]
+	inc de
+	cp "@"
+	jr z, .find_next_loop
+	dec de
+	ret
+
+EZChat_GetSelectedCategory:
+	push de
+	ld e, a
+	and $0f
+	ld d, a
+	ld a, e
+	swap a
+	and $0f
+	add d
+	pop de
+	ret
+
+EZChat_PlaceCategoryNames:
+	ld de, MobileEZChatCategoryNames
+	ld a, [wEZChatCategorySelection]
+	swap a
+	and $0f
+	jr z, .setup_start
+.start_loop
+	push af
+	call EZChat_FindNextCategoryName
+	pop af
+	dec a
+	jr nz, .start_loop
+.setup_start
+	hlcoord  1,  7
+	ld a, 10 / 2 ; Number of EZ Chat categories displayed
+.loop
+	push af
+	call PlaceString
+	call EZChat_FindNextCategoryName
+	ld bc, 10
+	add hl, bc
+	call PlaceString
+	call EZChat_FindNextCategoryName
+	ld bc, 30
+	add hl, bc
 	pop af
 	dec a
 	jr nz, .loop
-	hlcoord 1, 17
 	ld de, EZChatString_Stop_Mode_Cancel
 	call PlaceString
 	ret
@@ -1149,23 +1250,6 @@ EZChat_SortMenuBackground:
 
 EZChatString_Stop_Mode_Cancel:
 	db "BORRA　MODO　　SALIR@";"けす　　　　モード　　　やめる@"
-
-EZChatCoord_Categories: ; Category Coordinates
-	dwcoord  1,  7 ; PKMN
-	dwcoord  7,  7 ; TYPES
-	dwcoord 13,  7 ; GREET
-	dwcoord  1,  9 ; HUMAN
-	dwcoord  7,  9 ; FIGHT
-	dwcoord 13,  9 ; VOICE
-	dwcoord  1, 11 ; TALK
-	dwcoord  7, 11 ; EMOTE
-	dwcoord 13, 11 ; STATE
-	dwcoord  1, 13 ; LIFE
-	dwcoord  7, 13 ; HOBBY
-	dwcoord 13, 13 ; ACT
-	dwcoord  1, 15 ; TIME
-	dwcoord  7, 15 ; END
-	dwcoord 13, 15 ; MISC.
 
 EZChatDraw_WordSubmenu: ; Opens/Draws Word Submenu
 	call EZChat_ClearBottom12Rows
@@ -1455,6 +1539,7 @@ EZChat_DetermineWordAndPageCounts:
 	and a
 	jr z, .is_pokemon_selection
 	; load from data array
+	call EZChat_GetSelectedCategory
 	dec a
 	sla a
 	ld hl, MobileEZChatData_WordAndPageCounts
@@ -1519,6 +1604,7 @@ EZChat_RenderWordChoices:
 	jr nz, .not_pkmn_submenu
 	ld bc, EZChatCoord_PkmnWordSubmenu
 .not_pkmn_submenu
+	call EZChat_GetSelectedCategory
 	ld d, a
 	and a
 	jr z, .at_page_0
@@ -1847,6 +1933,7 @@ EZChat_SetOneWord:
 	jr nz, .alphabetical
 ; categorical
 	ld a, [wEZChatCategorySelection]
+	call EZChat_GetSelectedCategory
 	ld d, a
 	and a
 	jr z, .pokemon
@@ -2987,14 +3074,15 @@ AnimateEZChatCursor: ; EZChat cursor drawing code, extends all the way down to r
 
 .one ; Category Menu
 	ld a, [wEZChatCategorySelection]
-	cp 15
+	and $0f
+	cp EZCHAT_CATEGORY_CANC
 	push af
 	jr c, .not_menu
 	ld a, SPRITE_ANIM_FRAMESET_EZCHAT_CURSOR_1
 	call ReinitSpriteAnimFrame
 	jr .got_sprite
 .not_menu
-	ld a, SPRITE_ANIM_FRAMESET_EZCHAT_CURSOR_1
+	ld a, SPRITE_ANIM_FRAMESET_EZCHAT_CURSOR_2
 	call ReinitSpriteAnimFrame
 .got_sprite
 	pop af
@@ -3190,21 +3278,16 @@ AnimateEZChatCursor: ; EZChat cursor drawing code, extends all the way down to r
 	dbpixel 13, 17, 5, 2 ; OK        - 06
 
 .Coords_One: ; Category Menu
-	dbpixel  1,  8, 5, 2 ; PKMN
-	dbpixel  7,  8, 5, 2 ; TYPES
-	dbpixel 13,  8, 5, 2 ; GREET
-	dbpixel  1, 10, 5, 2 ; HUMAN
-	dbpixel  7, 10, 5, 2 ; FIGHT
-	dbpixel 13, 10, 5, 2 ; VOICE
-	dbpixel  1, 12, 5, 2 ; TALK
-	dbpixel  7, 12, 5, 2 ; EMOTE
-	dbpixel 13, 12, 5, 2 ; STATE
-	dbpixel  1, 14, 5, 2 ; LIFE
-	dbpixel  7, 14, 5, 2 ; HOBBY
-	dbpixel 13, 14, 5, 2 ; ACT
-	dbpixel  1, 16, 5, 2 ; TIME
-	dbpixel  7, 16, 5, 2 ; END
-	dbpixel 13, 16, 5, 2 ; MISC.
+	dbpixel  0,  8, 8, 8 ; Category 1
+	dbpixel 10,  8, 8, 8 ; Category 2
+	dbpixel  0, 10, 8, 8 ; Category 3
+	dbpixel 10, 10, 8, 8 ; Category 4
+	dbpixel  0, 12, 8, 8 ; Category 5
+	dbpixel 10, 12, 8, 8 ; Category 6
+	dbpixel  0, 14, 8, 8 ; Category 7
+	dbpixel 10, 14, 8, 8 ; Category 8
+	dbpixel  0, 16, 8, 8 ; Category 9
+	dbpixel 10, 16, 8, 8 ; Category 10
 	dbpixel  1, 18, 5, 2 ; DEL
 	dbpixel  7, 18, 5, 2 ; MODE
 	dbpixel 13, 18, 5, 2 ; QUIT
@@ -3755,21 +3838,22 @@ INCBIN "gfx/pokedex/slowpoke_mobile.2bpp.lz"
 
 MobileEZChatCategoryNames:
 ; Fixed message categories
-	db "PKMN@@" 	; 00 ; Pokemon 		; "ポケモン@@" ; this could've also been rendered as <PK><MN> but it looks odd
-	db "TYPES@" 	; 01 ; Types		; "タイプ@@@"
-	db "GREET@" 	; 02 ; Greetings	; "あいさつ@@"
-	db "HUMAN@" 	; 03 ; People		; "ひと@@@@"
-	db "FIGHT@" 	; 04 ; Battle		; "バトル@@@"
-	db "VOICE@" 	; 05 ; Voices		; "こえ@@@@"
-	db "TALK@@" 	; 06 ; Speech		; "かいわ@@@"
-	db "EMOTE@" 	; 07 ; Feelings		; "きもち@@@"
-	db "STATE@" 	; 08 ; Conditions	; "じょうたい@"
-	db "LIFE@@" 	; 09 ; Lifestyle	; "せいかつ@@"
-	db "HOBBY@" 	; 0a ; Hobbies		; "しゅみ@@@"
-	db "ACT@@@" 	; 0b ; Actions		; "こうどう@@"
-	db "TIME@@" 	; 0c ; Time			; "じかん@@@"
-	db "END@@@" 	; 0d ; Endings		; "むすび@@@"
-	db "MISC.@" 	; 0e ; Misc			; "あれこれ@@"
+	db "POKéMON@" 	; 00 ; Pokemon 		; "ポケモン@@" ; this could've also been rendered as <PK><MN> but it looks odd
+	db "TIPOS@" 	; 01 ; Types		; "タイプ@@@"
+	db "SALUDOS@" 	; 02 ; Greetings	; "あいさつ@@"
+	db "GENTE@" 	; 03 ; People		; "ひと@@@@"
+	db "COMBATE@" 	; 04 ; Battle		; "バトル@@@"
+	db "VOCES@" 	; 05 ; Voices		; "こえ@@@@"
+	db "NEXOS@" 	; 06 ; Speech		; "かいわ@@@"
+	db "SENSACION@" 	; 07 ; Feelings		; "きもち@@@"
+	db "HABILIDAD@" 	; 08 ; Conditions	; "じょうたい@"
+	db "VIDA@" 	; 09 ; Lifestyle	; "せいかつ@@"
+	db "AFICIONES@" 	; 0a ; Hobbies		; "しゅみ@@@"
+	db "ACCIONES@" 	; 0b ; Actions		; "こうどう@@"
+	db "TIEMPO@@" 	; 0c ; Time			; "じかん@@@"
+	db "VERBOS@@" 	; 0d ; Endings		; "むすび@@@"
+	db "OTROS@" 	; 0e ; Misc			; "あれこれ@@"
+	db " @@@@@"	    ; 0f ; EMPTY
 
 MobileEZChatCategoryPointers:
 ; entries correspond to EZCHAT_* constants
