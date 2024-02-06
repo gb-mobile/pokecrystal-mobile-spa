@@ -21,9 +21,9 @@ SpriteAnimOAMData:
 	spriteanimoam $06, .OAMData_GSIntroLapras            ; SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_3
 	spriteanimoam $0c, .OAMData_GSIntroNote              ; SPRITE_ANIM_OAMSET_GS_INTRO_NOTE
 	spriteanimoam $0d, .OAMData_1x1_Palette0             ; SPRITE_ANIM_OAMSET_GS_INTRO_INVISIBLE_NOTE
-	spriteanimoam $00, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_"JIGGLYPUFF"_1
-	spriteanimoam $04, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_"JIGGLYPUFF"_2
-	spriteanimoam $08, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_"JIGGLYPUFF"_3
+	spriteanimoam $00, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_JIGGLYPUFF_1
+	spriteanimoam $04, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_JIGGLYPUFF_2
+	spriteanimoam $08, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_JIGGLYPUFF_3
 	spriteanimoam $40, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_1
 	spriteanimoam $44, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_2
 	spriteanimoam $48, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_3
@@ -784,30 +784,27 @@ SpriteAnimOAMData:
 	dsprite  1,  0,  3,  0, $34, 0
 	dsprite  1,  0,  4,  0, $35, 0
 
-; split cursor for mon names
+; cursor for 'other'
 .OAMData_EZChatCursor10:
-	db 18
+	db 10
 	dsprite  0,  0,  0,  0, $30, 0
 	dsprite  0,  0,  1,  0, $31, 0
 	dsprite  0,  0,  2,  0, $31, 0
 	dsprite  0,  0,  3,  0, $31, 0
-	dsprite  0,  0,  4,  0, $31, 0
-
-	dsprite  0,  0,  (5+2),  0, $31, 0
-	dsprite  0,  0,  (6+2),  0, $31, 0
-	dsprite  0,  0,  (7+2),  0, $31, 0
-	dsprite  0,  0,  (8+2),  0, $32, 0
-
-	dsprite  1,  0,  0,  0, $33, 0
-	dsprite  1,  0,  1,  0, $34, 0
-	dsprite  1,  0,  2,  0, $34, 0
-	dsprite  1,  0,  3,  0, $34, 0
-	dsprite  1,  0,  4,  0, $34, 0
-
-	dsprite  1,  0,  (5+2),  0, $34, 0
-	dsprite  1,  0,  (6+2),  0, $34, 0
-	dsprite  1,  0,  (7+2),  0, $34, 0
-	dsprite  1,  0,  (8+2),  0, $35, 0
+	dsprite  0,  0,  4,  0, $32, 0
+	;dsprite  0,  0,  5,  0, $32, 0
+	;dsprite  0,  0,  6,  0, $32, 0
+	;dsprite  0,  0,  7,  0, $31, 0
+	;dsprite  0,  0,  8,  0, $32, 0
+	dsprite  0,  0,  0,  0, $33, 0
+	dsprite  0,  0,  1,  0, $34, 0
+	dsprite  0,  0,  2,  0, $34, 0
+	dsprite  0,  0,  3,  0, $34, 0
+	dsprite  0,  0,  4,  0, $35, 0
+	;dsprite  0,  0,  5,  0, $34, 0
+	;dsprite  1,  0,  6,  0, $34, 0
+	;dsprite  1,  0,  7,  0, $34, 0
+	;dsprite  1,  0,  8,  0, $35, 0
 
 .OAMData_BlueWalk:
 	db 4
