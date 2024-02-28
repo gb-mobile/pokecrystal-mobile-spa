@@ -4,7 +4,8 @@ DEF EZCHAT_WORDS_PER_ROW EQU 2
 DEF EZCHAT_WORDS_PER_COL EQU 4
 DEF EZCHAT_WORDS_IN_MENU EQU EZCHAT_WORDS_PER_ROW * EZCHAT_WORDS_PER_COL
 DEF EZCHAT_CUSTOM_BOX_BIG_SIZE EQU 9
-DEF EZCHAT_CUSTOM_BOX_START_X EQU 6
+DEF EZCHAT_CUSTOM_BOX_BIG_START EQU 4
+DEF EZCHAT_CUSTOM_BOX_START_X EQU 5
 DEF EZCHAT_CUSTOM_BOX_START_Y EQU $1B
 DEF EZCHAT_CHARS_PER_LINE EQU 18
 DEF EZCHAT_BLANK_SIZE EQU 5
@@ -3049,7 +3050,7 @@ PrepareEZChatCustomBox:
 	dec c
 	cp EZCHAT_CUSTOM_BOX_BIG_SIZE
 	jr c, .after_big_reshape
-	ld a, 5
+	ld a, (EZCHAT_CUSTOM_BOX_BIG_START * 2) - 1
 	jr .done_reshape
 .after_big_reshape
 	ld a, d
@@ -3117,7 +3118,7 @@ PrepareEZChatCustomBox:
 	ld a, c
 	cp EZCHAT_CUSTOM_BOX_BIG_SIZE - 1
 	ret c
-	dec a
+	sub EZCHAT_CUSTOM_BOX_BIG_START - 2
 	sla a
 	sla a
 	ld d, 0
@@ -3129,7 +3130,7 @@ PrepareEZChatCustomBox:
 	sbc d
 	ld h, a
 	ld a, c
-	sub 4
+	sub (EZCHAT_CUSTOM_BOX_BIG_START * 2) - 2
 	sla a
 	sla a
 	push hl
@@ -3137,7 +3138,7 @@ PrepareEZChatCustomBox:
 	add hl, de
 	pop de
 	push bc
-	ld c, 12
+	ld c, EZCHAT_CUSTOM_BOX_BIG_START * 4
 .resize_loop
 	ld a, [hli]
 	ld [de], a
