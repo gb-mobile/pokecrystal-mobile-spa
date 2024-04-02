@@ -8394,7 +8394,7 @@ DisplayLinkBattleResult:
 	jr .store_result
 
 .store_result
-	hlcoord 6, 8
+	hlcoord 3, 8
 	call PlaceString
 	farcall BackupMobileEventIndex
 	ld c, 200
@@ -8428,7 +8428,7 @@ DisplayLinkBattleResult:
 	db "    EMPATE    @"
 
 .Mobile_InvalidBattle:
-	hlcoord 6, 8
+	hlcoord 2, 8
 	ld de, .InvalidBattle
 	call PlaceString
 	ld c, 200
