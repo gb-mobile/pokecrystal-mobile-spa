@@ -8,11 +8,9 @@ It is possible that some menus were missed by the find/replace script, and need 
 
 ## TO-DO
 
-- Check for any untranslated menus missed by the find/replace script.
-- Translate any of mobile features. (Anything English under /mobile/, /maps/GoldenrodPokecenter1F.asm, maps/PokecomCenterAdminOfficeMobile.asm, data/text/common_1.asmm data/text/common_3.asm and data/text/battle.asm).
-- Also refer to the English build for 'Text_BattleReceptionistIntro:', 'Text_TradeReceptionistIntro:' and 'Text_TimeCapsuleReceptionistIntro:' for proper mobile translations of the PokeCOM Club reception dialogue.
-- Fix the known issues.
-
+- Reduce Text_SentSaveFileReadingNews & Text_CanceledSendingSaveFile in mobile_46.asm to just two lines.
+- Localize Easy Chat into Spanish.
+  
 ## Setup [![Build Status][ci-badge]][ci]
 
 For more information, please see [INSTALL.md](INSTALL.md)
