@@ -338,7 +338,7 @@ String10024d:
 
 String10025e:
 	db   "¡Las salas escogi-"	; "おともだちと　えらんだ　へやが"
-	next "das difieren!@"		; "ちがうようです@"
+	next "das difieren!@"			; "ちがうようです@"
 
 Function100276:
 	ld a, [wcd2b]
@@ -866,7 +866,8 @@ Function100597:
 
 MenuHeader_1005b2:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 15, 6, SCREEN_WIDTH - 1, 10
+	db 6, 15
+	db 10, 19
 	dw MenuData_1005ba
 	db 1 ; default option
 
@@ -912,7 +913,8 @@ Function1005e1:
 
 MenuHeader_1005fc:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 10, 6, SCREEN_WIDTH - 1, 10
+	db 6, 10;14
+	db 10, 19
 	dw MenuData_100604
 	db 1 ; default option
 
@@ -930,6 +932,7 @@ Mobile_CommunicationStandby:
 	ld de, .String
 	hlcoord 5, 11
 	call PlaceString
+	ret
 
 .String:
 	db "¡ESPERA.…!@"	; "つうしんたいきちゅう！@"
@@ -1048,7 +1051,7 @@ String1006c2:
 String1006c6:
 	db " seg.@"			; "びょう@" Second
 String1006ca:
-	db "1 hora o más@" 		; "１じかんいじょう@" More than 1 hour
+	db "1 hora o más   @" 		; "１じかんいじょう@" More than 1 hour
 
 Function1006d3:
 	call UpdateTime
@@ -1391,8 +1394,9 @@ Function1008e0:
 	ret
 
 Function100902:
-	hlcoord 0, 10
-	lb bc, 1, SCREEN_WIDTH - 2
+	hlcoord 0, 10;3, 10
+	ld b, $01
+	ld c, $12 ;$0b
 	call Textbox
 	ld a, [wcd6d]
 	ld c, a
@@ -1403,7 +1407,7 @@ Function100902:
 	ld de, .string_100966
 	hlcoord 1, 11
 	call PlaceString
-	hlcoord 9, 11
+	hlcoord 9, 11;8, 11
 	lb bc, 1, 2
 	ld de, wStringBuffer2
 	call PrintNum
@@ -1416,7 +1420,7 @@ Function100902:
 
 .asm_10093f
 	ld de, .string_10095a
-	hlcoord 6, 11
+	hlcoord 6, 11;4, 11
 	call PlaceString
 	ld de, SFX_4_NOTE_DITTY
 	call PlaySFX
@@ -1906,11 +1910,11 @@ Function100c98:
 	ret
 
 .data:
-	db 13, 5 ; cursor start y, x
+	db 13, 5 ; 10, 1
 	db -1, 1 ; rows, columns
-	db $a0, $00 ; flags
-	dn 1, 0 ; cursor offsets
-	db D_UP | D_DOWN | A_BUTTON | B_BUTTON ; accepted buttons
+	db $a0, $00
+	dn 1, 0 ; 2, 0
+	db D_UP | D_DOWN | A_BUTTON | B_BUTTON
 
 Mobile_PartyMenuSelect:
 	call Function100dd8
@@ -2028,9 +2032,9 @@ Function100d67:
 .MenuData:
 	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 3
-	db "TRATO@"	; "いれかえる@"   ; TRADE
-	db "ESTAD.@"; "つよさをみる@" ; STATS
-	db "SALIR@"	; "キャンセル@"   ; CANCEL
+	db "TRATO@"	; "いれかえる@"  ; TRADE
+	db "ESTAD.@"		; "つよさをみる@" ; STATS
+	db "SALIR@"	; "キャンセル@"  ; CANCEL
 
 Function100da5:
 	ld hl, wcd2a
@@ -4531,7 +4535,6 @@ Unknown_101ef5:
 String_101f13:
 	db "@"
 
-; Max. printed space is 15!
 String_101f14:
 	db   "¡Comunícate con"	; "モバイルアダプタを　つかって"
 	next "un amigo!@"		; "おともだちと　つうしんします"
@@ -4602,7 +4605,7 @@ Function102048:
 	ret
 
 Function10204c:
-	hlcoord 4, 4
+	hlcoord 4, 4;3, 2
 	ld c, $10
 	ld de, wcd53
 .asm_102054
@@ -6514,7 +6517,7 @@ Function102dec:
 
 Function102e07:
 	hlcoord 4, 10
-	ld b, 1
+	ld b,  1
 	ld c, 10
 	ld a, [wBattleMode]
 	and a
@@ -6523,6 +6526,10 @@ Function102e07:
 	jr .okay
 
 .link_battle
+; the next three operations are pointless
+	hlcoord 4, 10
+	ld b,  1
+	ld c, 10
 	ld d, h
 	ld e, l
 	farcall _LinkTextbox
@@ -6530,7 +6537,8 @@ Function102e07:
 .okay
 	ld de, .waiting
 	hlcoord 5, 11
-	jp PlaceString
+	call PlaceString
+	ret
 
 .waiting
 	db "¡ESPERA.…!@"
@@ -6645,7 +6653,7 @@ Function102f15:
 	db   "¡El trato esta"
 	next "cancelado!"
 	db   "@"
-
+	
 Function102f32:
 	call Function102dc3
 	ld de, .TradeCompleted
@@ -7161,7 +7169,7 @@ Function10343c:
 
 .asm_10347d
 	call Function10350f
-	ld bc, 11
+	ld bc, 11;11
 	call Function103487
 	ret
 
@@ -7519,7 +7527,7 @@ Function103700:
 
 MenuHeader_103747:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 12, 5, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 12, 5, SCREEN_WIDTH - 1, TEXTBOX_Y - 1;13, 5, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
 	dw MenuData_10374f
 	db 1 ; default option
 
