@@ -8,8 +8,7 @@ It is possible that some menus were missed by the find/replace script, and need 
 
 ## TO-DO
 
-- Reduce Text_SentSaveFileReadingNews & Text_CanceledSendingSaveFile in mobile_46.asm to just two lines.
-- Localize Easy Chat into Spanish.
+- Import localized EZ Chat.
   
 ## Setup [![Build Status][ci-badge]][ci]
 
@@ -46,6 +45,7 @@ https://github.com/gb-mobile/pokecrystal-mobile-en/wiki/Pok%C3%A9mon-Crystal-Mob
 - Pfero          : Old Spanish disassembly for Pokecrystal
 - Matze          : Mobile Restoration & Japanese Code Disassembly
 - Idain          : Mobile Spanish Translation & Code
+- Fillo			 : Easy Chat Translation
 - Damien         : Code
 - DS             : GFX & Code
 - Ryuzac         : Code & Japanese Translation
