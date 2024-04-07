@@ -1020,7 +1020,7 @@ EZChatString_ChatExplanation: ; Explanation string
 	db   "Combine cuatro pa-";"６つのことば¯くみあわせます"
 	next "labras o frases.";"かえたいところ¯えらぶと　でてくる"
 	next "Comience eligiendo";"ことばのグループから　いれかえたい"
-	next "un espacio.";"たんご¯えらんでください"
+	next "una casilla.";"たんご¯えらんでください"
 	db   "@"
 
 EZChatString_ChatExplanationBottom: ; Explanation commands string
@@ -3960,22 +3960,22 @@ INCBIN "gfx/pokedex/slowpoke_mobile.2bpp.lz"
 
 MobileEZChatCategoryNames:
 ; Fixed message categories
-	db "POKéMON@" 	; 00 ; Pokemon 		; "ポケモン@@" ; this could've also been rendered as <PK><MN> but it looks odd
-	db "TIPOS@" 	; 01 ; Types		; "タイプ@@@"
-	db "SALUDOS@" 	; 02 ; Greetings	; "あいさつ@@"
-	db "GENTE@" 	; 03 ; People		; "ひと@@@@"
-	db "COMBATE@" 	; 04 ; Battle		; "バトル@@@"
-	db "VOCES@" 	; 05 ; Voices		; "こえ@@@@"
-	db "NEXOS@" 	; 06 ; Speech		; "かいわ@@@"
-	db "SENSACION@" 	; 07 ; Feelings		; "きもち@@@"
+	db "POKéMON@" 		; 00 ; Pokemon 		; "ポケモン@@" ; this could've also been rendered as <PK><MN> but it looks odd
+	db "TIPOS@" 		; 01 ; Types		; "タイプ@@@"
+	db "SALUDOS@" 		; 02 ; Greetings	; "あいさつ@@"
+	db "GENTE@" 		; 03 ; People		; "ひと@@@@"
+	db "COMBATE@" 		; 04 ; Battle		; "バトル@@@"
+	db "VOCES@" 		; 05 ; Voices		; "こえ@@@@"
+	db "NEXOS@" 		; 06 ; Speech		; "かいわ@@@"
+	db "SENSACIÓN@" 	; 07 ; Feelings		; "きもち@@@"
 	db "HABILIDAD@" 	; 08 ; Conditions	; "じょうたい@"
-	db "VIDA@" 	; 09 ; Lifestyle	; "せいかつ@@"
+	db "VIDA@" 			; 09 ; Lifestyle	; "せいかつ@@"
 	db "AFICIONES@" 	; 0a ; Hobbies		; "しゅみ@@@"
-	db "ACCIONES@" 	; 0b ; Actions		; "こうどう@@"
-	db "TIEMPO@@" 	; 0c ; Time			; "じかん@@@"
-	db "VERBOS@@" 	; 0d ; Endings		; "むすび@@@"
-	db "OTROS@" 	; 0e ; Misc			; "あれこれ@@"
-	db " @@@@@"	    ; 0f ; EMPTY
+	db "ACCIONES@" 		; 0b ; Actions		; "こうどう@@"
+	db "TIEMPO@@" 		; 0c ; Time			; "じかん@@@"
+	db "VERBOS@@" 		; 0d ; Endings		; "むすび@@@"
+	db "OTROS@" 		; 0e ; Misc			; "あれこれ@@"
+	db " @@@@@"	    	; 0f ; EMPTY
 
 MobileEZChatCategoryPointers:
 ; entries correspond to EZCHAT_* constants
