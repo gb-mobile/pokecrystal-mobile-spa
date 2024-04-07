@@ -9,6 +9,7 @@ It is possible that some menus were missed by the find/replace script, and need 
 ## TO-DO
 
 - Import localized EZ Chat.
+- Update the default Profile easy chat words.
   
 ## Setup [![Build Status][ci-badge]][ci]
 
