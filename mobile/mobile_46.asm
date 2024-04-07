@@ -4473,9 +4473,8 @@ Text_SaveFileWillBeSent:
 	done
 
 Text_SentSaveFileReadingNews:
-	text "FICHERO GUARDADO"
-	line "enviado."
-	cont "Leyendo NOTICIAS…"
+	text "FICHERO enviado."
+	line "Leyendo NOTICIAS…"
 	done
 
 Text_ReadingNews:
@@ -4494,8 +4493,7 @@ Text_QuitReadingNews:
 
 Text_CanceledSendingSaveFile: ; unreferenced
 	text "Envío de ARCHIVO"
-	line "GUARDADO"
-	cont "cancelado."
+	line "cancelado."
 	done
 
 Text_ReceivedOddEgg: ; unreferenced
