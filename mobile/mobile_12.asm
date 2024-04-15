@@ -98,10 +98,10 @@ InitMobileProfile:
 	call GetNthString
 	ld d, h
 	ld e, l
-	hlcoord 11, 5 ; Default gender position in MOBILE menu
+	hlcoord 14, 5 ; Default gender position in MOBILE menu
 	call PlaceString
 .asm_48113
-	hlcoord 15, 7 ; Default age position in MOBILE menu
+	hlcoord 16, 7 ; Default age position in MOBILE menu
 	call Function487ec
 	ld a, [wPrefecture]
 	dec a
@@ -236,7 +236,7 @@ Mobile12_ClearBlankUserParameters:
 	bit 0, a
 	jr nz, .asm_48201
 .asm_481f8
-	hlcoord 7, 11 ; Position of 'Tell Later' after selecting
+	hlcoord 8, 11 ; Position of 'Tell Later' after selecting
 	ld de, .String_TellLater
 	call PlaceString
 .asm_48201
@@ -353,7 +353,7 @@ GenderPressed:
 .asm_482f1
 	ld d, h
 	ld e, l
-	hlcoord 13, 5 ; Gender position
+	hlcoord 14, 5 ; Gender position
 	call PlaceString
 	ld a, [wMobileProfileParametersFilled]
 	set 0, a
@@ -575,17 +575,17 @@ Mobile12_Index2CharDisplay:
 	ld [hl], a
 	ret
 
-MobileProfileString:         db "    Mobilprofil@"
-MobileString_Gender:         db "Geschlecht@"
-MobileString_Age:            db "Alter@"
-MobileString_Address:        db "Wohnort@"
-MobileString_ZipCode:        db "Postleitzahl@"
-MobileString_OK:             db "O.K.@"
-MobileString_ProfileChanged: db "Profil bearbeitet@"
-MobileDesc_Gender:           db "Dein Geschlecht?@"
-MobileDesc_Age:              db "Dein Alter?@"
-MobileDesc_Address:          db "Dein Wohnort?@"
-MobileDesc_ZipCode:          db "Deine PLZ?@"
+MobileProfileString:         db "   Perfil Móvil  @"
+MobileString_Gender:         db "Género@"
+MobileString_Age:            db "Edad@"
+MobileString_Address:        db "Dirección@"
+MobileString_ZipCode:        db "Código Postal@"
+MobileString_OK:             db "OK@"
+MobileString_ProfileChanged: db "Perfil Cambiado@"
+MobileDesc_Gender:           db "¿Chico o chica?@"
+MobileDesc_Age:              db "¿Qué edad tienes?@"
+MobileDesc_Address:          db "¿Dónde vives?@"
+MobileDesc_ZipCode:          db "¿Tu código postal?@"
 
 MenuHeader_0x484f1:
 	db MENU_BACKUP_TILES ; flags
@@ -609,11 +609,11 @@ MenuHeader_0x48504:
 
 MenuHeader_0x48509:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 10, 5, SCREEN_WIDTH - 1 + ZIPCODE_FRAME_RIGHT_MARGIN, 8 ; For clearing the Age Box
+	menu_coords 10, 5, SCREEN_WIDTH - 1, 8 ; For clearing the Age Box
 
 MenuHeader_ZipCodeEditBox:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 17 - ZIPCODE_LENGTH, 10, SCREEN_WIDTH - 1 + ZIPCODE_FRAME_RIGHT_MARGIN, TEXTBOX_Y - 0 ; For clearing the Zip Code box
+	menu_coords 18 - ZIPCODE_LENGTH, 10, SCREEN_WIDTH - 1, TEXTBOX_Y - 0 ; For clearing the Zip Code box
 
 	;Bounding of left side ; bounding of top ; bounding of right side ; bounding of bottom
 
@@ -817,9 +817,9 @@ AgePressed:
 	push af
 	ld a, $1
 	ldh [hInMenu], a
-	hlcoord 14, 6 ; Age menu position
+	hlcoord 15, 6 ; Age menu position
 	ld b, $1
-	ld c, $4
+	ld c, $3
 	call DisplayBlankGoldenBox
 	call WaitBGMap
 	ld a, [wAge]
@@ -827,20 +827,20 @@ AgePressed:
 	jr z, .asm_487ab
 	cp $64
 	jr z, .asm_487b2
-	hlcoord 16, 6 ; Age menu up arrow position
+	hlcoord 17, 6 ; Age menu up arrow position
 	ld [hl], $10
-	hlcoord 16, 8 ; Age menu down arrow position (probably)
+	hlcoord 17, 8 ; Age menu down arrow position (probably)
 	ld [hl], $11
 	jr .asm_487b7
 .asm_487ab
-	hlcoord 16, 6 ; Age menu up arrow position
+	hlcoord 17, 6 ; Age menu up arrow position
 	ld [hl], $10
 	jr .asm_487b7
 .asm_487b2
-	hlcoord 16, 8 ; Age menu down arrow position (probably)
+	hlcoord 17, 8 ; Age menu down arrow position (probably)
 	ld [hl], $11
 .asm_487b7
-	hlcoord 15, 7 ; Age position
+	hlcoord 16, 7 ; Age position
 	call Function487ec
 	ld c, 10
 	call DelayFrames
@@ -859,7 +859,7 @@ AgePressed:
 .asm_487da
 	ld a, [wAge]
 	call ExitMenu
-	hlcoord 15, 7 ; Age position
+	hlcoord 16, 7 ; Age position
 	call Function487ec
 	pop af
 	ldh [hInMenu], a
@@ -957,28 +957,28 @@ Function4880e:
 	cp $64
 	jr z, .asm_48898
 	jr z, .asm_488a7
-	hlcoord 16, 6 ; Age menu up arrow position
+	hlcoord 17, 6 ; Age menu up arrow position
 	ld [hl], $10
-	hlcoord 16, 8 ; Age menu down arrow position
+	hlcoord 17, 8 ; Age menu down arrow position
 	ld [hl], $11
 	jr .asm_488a7
 .asm_48887
-	hlcoord 14, 6 ; Age menu up arrow position when using D-Pad
+	hlcoord 15, 6 ; Age menu up arrow position when using D-Pad
 	ld b, $1
-	ld c, $4
+	ld c, $3
 	call DisplayBlankGoldenBox
-	hlcoord 16, 6 ; Age menu up arrow position when using D-Pad
+	hlcoord 17, 6 ; Age menu up arrow position when using D-Pad
 	ld [hl], $10
 	jr .asm_488a7
 .asm_48898
-	hlcoord 14, 6 ; Age menu up arrow position when using D-Pad
+	hlcoord 15, 6 ; Age menu up arrow position when using D-Pad
 	ld b, $1
 	ld c, $4
 	call DisplayBlankGoldenBox
-	hlcoord 16, 8 ; Age menu down arrow position when using D-Pad
+	hlcoord 17, 8 ; Age menu down arrow position when using D-Pad
 	ld [hl], $11
 .asm_488a7
-	hlcoord 15, 7 ; Age position
+	hlcoord 16, 7 ; Age position
 	call Function487ec
 	call WaitBGMap
 	ld a, $1
@@ -1012,7 +1012,7 @@ ZipCodePressed:
 	call TellNowTellLaterMenu
 	jp c, ReturnToMobileProfileMenu
 
-	hlcoord 7, 11 ; Clearing the potential "Tell Later" text.
+	hlcoord 7, 12 ; Clearing the potential "Tell Later" text.
 	lb bc, 1, 11 - ZIPCODE_LENGTH ; Determines the size of the clearing box
 	call ClearBox
 
@@ -1024,11 +1024,11 @@ ZipCodePressed:
 	ld a, TRUE
 	ldh [hInMenu], a
 
-	hlcoord 17 - ZIPCODE_LENGTH, 10
+	hlcoord 18 - ZIPCODE_LENGTH, 10
 	ld b, $1 ; Zip Code Menu starting point
-	ld c, ZIPCODE_LENGTH + ZIPCODE_FRAME_RIGHT_MARGIN; Zip Code Menu width
+	ld c, ZIPCODE_LENGTH; Zip Code Menu width
 	call DisplayBlankGoldenBox
-	hlcoord 18 - ZIPCODE_LENGTH, 11 ; Zip Code Position
+	hlcoord 19 - ZIPCODE_LENGTH, 11 ; Zip Code Position
 	call DisplayZipCode
 	call WaitBGMap
 	; Backup of the zip code, in case the player cancels.
@@ -1137,7 +1137,7 @@ asm_48972:
 	ld [wd002], a
 
 .regular_blinking
-	hlcoord 18 - ZIPCODE_LENGTH, 11 ; Zip code location
+	hlcoord 19 - ZIPCODE_LENGTH, 11 ; Zip code location
 	ld b, $0
 	ld c, d
 	add hl, bc
@@ -1209,7 +1209,7 @@ endr
 	call DisplayZipCodeRightAlign
 	hlcoord 8, 11 ; Location of a clear box to clear any excess characters if 'Tell Now' is selected, but cannot overlap the position of the zip code itself, because otherwise it will clear that too.
 
-	ld a, 10 - ZIPCODE_LENGTH ; Determines the size of the clearing box
+	ld a, 11 - ZIPCODE_LENGTH ; Determines the size of the clearing box
 	add b ; We increase the clearbox width, in case the zipcode has been shifted to the right.
 	ld c, a
 	ld b, 1
@@ -1222,7 +1222,7 @@ endr
 DisplayZipCodeRightAlign:
 	push de
 	; We first clear the area.
-	hlcoord 18 - ZIPCODE_LENGTH, 11 ; Zip Code Position in MOBILE menu
+	hlcoord 19 - ZIPCODE_LENGTH, 11 ; Zip Code Position in MOBILE menu
 	ld a, ZIPCODE_LENGTH
 	ld c, a
 	ld b, 0
@@ -1231,7 +1231,7 @@ DisplayZipCodeRightAlign:
 	ld b, e
 
 	; Aligning to the right, based on wZipcodeFormatLength.
-	hlcoord 18 - ZIPCODE_LENGTH, 11 ; Zip Code Position in MOBILE menu
+	hlcoord 19 - ZIPCODE_LENGTH, 11 ; Zip Code Position in MOBILE menu
 	ld a, [wZipcodeFormatLength]
     ld b, a
     ld a, ZIPCODE_LENGTH
@@ -1291,15 +1291,15 @@ TellNowTellLaterMenu:
 	call SetCursorParameters_Gender
 	ld a, $a
 	ld [w2DMenuCursorInitY], a
-	ld a, $6 ; Y Placement of 'Tell Now' 'Tell Later' Cursor
+	ld a, $7 ; Y Placement of 'Tell Now' 'Tell Later' Cursor
 	ld [w2DMenuCursorInitX], a
 	ld a, $1 ; X Placement of 'Later' Cursor
 	ld [wMenuCursorY], a
-	hlcoord 5, 8 ; Placement of 'Tell Now' 'Tell Later' Box
+	hlcoord 6, 8 ; Placement of 'Tell Now' 'Tell Later' Box
 	ld b, 4
-	ld c, 13
+	ld c, 12
 	call DisplayBlankGoldenBox
-	hlcoord 7, 10 ; Placement of 'Tell Now' 'Tell Later' Text
+	hlcoord 8, 10 ; Placement of 'Tell Now' 'Tell Later' Text
 	ld de, TellNowLaterStrings
 	call PlaceString
 	call StaticMenuJoypad ; Waits for a user input from the input filter.
@@ -1335,7 +1335,7 @@ TellNowTellLaterMenu:
 
 MenuHeader_0x48a9c:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 5, 8, SCREEN_WIDTH - 1, 13 ; For clearing the 'Tell Later' 'Tell Now' Box
+	menu_coords 6, 8, SCREEN_WIDTH - 1, 13 ; For clearing the 'Tell Later' 'Tell Now' Box
 
 TellNowLaterStrings:
 	db   "Decir ahora"
@@ -1374,7 +1374,7 @@ InputZipcodeCharacters: ; Function48ab5. Zip code menu controls.
 	jr nz, .press_right
 
 	; If we reach this line, it means the player didn't press any button this frame.
-	hlcoord 18 - ZIPCODE_LENGTH, 11 ; Zip Code Location
+	hlcoord 19 - ZIPCODE_LENGTH, 11 ; Zip Code Location
 	call DisplayZipCode
 	ld a, [wd002]
 	bit 7, a
@@ -1396,9 +1396,9 @@ InputZipcodeCharacters: ; Function48ab5. Zip code menu controls.
 .no_underflow
 	push de
 	push af
-	hlcoord 17 - ZIPCODE_LENGTH, 10
+	hlcoord 18 - ZIPCODE_LENGTH, 10
 	ld b, $1 ; Zip Code Menu starting point
-	ld c, ZIPCODE_LENGTH + ZIPCODE_FRAME_RIGHT_MARGIN; Zip Code Menu width
+	ld c, ZIPCODE_LENGTH; Zip Code Menu width
 	call DisplayBlankGoldenBox
 	pop af
 	pop de
@@ -1418,9 +1418,9 @@ InputZipcodeCharacters: ; Function48ab5. Zip code menu controls.
 
 .press_right
 	push de
-	hlcoord 17 - ZIPCODE_LENGTH, 10
+	hlcoord 18 - ZIPCODE_LENGTH, 10
 	ld b, $1 ; Zip Code Menu starting point
-	ld c, ZIPCODE_LENGTH + ZIPCODE_FRAME_RIGHT_MARGIN; Zip Code Menu width
+	ld c, ZIPCODE_LENGTH; Zip Code Menu width
 	call DisplayBlankGoldenBox
 	pop de
 	ld a, [wZipcodeFormatLength]
@@ -1447,9 +1447,9 @@ InputZipcodeCharacters: ; Function48ab5. Zip code menu controls.
 
 .press_left
 	push de
-	hlcoord 17 - ZIPCODE_LENGTH, 10
+	hlcoord 18 - ZIPCODE_LENGTH, 10
 	ld b, $1 ; Zip Code Menu starting point
-	ld c, ZIPCODE_LENGTH + ZIPCODE_FRAME_RIGHT_MARGIN; Zip Code Menu width
+	ld c, ZIPCODE_LENGTH; Zip Code Menu width
 	call DisplayBlankGoldenBox
 	pop de
 	pop af
@@ -1521,7 +1521,7 @@ Zipcode_GetCharPoolLengthForGivenCharSlot:
 
 DisplayZipCodeAfterChange:
 	push af
-	hlcoord 18 - ZIPCODE_LENGTH, 11 ; Zip code location
+	hlcoord 19 - ZIPCODE_LENGTH, 11 ; Zip code location
 	call DisplayZipCode
 	ld a, $1
 	and a
