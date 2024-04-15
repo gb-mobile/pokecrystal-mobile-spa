@@ -5,11 +5,6 @@
 A Spanish translation of https://github.com/gb-mobile/pokecrystal-mobile-eng
 This translation was performed via text dumps and a (somewhat) sophisticated find/replace script.
 It is possible that some menus were missed by the find/replace script, and need translating manually.
-
-## TO-DO
-
-- Import localized EZ Chat.
-- Update the default Profile easy chat words.
   
 ## Setup [![Build Status][ci-badge]][ci]
 
