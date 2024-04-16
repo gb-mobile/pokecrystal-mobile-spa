@@ -94,14 +94,14 @@ InitMobileProfile:
 	bit 6, a
 	jr nz, .asm_48113
 	ld a, [wPlayerGender]
-	ld hl, Strings_484fc
+	ld hl, Strings_484fb
 	call GetNthString
 	ld d, h
 	ld e, l
 	hlcoord 14, 5 ; Default gender position in MOBILE menu
 	call PlaceString
 .asm_48113
-	hlcoord 16, 7 ; Default age position in MOBILE menu
+	hlcoord 14, 7 ; Default age position in MOBILE menu
 	call Function487ec
 	ld a, [wPrefecture]
 	dec a
@@ -337,7 +337,7 @@ GenderPressed:
 	jp z, ReturnToMobileProfileMenu
 	ld hl, wMenuCursorY
 	ld a, [hl]
-	ld hl, Strings_484fc
+	ld hl, Strings_484fb
 	cp $1
 	jr z, .asm_482ed
 .asm_482e1
@@ -599,9 +599,6 @@ MenuData_0x484f9:
 Strings_484fb:
 String_484fb: db "Chico@"
 String_484ff: db "Chica@"
-Strings_484fc:
-String_484fc: db "Chico@"
-String_48500: db "Chica@"
 
 MenuHeader_0x48504:
 	db MENU_BACKUP_TILES ; flags
@@ -817,9 +814,9 @@ AgePressed:
 	push af
 	ld a, $1
 	ldh [hInMenu], a
-	hlcoord 15, 6 ; Age menu position
+	hlcoord 13, 6 ; Age menu position
 	ld b, $1
-	ld c, $3
+	ld c, $5
 	call DisplayBlankGoldenBox
 	call WaitBGMap
 	ld a, [wAge]
@@ -827,20 +824,20 @@ AgePressed:
 	jr z, .asm_487ab
 	cp $64
 	jr z, .asm_487b2
-	hlcoord 17, 6 ; Age menu up arrow position
+	hlcoord 15, 6 ; Age menu up arrow position
 	ld [hl], $10
-	hlcoord 17, 8 ; Age menu down arrow position (probably)
+	hlcoord 15, 8 ; Age menu down arrow position (probably)
 	ld [hl], $11
 	jr .asm_487b7
 .asm_487ab
-	hlcoord 17, 6 ; Age menu up arrow position
+	hlcoord 15, 6 ; Age menu up arrow position
 	ld [hl], $10
 	jr .asm_487b7
 .asm_487b2
-	hlcoord 17, 8 ; Age menu down arrow position (probably)
+	hlcoord 15, 8 ; Age menu down arrow position (probably)
 	ld [hl], $11
 .asm_487b7
-	hlcoord 16, 7 ; Age position
+	hlcoord 14, 7 ; Age position
 	call Function487ec
 	ld c, 10
 	call DelayFrames
@@ -859,7 +856,7 @@ AgePressed:
 .asm_487da
 	ld a, [wAge]
 	call ExitMenu
-	hlcoord 16, 7 ; Age position
+	hlcoord 14, 7 ; Age position
 	call Function487ec
 	pop af
 	ldh [hInMenu], a
@@ -957,28 +954,28 @@ Function4880e:
 	cp $64
 	jr z, .asm_48898
 	jr z, .asm_488a7
-	hlcoord 17, 6 ; Age menu up arrow position
+	hlcoord 15, 6 ; Age menu up arrow position
 	ld [hl], $10
-	hlcoord 17, 8 ; Age menu down arrow position
+	hlcoord 15, 8 ; Age menu down arrow position
 	ld [hl], $11
 	jr .asm_488a7
 .asm_48887
-	hlcoord 15, 6 ; Age menu up arrow position when using D-Pad
+	hlcoord 13, 6 ; Age menu up arrow position when using D-Pad
 	ld b, $1
-	ld c, $3
+	ld c, $5
 	call DisplayBlankGoldenBox
-	hlcoord 17, 6 ; Age menu up arrow position when using D-Pad
+	hlcoord 15, 6 ; Age menu up arrow position when using D-Pad
 	ld [hl], $10
 	jr .asm_488a7
 .asm_48898
-	hlcoord 15, 6 ; Age menu up arrow position when using D-Pad
+	hlcoord 13, 6 ; Age menu up arrow position when using D-Pad
 	ld b, $1
-	ld c, $3
+	ld c, $5
 	call DisplayBlankGoldenBox
-	hlcoord 17, 8 ; Age menu down arrow position when using D-Pad
+	hlcoord 15, 8 ; Age menu down arrow position when using D-Pad
 	ld [hl], $11
 .asm_488a7
-	hlcoord 16, 7 ; Age position
+	hlcoord 14, 7 ; Age position
 	call Function487ec
 	call WaitBGMap
 	ld a, $1
@@ -1068,6 +1065,13 @@ ZipCodePressed:
 
 
 ZipCodeEditMenu:
+	hlcoord 11 - ZIPCODE_LENGTH, 11 ; Zip Code Position in MOBILE menu
+	ld a, ZIPCODE_LENGTH + 2
+	ld c, a
+	ld b, 0
+	ld a, " "
+	call ByteFill ; fill bc bytes with the value of a, starting at hl
+	ld b, e
 	push bc
 	call JoyTextDelay
 	ldh a, [hJoyDown]
@@ -1238,7 +1242,7 @@ DisplayZipCodeRightAlign:
     sub b
     ld e, a
     ld d, 0
-    add hl, de ; Shifting HL coord to the right, based on wZipcodeFormatLength. It's so that the zipcode stays aligned to the right.
+    ;add hl, de ; Shifting HL coord to the right, based on wZipcodeFormatLength. It's so that the zipcode stays aligned to the right.
 
 	call CountZipcodeRightBlanks
 	ld d, 0
