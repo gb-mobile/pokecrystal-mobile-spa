@@ -1,27 +1,58 @@
 Prefectures: ; Some names shortened to fit, check for official initials later. In this list, strings must be right-aligned.
-	db "ES-AN@"      ; Andalusia
-	db "ES-AR@"      ; Aragon
-	db "ES-AS@"      ; Principality of Asturias
-	db "ES-CB@"      ; Cantabria
-	db "ES-CE@"      ; Ceuta
-	db "ES-CL@"      ; Castile and León
-	db "ES-CM@"      ; Castile-La Mancha
-	db "ES-CN@"      ; Canary Islands
-	db "ES-CT@"      ; Catalonia
-	db "ES-EX@"      ; Extremadura
-	db "ES-GA@"      ; Galicia
-	db "ES-IB@"      ; Balearic Islands
-	db "ES-MC@"      ; Region of Murcia
-	db "ES-MD@"      ; Community of Madrid
-	db "ES-ML@"      ; Melilla
-	db "ES-NC@"      ; Chartered Community of Navarre
-	db "ES-PV@"      ; Basque Country
-	db "ES-RI@"      ; La Rioja
-	db "ES-VC@"      ; Valencian Community
-	db "AD-02@"      ; Escut Canillo
-	db "AD-03@"      ; Escut Encamp
-	db "AD-04@"      ; Massana
-	db "AD-05@"      ; Ordino
-	db "AD-06@"      ; Sant Julià de Lòria
-	db "AD-07@"      ; Escut Andorra la Vella
-LastPrefecture: db "AD-08@"      ; Escut Escaldes-Engordany	
+	db "ES-C @"
+	db "ES-VI@"
+	db "ES-AB@"
+	db "ES-A @"
+	db "ES-AL@"
+	db "ES-O @"
+	db "ES-AV@"
+	db "ES-BA@"
+	db "ES-B @"
+	db "ES-BI@"
+	db "ES-BU@"
+	db "ES-CC@"
+	db "ES-CA@"
+	db "ES-S @"
+	db "ES-CS@"
+	db "ES-CR@"
+	db "ES-CO@"
+	db "ES-CU@"
+	db "ES-SS@"
+	db "ES-GI@"
+	db "ES-GR@"
+	db "ES-GU@"
+	db "ES-H @"
+	db "ES-HU@"
+	db "ES-PM@"
+	db "ES-J @"
+	db "ES-LO@"
+	db "ES-GC@"
+	db "ES-LE@"
+	db "ES-L @"
+	db "ES-LU@"
+	db "ES-M @"
+	db "ES-MA@"
+	db "ES-MU@"
+	db "ES-NA@"
+	db "ES-OR@"
+	db "ES-P @"
+	db "ES-PO@"
+	db "ES-SA@"
+	db "ES-TF@"
+	db "ES-SG@"
+	db "ES-SE@"
+	db "ES-SO@"
+	db "ES-T @"
+	db "ES-TE@"
+	db "ES-TO@"
+	db "ES-V @"
+	db "ES-VA@"
+	db "ES-ZA@"
+	db "ES-Z @"
+	db "AD-07@"      ; Escut Canillo
+	db "AD-02@"      ; Escut Encamp
+	db "AD-03@"      ; Massana
+	db "AD-08@"      ; Ordino
+	db "AD-04@"      ; Sant Julià de Lòria
+	db "AD-05@"      ; Escut Andorra la Vella
+LastPrefecture: db "AD-06@"      ; Escut Escaldes-Engordany	
