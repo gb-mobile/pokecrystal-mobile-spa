@@ -6674,7 +6674,7 @@ Function102f6d:
 	ret
 
 .Finished:
-	db "Completando trato...@"	; "しゅうりょう　します@"
+	db "Completando trato…@"	; "しゅうりょう　します@"
 
 Function102f85:
 	ld a, [wd003]
