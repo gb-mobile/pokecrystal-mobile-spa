@@ -5986,14 +5986,14 @@ Jumptable_1029cb:
 
 Function1029cf:
 	call LoadStandardMenuHeader
-	hlcoord 9, 7
+	hlcoord 7, 7
 	ld b, 3
-	ld c, 9
+	ld c, 10
 	ld d, h
 	ld e, l
 	farcall _LinkTextbox
 	ld de, String_102a26
-	hlcoord 11, 8
+	hlcoord 9, 8
 	call PlaceString
 	ld hl, wcd4b
 	set 1, [hl]

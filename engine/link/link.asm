@@ -1706,12 +1706,12 @@ LinkTrade:
 	bccoord 1, 14
 	call PlaceHLTextAtBC
 	call LoadStandardMenuHeader
-	hlcoord 9, 7
+	hlcoord 7, 7
 	ld b, 3
-	ld c, 9
+	ld c, 10
 	call LinkTextboxAtHL
 	ld de, String_TradeCancel
-	hlcoord 11, 8
+	hlcoord 9, 8
 	call PlaceString
 	ld a, 8
 	ld [w2DMenuCursorInitY], a
