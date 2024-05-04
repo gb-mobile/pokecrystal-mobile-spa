@@ -164,10 +164,13 @@ BattleTowerRoomMenu_InitRAM:
 
 Function118000:
 	ld a, $1
-	ld [wcd38], a
 	jr asm_11800b
 
+Function118007:
+	xor a
+
 asm_11800b:
+	ld [wcd38], a
 	call BattleTowerRoomMenu_InitRAM
 	ld a, $18
 	ld [wcd33], a
@@ -1660,7 +1663,7 @@ TradeCornerHoldMon_PrepareForUpload:
 	ret
 
 Function11b570:
-	farcall Function118007
+	call Function118007
 	ld a, [wScriptVar]
 	and a
 	jr nz, .exit
@@ -1890,7 +1893,7 @@ Function11b920:
 	ld bc, 8
 	call CopyBytes
 	call CloseSRAM
-	farcall Function118000
+	call Function118000
 	ret
 
 Function11b93b:

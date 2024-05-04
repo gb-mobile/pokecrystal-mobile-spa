@@ -12,10 +12,6 @@ SetMobileErrorCode:
 	ld [wBattleTowerRoomMenuJumptableIndex], a
 	ret
 
-Function118007:
-	xor a
-	ld [wcd38], a
-
 Function118440:
 	push af
 	ld a, BANK(s5_bfff)
