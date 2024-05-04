@@ -631,8 +631,8 @@ String_17fe9a: ; unreferenced
 	next "MON se han actua-" ; "あたらしくなっているので"
 	next "lizado. Por favor" ; "レポートを　おくれません"
 	next "descárguelas antes" ; "あたらしい　ポケモンニュースの"
-	next "de actualizar las" ; "よみこみを　さきに　してください"
-	next "clasificaciones." 
+	next "de actualizar los" ; "よみこみを　さきに　してください"
+	next "rankings." 
 	db   "@" 
 
 String_17fedf:
