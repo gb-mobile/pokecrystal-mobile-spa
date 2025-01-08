@@ -3139,10 +3139,10 @@ Strings_Ll0ToL40:
 	db " N:20 @@"
 	db " N:30 @@"
 	db " N:40 @@"
-	db " SALIR@@"
+	db "SALIR @@"
 
 BattleTowerCancelString:
-	db " SALIR@@"
+	db "SALIR @"
 
 ; to clear the cancel text, japanese version does not require this
 String_blank:
