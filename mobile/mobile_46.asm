@@ -4536,7 +4536,7 @@ Text_CancelBattleRoomChallenge:
 Text_ExitGymLeaderHonorRoll:
 	text "¿Sales de la LISTA"
 	line "de HONOR de los"
-	cont "LÍDER de la SALA?"
+	cont "LÍD. de la SALA?"
 	done
 
 Text_LinkingWithCenter: ; unreferenced
