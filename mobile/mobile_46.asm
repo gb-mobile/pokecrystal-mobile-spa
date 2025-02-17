@@ -4570,7 +4570,6 @@ Text_WhichBattleRoom: ; unreferenced
 Text_ThisBattleRoomPleaseWait:
 	text "¿SALA @"
 	text_ram wStringBuffer4
-	text_start
 	line "de @"
 	text_ram wStringBuffer3
 	text "?"
