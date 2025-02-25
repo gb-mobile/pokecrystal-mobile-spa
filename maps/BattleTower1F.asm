@@ -722,11 +722,11 @@ Text_SaveAndEndTheSession:
 	done
 
 Text_SaveBeforeReentry:
-	text "Tu récord será"
-	line "GUARDADO antes de"
+    text "Tu archivo será"
+    line "GUARDADO antes de"
 
-	para "que vuelvas a la"
-	line "SALA anterior."
+    para "que vuelvas a la"
+    line "SALA anterior."
 	done
 
 Text_CancelYourBattleRoomChallenge:
