@@ -4570,10 +4570,10 @@ Text_WhichBattleRoom: ; unreferenced
 Text_ThisBattleRoomPleaseWait:
 	text "¿SALA @"
 	text_ram wStringBuffer4
-	line "de @"
+	text "@ "
 	text_ram wStringBuffer3
 	text "?"
-	cont "Por favor, espera…"
+	line "Por favor, espera…"
 	done
 
 Function11ac3e:
