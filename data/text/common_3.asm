@@ -967,7 +967,7 @@ _LearnedMoveText::
 	text_ram wStringBuffer2
 	text "!@"
 	sound_dex_fanfare_50_79
-	text_waitbutton
+	text_promptbutton
 	text_end
 
 	text_end ; unreferenced
@@ -1244,7 +1244,7 @@ Text_BallCaught::
 	text_end ; unreferenced
 
 _WaitButtonText::
-	text_waitbutton
+	text_promptbutton
 	text_end
 
 	text_end ; unreferenced
@@ -1265,7 +1265,7 @@ _NewDexDataText::
 	text "."
 	line "@"
 	sound_slot_machine_start
-	text_waitbutton
+	text_promptbutton
 	text_end
 
 	text_end ; unreferenced
@@ -1315,7 +1315,7 @@ Text_PlayedPokeFlute::
 	text "<PLAYER> sintonizó"
 	line "el canal FLAUTA"
 	cont "#MON.@"
-	text_waitbutton
+	text_promptbutton
 	text_end
 
 	text_end ; unreferenced
