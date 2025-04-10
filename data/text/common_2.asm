@@ -336,7 +336,7 @@ _CutNothingText::
 _BlindingFlashText::
 	text "¡Un DESTELLO"
 	line "ilumina la zona!@"
-	text_waitbutton
+	text_promptbutton
 	text_end
 
 	text_end ; unreferenced
