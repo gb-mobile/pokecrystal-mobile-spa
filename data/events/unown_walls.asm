@@ -33,13 +33,13 @@ UnownWalls:
 MenuHeaders_UnownWalls:
 ; UNOWNWORDS_ESCAPE
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 3, 4, 16, 9
+	menu_coords 4, 4, 15, 9
 ; UNOWNWORDS_LIGHT
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 4, 4, 15, 9
 ; UNOWNWORDS_WATER
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 4, 4, 15, 9
+	menu_coords 5, 4, 14, 9
 ; UNOWNWORDS_HO_OH
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 4, 4, 15, 9
