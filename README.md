@@ -1,7 +1,6 @@
 # Information
 A Spanish translation of https://github.com/gb-mobile/pokecrystal-mobile-eng
-This translation was performed via text dumps and a (somewhat) sophisticated find/replace script.
-It is possible that some menus were missed by the find/replace script, and need translating manually.
+This translation was performed via text dumps and a (somewhat) sophisticated find/replace script and some manual effort.
 
 ## Screenshots
 ![image](https://github.com/user-attachments/assets/a8d32cab-626c-483a-9616-e384502c74ce)
