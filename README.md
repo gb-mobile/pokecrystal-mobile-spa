@@ -1,11 +1,26 @@
-# NOTE
-## This repository is a work in progress, you may experience bugs, glitches and general oddities. Should these occur please report them as issues.
-
 # Information
 A Spanish translation of https://github.com/gb-mobile/pokecrystal-mobile-eng
 This translation was performed via text dumps and a (somewhat) sophisticated find/replace script.
 It is possible that some menus were missed by the find/replace script, and need translating manually.
-  
+
+## Screenshots
+![image](https://github.com/user-attachments/assets/a8d32cab-626c-483a-9616-e384502c74ce)
+![image](https://github.com/user-attachments/assets/a14dead5-ef9a-402b-a240-9a2083aa5834)
+![image](https://github.com/user-attachments/assets/6de5a933-8478-456b-a19a-7f103770f1b8)
+![image](https://github.com/user-attachments/assets/8acdc1b3-1355-4808-8c8c-ddb08eddd638)
+![image](https://github.com/user-attachments/assets/63952c7c-c0a8-4331-977e-0629f6fcf0ad)
+![image](https://github.com/user-attachments/assets/fefcd088-abd6-4ec4-80a2-6d6967cdeea8)
+![image](https://github.com/user-attachments/assets/b620d90a-d20e-43e9-839a-d263fcaf41f2)
+![image](https://github.com/user-attachments/assets/947635fa-3522-4105-9599-0af401298227)
+![image](https://github.com/user-attachments/assets/10c0e429-c773-494e-a317-4f4ba8ce2fed)
+![image](https://github.com/user-attachments/assets/ef71ed66-64b2-4b97-bc73-7f8e940ef5cf)
+![image](https://github.com/user-attachments/assets/4e8bf2bd-b7f8-4c29-a1f7-c30a779f9ab8)
+![image](https://github.com/user-attachments/assets/4541ed0b-f710-4ae7-8001-bec3ef0f6ca0)
+![image](https://github.com/user-attachments/assets/b65e97de-6269-4932-b9b2-4379a8d2ece4)
+![image](https://github.com/user-attachments/assets/663f7e04-83d5-408d-9ab9-e89932ed9762)
+![image](https://github.com/user-attachments/assets/cef76ebb-5d31-4135-8ec2-69977f86f777)
+
+
 ## Setup [![Build Status][ci-badge]][ci]
 
 For more information, please see [INSTALL.md](INSTALL.md)
