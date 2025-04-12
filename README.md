@@ -30,7 +30,15 @@ To build a specific version, run this command inside the repository directory in
 `make`
 
 
-Other languages are being worked on, but are not complete and still require a lot of polish.
+Other languages can be found here:
+
+https://github.com/gb-mobile/pokecrystal-mobile-eng
+
+https://github.com/gb-mobile/pokecrystal-mobile-fra
+
+https://github.com/gb-mobile/pokecrystal-mobile-ger
+
+https://github.com/gb-mobile/pokecrystal-mobile-ita
 
 ## Using Mobile Adapter Features
 
