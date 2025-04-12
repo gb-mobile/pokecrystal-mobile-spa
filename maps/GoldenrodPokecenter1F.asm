@@ -737,7 +737,7 @@ GoldenrodPokecomCenterOddEggBriefingText:
 	para "CAMBIO se hacen"
 	line "entre dos entrena-"
 	cont "dores que no se"
-	line "conocen."
+	cont "conocen."
 
 	para "Por eso, puede que"
 	line "lleve tiempo."
