@@ -110,7 +110,7 @@ PlacePartyNicknames:
 	ret
 
 .CancelString:
-	db "CANCELAR@"
+	db "SALIR@"
 
 PlacePartyHPBar:
 	xor a

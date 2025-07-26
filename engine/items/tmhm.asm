@@ -451,7 +451,7 @@ PlaceMoveNameAfterTMHMName: ; unreferenced
 	ret
 
 TMHM_CancelString:
-	db "CANCELAR@"
+	db "SALIR@"
 
 TMHM_GetCurrentPocketPosition:
 	ld hl, wTMsHMs
