@@ -4550,7 +4550,7 @@ Text_WhatLevelDoYouWantToChallenge:
 	done
 
 Text_CheckBattleRoomListByMaxLevel:
-	text "¿Ver SALA BATALLA"
+	text "¿Ver SALAS BATALLA"
 	line "por nivel máximo?"
 	done
 
