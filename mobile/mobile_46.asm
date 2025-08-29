@@ -4550,11 +4550,8 @@ Text_WhatLevelDoYouWantToChallenge:
 	done
 
 Text_CheckBattleRoomListByMaxLevel:
-	text "¿Compruebas la"
-	line "lista de SALAS"
-
-	para "BATALLA por nivel"
-	line "máximo?"
+	text "¿Ver SALA BATALLA"
+	line "por nivel máximo?"
 	done
 
 Text_EnterWhichBattleRoom: ; unreferenced
