@@ -330,7 +330,7 @@ Mobile_CopyDefaultOTName:
 	ret
 
 Mobile5F_PlayersName:
-	db "CHRIS@@"
+	db "CRIS@@"
 
 Mobile_CopyDefaultNickname:
 	ld hl, .DefaultNickname
