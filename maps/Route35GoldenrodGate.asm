@@ -73,7 +73,9 @@ GiftSpearowName:
 GiftSpearowOTName:
 	db "LUCAS@"
 
-	db 0, " ES@", 0 ; filler
+	db 0 ; filler
+	db " ES@" ; Nationality bytes, so that the game loads the proper font when reading the mail. ES stands for European-Spanish.
+	db 0 ; unused
 
 Route35GoldenrodGatePokefanFScript:
 	faceplayer
