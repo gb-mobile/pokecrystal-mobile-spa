@@ -4408,17 +4408,17 @@ Function11a884:
 Unknown_11a89a:
 for x, 16
 	bcd x % 100, x / 100
-endr
+ENDR
 
 Unknown_11a8ba:
 for x, 0, 16**2, 16
 	bcd x % 100, x / 100
-endr
+ENDR
 
 Unknown_11a8da:
 for x, 0, 16**3, 16**2
 	bcd x % 100, x / 100
-endr
+ENDR
 
 BattleTowerRoomMenu_SetMessage:
 	ld a, l

@@ -878,9 +878,9 @@ Function119471:
 	ld a, $10
 	cp b
 	jr z, .asm_119536
-rept 4
+REPT 4
 	inc hl
-endr
+ENDR
 	jr .asm_11957a
 .asm_119536
 	ld a, [hli]

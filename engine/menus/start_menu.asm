@@ -259,9 +259,9 @@ StartMenu::
 	cp $ff
 	jr z, .none
 	call .GetMenuAccountTextPointer
-rept 4
+REPT 4
 	inc hl
-endr
+ENDR
 	ld a, [hli]
 	ld d, [hl]
 	ld e, a
@@ -279,9 +279,9 @@ endr
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-rept 6
+REPT 6
 	add hl, de
-endr
+ENDR
 	ret
 
 .SetUpMenuItems:
