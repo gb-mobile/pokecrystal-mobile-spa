@@ -45,7 +45,7 @@ BuenasPassword:
 	db NUM_PASSWORDS_PER_CATEGORY
 for x, NUM_PASSWORDS_PER_CATEGORY
 	db x
-ENDR
+endr
 	db -1
 
 .PlacePasswordChoices:
@@ -264,7 +264,7 @@ Buena_PrizeMenu:
 	db NUM_BUENA_PRIZES
 for x, NUM_BUENA_PRIZES
 	db x + 1
-ENDR
+endr
 	db -1
 
 .PrintPrizeItem:
